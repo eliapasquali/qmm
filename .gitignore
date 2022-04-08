@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+# Latex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# QTCreator
+build-QMM-Desktop-*
+*.pro.user

@@ -42,4 +42,4 @@
 
 # QTCreator
 build-QMM-Desktop-*
-*.pro.user
+*.pro.user*

@@ -30,7 +30,11 @@ QLayout* HomeView::insertButtons()
     for(auto b : buttons){
         b->setFixedSize(BUTTON_SIZE);
         buttonsLayout->addWidget(b);
+        connect(b,SIGNAL(clicked()),this,SIGNAL(prova()));
     }
+
+    // Blocca ridimensionamento in verticale
+    buttonsLayout->setStretch(1, 0);
 
     return buttonsLayout;
 }
@@ -49,6 +53,7 @@ QGroupBox* HomeView::setupForm()
     QFormLayout* formLayout = new QFormLayout;
     formLayout->addRow("Nome", name);
     formLayout->addRow("Valore", value);
+    // Limitate, cambia in select
     formLayout->addRow("Categoria", category);
     formLayout->addRow("Data", date);
 
@@ -90,6 +95,9 @@ QLayout* HomeView::finalLayout()
 
     homeLayout->addItem(insertDataWidgets());
     homeLayout->addItem(insertButtons());
+
+    homeLayout->setSpacing(10);
+    homeLayout->setMargin(15);
 
     return homeLayout;
 }

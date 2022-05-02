@@ -56,7 +56,7 @@ private:
 
 
 signals:
-
+    void prova() const;
 };
 
 #endif // HOMEVIEW_H

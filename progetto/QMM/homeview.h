@@ -25,6 +25,7 @@ public:
 
 private:
     // Controller* controller;
+    QLineEdit* name;
 
     /**
      * @brief insertButtons crea la parte di home contenente i bottoni
@@ -54,9 +55,11 @@ private:
      */
     QLayout* finalLayout();
 
+public slots:
+    void cambiaEtichetta(int label);
 
 signals:
-    void prova() const;
+    void graph1Clicked();
 };
 
 #endif // HOMEVIEW_H

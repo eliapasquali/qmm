@@ -6,7 +6,9 @@ HomeView::HomeView(QWidget *parent)
 {
     QLayout* mainLayout = finalLayout();
 
+
     setLayout(mainLayout);
+
 
 }
 
@@ -30,12 +32,12 @@ QLayout* HomeView::insertButtons()
     for(auto b : buttons){
         b->setFixedSize(BUTTON_SIZE);
         buttonsLayout->addWidget(b);
-        connect(b,SIGNAL(clicked()),this,SIGNAL(prova()));
     }
 
     // Blocca ridimensionamento in verticale
     buttonsLayout->setStretch(1, 0);
 
+    connect(graph1, &QPushButton::clicked, this, &HomeView::graph1Clicked);
     return buttonsLayout;
 }
 
@@ -44,7 +46,7 @@ QGroupBox* HomeView::setupForm()
     QGroupBox* form = new QGroupBox;
 
     // Creo form di inserimento ed elementi
-    QLineEdit* name = new QLineEdit;
+    name = new QLineEdit;
     QDoubleSpinBox* value = new QDoubleSpinBox;
     QLineEdit* category = new QLineEdit;
     QDateEdit* date = new QDateEdit;
@@ -59,8 +61,11 @@ QGroupBox* HomeView::setupForm()
 
     form->setLayout(formLayout);
 
-     return form;
+
+    return form;
 }
+
+
 
 QLayout* HomeView::insertDataWidgets()
 {
@@ -100,4 +105,9 @@ QLayout* HomeView::finalLayout()
     homeLayout->setMargin(15);
 
     return homeLayout;
+}
+
+void HomeView::cambiaEtichetta(int label)
+{
+    name->setText(QString::number(label));
 }

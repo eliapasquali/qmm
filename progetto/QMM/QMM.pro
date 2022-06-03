@@ -10,13 +10,17 @@ CONFIG += c++17
 
 SOURCES += \
     account.cpp \
+    homecontroller.cpp \
     homeview.cpp \
     main.cpp \
+    mainmodel.cpp \
     transaction.cpp
 
 HEADERS += \
     account.h \
+    homecontroller.h \
     homeview.h \
+    mainmodel.h \
     transaction.h
 
 FORMS +=

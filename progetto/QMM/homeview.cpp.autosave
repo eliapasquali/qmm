@@ -109,5 +109,5 @@ QLayout* HomeView::finalLayout()
 }
 
 void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
-    std::cout << "displayed";
+
 }

@@ -4,6 +4,7 @@
 #include <QObject>
 #include <mainmodel.h>
 #include "homeview.h"
+#include "json_import.h"
 
 class homecontroller : public QObject
 {
@@ -12,11 +13,10 @@ public:
     explicit homecontroller(QObject *parent = nullptr);
 
 public slots:
-    void calcolaNumero();
+    void checkTransactionList();
 
 signals:
-
-    void calcolatoNumero(int numero);
+    void checkedTransctionList(std::vector<Transaction> p);
 
 private:
     HomeView* homeview;

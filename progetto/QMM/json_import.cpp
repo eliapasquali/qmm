@@ -7,7 +7,7 @@
 QJsonObject* JSONImport::getJSONObject(){
 
     QString val;
-    QString path ="/Volumes/GoogleDrive/My Drive/UNIPD/C++/Progetto/qmm/progetto/qmm/transactions.json";     // vedere come fare in modo che sia dinamico e non fisso, tra l'altro non so perchè ma mi va solo se metto il percorso globale
+    QString path ="D:\\UNIPD\\2 anno\\ProgAOggetti\\qmm\\progetto\\QMM\\transactions.json";     // vedere come fare in modo che sia dinamico e non fisso, tra l'altro non so perchè ma mi va solo se metto il percorso globale
     QFile fileRead(path);
 
     fileRead.open(QIODevice::ReadOnly | QIODevice::Text);

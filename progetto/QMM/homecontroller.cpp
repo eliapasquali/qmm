@@ -5,14 +5,14 @@ homecontroller::homecontroller(QObject *parent)
 {
     homeview->show();
 
-    connect(homeview, &HomeView::graph1Clicked, this, &homecontroller::calcolaNumero) ;
-    connect(this, &homecontroller::calcolatoNumero, homeview, &HomeView::cambiaEtichetta);
+
+    connect(homeview, &HomeView::importButtonClicked, this, &homecontroller::checkTransactionList) ;
+    connect(this, &homecontroller::checkedTransctionList, homeview, &HomeView::displayTransaction);
 }
 
-
-
-void homecontroller::calcolaNumero()
+void homecontroller::checkTransactionList()
 {
-    int c = model->calcolaSpesa(1,2);
-    emit calcolatoNumero(c);
+    std::vector<Transaction> toBeAdded = JSONImport::getTransactionList(JSONImport::getJSONObject());
+    model->updateTransactionList(toBeAdded);
+    emit checkedTransctionList(model->getTransactionList());
 }

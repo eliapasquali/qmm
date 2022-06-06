@@ -1,16 +1,19 @@
 #ifndef MAINMODEL_H
 #define MAINMODEL_H
 
+#include "transaction.h"
+#include "vector"
+#include <iostream>
 
 class MainModel
 {
 public:
     MainModel();
-
-    double calcolaSpesa(double a, double b);
+    std::vector<Transaction> getTransactionList();
+    void updateTransactionList(std::vector<Transaction> toBeAdded);
 
 private:
-    int multi;
+    std::vector<Transaction> transactionList;
 };
 
 #endif // MAINMODEL_H

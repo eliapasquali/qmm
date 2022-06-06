@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <vector>
+#include "transaction.h"
 
 class HomeView : public QWidget
 {
@@ -56,10 +57,10 @@ private:
     QLayout* finalLayout();
 
 public slots:
-    void cambiaEtichetta(int label);
+    void displayTransaction(std::vector<Transaction> transactionVector);
 
 signals:
-    void graph1Clicked();
+    void importButtonClicked();
 };
 
 #endif // HOMEVIEW_H

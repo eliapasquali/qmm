@@ -13,6 +13,7 @@ SOURCES += \
     homecontroller.cpp \
     homeview.cpp \
     main.cpp \
+    json_import.cpp \
     mainmodel.cpp \
     transaction.cpp
 
@@ -20,6 +21,7 @@ HEADERS += \
     account.h \
     homecontroller.h \
     homeview.h \
+    json_import.h \
     mainmodel.h \
     transaction.h
 

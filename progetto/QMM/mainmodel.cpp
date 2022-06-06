@@ -1,12 +1,15 @@
 #include "mainmodel.h"
 
-MainModel::MainModel()
-    : multi(4)
-{
+MainModel::MainModel(){
 
 }
 
-double MainModel::calcolaSpesa(double a, double b)
+std::vector<Transaction> MainModel::getTransactionList()
 {
-    return (a+b)*multi;
+    return transactionList;
+}
+
+void MainModel::updateTransactionList(std::vector<Transaction> toBeAdded)
+{
+    transactionList.insert(transactionList.end(), toBeAdded.begin(),toBeAdded.end());
 }

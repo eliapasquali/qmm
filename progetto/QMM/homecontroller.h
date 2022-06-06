@@ -16,7 +16,7 @@ public slots:
     void checkTransactionList();
 
 signals:
-    void checkedTransctionList(std::vector<Transaction> p);
+    void checkedTransactionList(std::vector<Transaction> p);
 
 private:
     HomeView* homeview;

@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_homecontroller_t {
     QByteArrayData data[6];
-    char stringdata0[86];
+    char stringdata0[87];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,14 +32,14 @@ struct qt_meta_stringdata_homecontroller_t {
 static const qt_meta_stringdata_homecontroller_t qt_meta_stringdata_homecontroller = {
     {
 QT_MOC_LITERAL(0, 0, 14), // "homecontroller"
-QT_MOC_LITERAL(1, 15, 21), // "checkedTransctionList"
-QT_MOC_LITERAL(2, 37, 0), // ""
-QT_MOC_LITERAL(3, 38, 24), // "std::vector<Transaction>"
-QT_MOC_LITERAL(4, 63, 1), // "p"
-QT_MOC_LITERAL(5, 65, 20) // "checkTransactionList"
+QT_MOC_LITERAL(1, 15, 22), // "checkedTransactionList"
+QT_MOC_LITERAL(2, 38, 0), // ""
+QT_MOC_LITERAL(3, 39, 24), // "std::vector<Transaction>"
+QT_MOC_LITERAL(4, 64, 1), // "p"
+QT_MOC_LITERAL(5, 66, 20) // "checkTransactionList"
 
     },
-    "homecontroller\0checkedTransctionList\0"
+    "homecontroller\0checkedTransactionList\0"
     "\0std::vector<Transaction>\0p\0"
     "checkTransactionList"
 };
@@ -79,7 +79,7 @@ void homecontroller::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         homecontroller *_t = static_cast<homecontroller *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->checkedTransctionList((*reinterpret_cast< std::vector<Transaction>(*)>(_a[1]))); break;
+        case 0: _t->checkedTransactionList((*reinterpret_cast< std::vector<Transaction>(*)>(_a[1]))); break;
         case 1: _t->checkTransactionList(); break;
         default: ;
         }
@@ -87,7 +87,7 @@ void homecontroller::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             typedef void (homecontroller::*_t)(std::vector<Transaction> );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&homecontroller::checkedTransctionList)) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&homecontroller::checkedTransactionList)) {
                 *result = 0;
                 return;
             }
@@ -132,7 +132,7 @@ int homecontroller::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void homecontroller::checkedTransctionList(std::vector<Transaction> _t1)
+void homecontroller::checkedTransactionList(std::vector<Transaction> _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

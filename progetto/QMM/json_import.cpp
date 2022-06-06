@@ -1,15 +1,35 @@
 #include "json_import.h"
 
+
+#include <QCoreApplication>
 #include <QFile>
+#include <QFileDialog>
 #include <QJsonDocument>
 #include <QJsonObject>
+
+QString JSONImport::filePicker()
+{
+    QFileDialog dialog;
+    dialog.setFileMode(QFileDialog::ExistingFile);  // richiede un file esistente
+    dialog.setNameFilter("*.json");     // accetta solo file JSON
+
+    // Apre la finestra che ti permette di selezionare i file da importare, salva il percorso assoluto del file selezionato
+    QString path;
+    if (dialog.exec())
+        path = dialog.selectedFiles().at(0);
+
+    return path;
+}
 
 QJsonObject* JSONImport::getJSONObject(){
 
     QString val;
-    QString path ="D:\\UNIPD\\2 anno\\ProgAOggetti\\qmm\\progetto\\QMM\\transactions.json";     // vedere come fare in modo che sia dinamico e non fisso, tra l'altro non so perchè ma mi va solo se metto il percorso globale
+
+    QString path = filePicker();
+
     QFile fileRead(path);
 
+    std::cout << QCoreApplication::applicationDirPath().toStdString();
     fileRead.open(QIODevice::ReadOnly | QIODevice::Text);
     val = fileRead.readAll(); // legge il file e lo inserisce dentro la QString "val"
     fileRead.close();   // chiude il file (importante)

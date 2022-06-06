@@ -73,7 +73,7 @@ QLayout* HomeView::insertDataWidgets()
     // Colonna sinistra, con i valori estratti
     QVBoxLayout* leftColumn = new QVBoxLayout;
     QLabel* totalLabel = new QLabel("Prova");
-    QTableWidget* movements = new QTableWidget();
+    movements = new QTableWidget();
     leftColumn->addWidget(totalLabel);
     leftColumn->addWidget(movements);
 
@@ -109,5 +109,5 @@ QLayout* HomeView::finalLayout()
 }
 
 void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
-    std::cout << "displayed";
+    movements->insertRow(movements->rowCount());
 }

@@ -7,12 +7,12 @@ homecontroller::homecontroller(QObject *parent)
 
 
     connect(homeview, &HomeView::importButtonClicked, this, &homecontroller::checkTransactionList) ;
-    connect(this, &homecontroller::checkedTransctionList, homeview, &HomeView::displayTransaction);
+    connect(this, &homecontroller::checkedTransactionList, homeview, &HomeView::displayTransaction);
 }
 
 void homecontroller::checkTransactionList()
 {
     std::vector<Transaction> toBeAdded = JSONImport::getTransactionList(JSONImport::getJSONObject());
     model->updateTransactionList(toBeAdded);
-    emit checkedTransctionList(model->getTransactionList());
+    emit checkedTransactionList(model->getTransactionList());
 }

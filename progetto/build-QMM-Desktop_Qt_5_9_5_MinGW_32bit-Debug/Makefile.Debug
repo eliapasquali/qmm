@@ -173,6 +173,11 @@ debug/moc_homecontroller.cpp: D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QO
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qcontainerfwd.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qobject_impl.h \
 		../QMM/mainmodel.h \
+		../QMM/transaction.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qshareddata.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qhash.h \
 		../QMM/homeview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QWidget \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qwidget.h \
@@ -205,8 +210,6 @@ debug/moc_homecontroller.cpp: D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QO
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qpixelformat.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qpixmap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qsharedpointer.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qshareddata.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qhash.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qsharedpointer_impl.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qfont.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qfontmetrics.h \
@@ -272,7 +275,12 @@ debug/moc_homecontroller.cpp: D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QO
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qspinbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QDateEdit \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdatetimeedit.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
+		../QMM/json_import.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QJsonArray \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsonarray.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsonvalue.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QJsonDocument \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsondocument.h \
 		../QMM/homecontroller.h \
 		debug/moc_predefs.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/bin/moc.exe
@@ -423,6 +431,8 @@ debug/moc_homeview.cpp: D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QWidg
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QDateEdit \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdatetimeedit.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
+		../QMM/transaction.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		../QMM/homeview.h \
 		debug/moc_predefs.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/bin/moc.exe
@@ -538,6 +548,11 @@ debug/homecontroller.o: ../QMM/homecontroller.cpp ../QMM/homecontroller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qcontainerfwd.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qobject_impl.h \
 		../QMM/mainmodel.h \
+		../QMM/transaction.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qshareddata.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qhash.h \
 		../QMM/homeview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QWidget \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qwidget.h \
@@ -570,8 +585,6 @@ debug/homecontroller.o: ../QMM/homecontroller.cpp ../QMM/homecontroller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qpixelformat.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qpixmap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qsharedpointer.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qshareddata.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qhash.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qsharedpointer_impl.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qfont.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qfontmetrics.h \
@@ -637,7 +650,12 @@ debug/homecontroller.o: ../QMM/homecontroller.cpp ../QMM/homecontroller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qspinbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QDateEdit \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdatetimeedit.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h
+		../QMM/json_import.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QJsonArray \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsonarray.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsonvalue.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QJsonDocument \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsondocument.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\homecontroller.o ..\QMM\homecontroller.cpp
 
 debug/homeview.o: ../QMM/homeview.cpp ../QMM/homeview.h \
@@ -785,7 +803,9 @@ debug/homeview.o: ../QMM/homeview.cpp ../QMM/homeview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qspinbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QDateEdit \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdatetimeedit.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
+		../QMM/transaction.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\homeview.o ..\QMM\homeview.cpp
 
 debug/main.o: ../QMM/main.cpp ../QMM/homecontroller.h \
@@ -837,6 +857,11 @@ debug/main.o: ../QMM/main.cpp ../QMM/homecontroller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qcontainerfwd.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qobject_impl.h \
 		../QMM/mainmodel.h \
+		../QMM/transaction.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qshareddata.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qhash.h \
 		../QMM/homeview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QWidget \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qwidget.h \
@@ -869,8 +894,6 @@ debug/main.o: ../QMM/main.cpp ../QMM/homecontroller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qpixelformat.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qpixmap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qsharedpointer.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qshareddata.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qhash.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qsharedpointer_impl.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qfont.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qfontmetrics.h \
@@ -936,7 +959,12 @@ debug/main.o: ../QMM/main.cpp ../QMM/homecontroller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qspinbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QDateEdit \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdatetimeedit.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
+		../QMM/json_import.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QJsonArray \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsonarray.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsonvalue.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QJsonDocument \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsondocument.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QApplication \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qcoreapplication.h \
@@ -1011,7 +1039,49 @@ debug/json_import.o: ../QMM/json_import.cpp ../QMM/json_import.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qjsonobject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\json_import.o ..\QMM\json_import.cpp
 
-debug/mainmodel.o: ../QMM/mainmodel.cpp ../QMM/mainmodel.h
+debug/mainmodel.o: ../QMM/mainmodel.cpp ../QMM/mainmodel.h \
+		../QMM/transaction.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qstring.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qchar.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qglobal.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qconfig-bootstrapped.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qconfig.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qtcore-config.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qsystemdetection.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qprocessordetection.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qcompilerdetection.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qtypeinfo.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qsysinfo.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qlogging.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qflags.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qatomic.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qbasicatomic.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qatomic_bootstrap.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qgenericatomic.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qatomic_cxx11.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qatomic_msvc.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qglobalstatic.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qmutex.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qnumeric.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qversiontagging.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qbytearray.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qrefcount.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qnamespace.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qarraydata.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qstringbuilder.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qshareddata.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qhash.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qiterator.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qlist.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qalgorithms.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qhashfunctions.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qpair.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qbytearraylist.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qstringlist.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qregexp.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qstringmatcher.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainmodel.o ..\QMM\mainmodel.cpp
 
 debug/transaction.o: ../QMM/transaction.cpp ../QMM/transaction.h \

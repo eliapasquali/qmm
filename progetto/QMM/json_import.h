@@ -13,6 +13,7 @@ class JSONImport
 public:
     JSONImport();
 
+    static QString filePicker();
     static QJsonObject* getJSONObject();
     static std::vector<Transaction> getTransactionList(QJsonObject* jObject);
 };

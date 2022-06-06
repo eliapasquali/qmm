@@ -21,7 +21,7 @@ class HomeView : public QWidget
     Q_OBJECT
 public:
     HomeView(QWidget *parent = nullptr);
-
+    QTableWidget* movements;
     ~HomeView() = default;
 
 private:

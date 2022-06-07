@@ -6,7 +6,9 @@ HomeView::HomeView(QWidget *parent)
 {
     QLayout* mainLayout = finalLayout();
 
+
     setLayout(mainLayout);
+
 
 }
 
@@ -30,7 +32,6 @@ QLayout* HomeView::insertButtons()
     for(auto b : buttons){
         b->setFixedSize(BUTTON_SIZE);
         buttonsLayout->addWidget(b);
-        connect(b,SIGNAL(clicked()),this,SIGNAL(prova()));
     }
 
     // Blocca ridimensionamento in verticale
@@ -44,7 +45,7 @@ QGroupBox* HomeView::setupForm()
     QGroupBox* form = new QGroupBox;
 
     // Creo form di inserimento ed elementi
-    QLineEdit* name = new QLineEdit;
+    name = new QLineEdit;
     QDoubleSpinBox* value = new QDoubleSpinBox;
     QLineEdit* category = new QLineEdit;
     QDateEdit* date = new QDateEdit;
@@ -59,8 +60,11 @@ QGroupBox* HomeView::setupForm()
 
     form->setLayout(formLayout);
 
-     return form;
+
+    return form;
 }
+
+
 
 QLayout* HomeView::insertDataWidgets()
 {
@@ -69,7 +73,7 @@ QLayout* HomeView::insertDataWidgets()
     // Colonna sinistra, con i valori estratti
     QVBoxLayout* leftColumn = new QVBoxLayout;
     QLabel* totalLabel = new QLabel("Prova");
-    QTableWidget* movements = new QTableWidget();
+    movements = new QTableWidget();
     leftColumn->addWidget(totalLabel);
     leftColumn->addWidget(movements);
 
@@ -86,6 +90,8 @@ QLayout* HomeView::insertDataWidgets()
     dataWidgets->addItem(leftColumn);
     dataWidgets->addItem(rightColumn);
 
+    connect(importBtn, &QPushButton::clicked, this, &HomeView::importButtonClicked);
+
     return dataWidgets;
 }
 
@@ -100,4 +106,8 @@ QLayout* HomeView::finalLayout()
     homeLayout->setMargin(15);
 
     return homeLayout;
+}
+
+void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
+    movements->insertRow(movements->rowCount());
 }

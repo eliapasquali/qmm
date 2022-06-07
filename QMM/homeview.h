@@ -14,17 +14,19 @@
 
 #include <iostream>
 #include <vector>
+#include "transaction.h"
 
 class HomeView : public QWidget
 {
     Q_OBJECT
 public:
     HomeView(QWidget *parent = nullptr);
-
+    QTableWidget* movements;
     ~HomeView() = default;
 
 private:
     // Controller* controller;
+    QLineEdit* name;
 
     /**
      * @brief insertButtons crea la parte di home contenente i bottoni
@@ -54,9 +56,11 @@ private:
      */
     QLayout* finalLayout();
 
+public slots:
+    void displayTransaction(std::vector<Transaction> transactionVector);
 
 signals:
-    void prova() const;
+    void importButtonClicked();
 };
 
 #endif // HOMEVIEW_H

@@ -1,6 +1,4 @@
 #include "json_import.h"
-
-
 #include <QCoreApplication>
 #include <QFile>
 #include <QFileDialog>
@@ -53,7 +51,7 @@ std::vector<Transaction> JSONImport::getTransactionList(QJsonObject* jObject){
     for(int i = 0; i < JSONarray.size(); i++){
         QJsonObject arrayObject = JSONarray[i].toObject();  //ottengo il singolo elemento dell'array JSON da cui estrarre le informazioni
 
-        QDate date(arrayObject["year"].toInt(),arrayObject["month"].toString().toInt(),arrayObject["name"].toString().toInt());
+        QDate date(arrayObject["year"].toInt(),arrayObject["month"].toInt(),arrayObject["day"].toInt());
         Category tmp_category = (Category)arrayObject["category"].toInt();
 
         //costtruisco la transaction usando le informazioni dell'oggetto JSON

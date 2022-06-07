@@ -1,7 +1,8 @@
 #ifndef TRANSACTION_H
 #define TRANSACTION_H
 
- #include <QDate>
+#include <QDate>
+#include <map>
 
 enum Category {
     Lavoro,
@@ -10,6 +11,15 @@ enum Category {
     Salute,
     Risparmi,
     Tasse
+};
+
+const std::map<Category, std::string> enumToString {
+    {Lavoro, "Lavoro"},
+    {Casa, "Casa"},
+    {Intrattenimento, "Intrattenimento"},
+    {Salute, "Salute"},
+    {Risparmi, "Risparmi"},
+    {Tasse, "Tasse"}
 };
 
 class Transaction
@@ -36,6 +46,7 @@ public:
 
     Category getCategory() const;
     void setCategory(Category newCategory);
+
 
     const QDate &getDate() const;
     void setDate(const QDate &newDate);

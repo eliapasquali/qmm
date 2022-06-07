@@ -1,12 +1,11 @@
 #ifndef JSON_IMPORT_H
 #define JSON_IMPORT_H
 
-#include "QJsonArray"
-#include "transaction.h"
-#include "iostream"
-#include "vector"
-
+#include <QJsonArray>
+#include <iostream>
+#include <vector>
 #include <QJsonDocument>
+#include "transaction.h"
 
 class JSONImport
 {

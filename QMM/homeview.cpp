@@ -1,15 +1,16 @@
 #include "homeview.h"
 
+#include <QHeaderView>
+#include <QStringList>
+#include <QTextEdit>
+
 
 HomeView::HomeView(QWidget *parent)
     : QWidget{parent}
 {
     QLayout* mainLayout = finalLayout();
 
-
     setLayout(mainLayout);
-
-
 }
 
 QLayout* HomeView::insertButtons()
@@ -49,6 +50,7 @@ QGroupBox* HomeView::setupForm()
     QDoubleSpinBox* value = new QDoubleSpinBox;
     QLineEdit* category = new QLineEdit;
     QDateEdit* date = new QDateEdit;
+    QTextEdit* desc = new QTextEdit;
 
     // Creo layout del form
     QFormLayout* formLayout = new QFormLayout;
@@ -57,6 +59,7 @@ QGroupBox* HomeView::setupForm()
     // Limitate, cambia in select
     formLayout->addRow("Categoria", category);
     formLayout->addRow("Data", date);
+    formLayout->addRow("Descrizione", desc);
 
     form->setLayout(formLayout);
 
@@ -64,7 +67,16 @@ QGroupBox* HomeView::setupForm()
     return form;
 }
 
-
+void HomeView::setupTransactionTable()
+{
+    movements->setColumnCount(5);
+    // righe in base a transazioni ricevute
+    // Definizione politiche di espansione
+    QHeaderView* movementsHeader = movements->horizontalHeader();
+    movementsHeader->setSectionResizeMode(QHeaderView::Stretch);
+    QStringList hLabel = { "Nome", "Valore", "Categoria", "Data", "Descrizione" };
+    movements->setHorizontalHeaderLabels(hLabel);
+}
 
 QLayout* HomeView::insertDataWidgets()
 {
@@ -74,17 +86,21 @@ QLayout* HomeView::insertDataWidgets()
     QVBoxLayout* leftColumn = new QVBoxLayout;
     QLabel* totalLabel = new QLabel("Prova");
     movements = new QTableWidget();
+    setupTransactionTable();
+
     leftColumn->addWidget(totalLabel);
     leftColumn->addWidget(movements);
 
     // Colonna destra, per inserimento e salvataggio dei dati
     QVBoxLayout* rightColumn = new QVBoxLayout;
-    QPushButton* importBtn = new QPushButton("Importa movimenti");
-    QPushButton* saveBtn = new QPushButton("Salva movimenti");
+    QPushButton* importBtn  = new QPushButton("Importa movimenti");
+    QPushButton* exportBtn  = new QPushButton("Esporta movimenti");
+    QPushButton* addBtn     = new QPushButton("Aggiungi movimento");
 
     rightColumn->addWidget(importBtn);
-    rightColumn->addWidget(saveBtn);
+    rightColumn->addWidget(exportBtn);
     rightColumn->addWidget(setupForm());
+    rightColumn->addWidget(addBtn);
 
     // Unione colonne
     dataWidgets->addItem(leftColumn);
@@ -109,5 +125,15 @@ QLayout* HomeView::finalLayout()
 }
 
 void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
-    movements->insertRow(movements->rowCount());
+    int maxRows = transactionVector.size();
+    movements->setRowCount(maxRows);
+    int row=0;
+    for( auto t : transactionVector ) {
+        movements->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(t.getName())));
+        movements->setItem(row, 1, new QTableWidgetItem(QString::number(t.getValue())));
+        movements->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(enumToString.at(t.getCategory()))));
+        movements->setItem(row, 3, new QTableWidgetItem(t.getDate().toString("dd/MM/yyyy")));
+        movements->setItem(row, 4, new QTableWidgetItem(QString::fromStdString(t.getShort_desc())));
+        row++;
+    }
 }

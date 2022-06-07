@@ -42,6 +42,11 @@ private:
      QGroupBox* setupForm();
 
      /**
+      * @brief setupTransactionTable Configura impostazioni grafiche TableWidget
+      */
+     void setupTransactionTable();
+
+     /**
      * @brief insertData crea la griglia con lista movimenti e strumenti
      * per aggiugnerli, importarli e salvarli
      * @return layout della parte superiore della home, contenente gli

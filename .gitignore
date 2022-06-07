@@ -43,3 +43,6 @@
 # QTCreator
 build-QMM-Desktop-*
 *.pro.user*
+
+# IntelliJ
+.idea

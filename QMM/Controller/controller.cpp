@@ -3,11 +3,15 @@
 Controller::Controller(View* v, Model* m, QWidget *parent)
     : QWidget{parent}, view(v), model(m)
 {
-    connectToView();
+    connectView();
 }
 
-void Controller::connectToView() const {
+void Controller::connectView() const {
     connect(view,SIGNAL(closeView()),this,SLOT(onCloseView()));
+}
+
+void Controller::makeVisibile() const {
+    getView()->show();
 }
 
 Controller::~Controller() {

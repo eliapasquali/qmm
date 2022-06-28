@@ -10,7 +10,7 @@ class HomeModel : public Model
 {
 
 public:
-    HomeModel() = default;
+    explicit HomeModel() = default;
     std::vector<Transaction> getTransactionList();
     void updateTransactionList(std::vector<Transaction> &toBeAdded);
 

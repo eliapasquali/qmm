@@ -3,7 +3,7 @@
 HomeController::HomeController(HomeView* v, HomeModel* m, Controller* parent) :
     Controller(v, m, parent)
 {
-    connectToView();
+    connectView();
 }
 
 HomeView* HomeController::getView() const {
@@ -14,11 +14,14 @@ HomeModel* HomeController::getModel() const {
     return static_cast<HomeModel*>(model);
 }
 
-void HomeController::connectToView() const {
-    connect(this->getView(), &HomeView::importButtonClicked,
+void HomeController::connectView() const {
+    auto view = getView();
+    connect(view, &HomeView::importButtonClicked,
             this, &HomeController::checkTransactionList);
     connect(this, &HomeController::checkedTransactionList,
-            this->getView(), &HomeView::displayTransaction);
+            view, &HomeView::displayTransaction);
+    connect(view, &HomeView::lineChartClicked,
+            this, &HomeController::createLineChart);
 }
 
 void HomeController::checkTransactionList()
@@ -27,6 +30,16 @@ void HomeController::checkTransactionList()
     auto toBeAdded = JSONImport::getTransactionList(JSONImport::getJSONObject());
     m->updateTransactionList(toBeAdded);
     emit checkedTransactionList(m->getTransactionList());
+}
+
+void HomeController::createLineChart()
+{
+    auto m = getModel();
+    auto transactions = m->getTransactionList();
+    auto lineChartView = new LineChartView();
+    lineChartView->setTitle("Spesa per categoria");
+    auto lineChartController = new LineChartController(lineChartView, new LineChartModel(), this);
+    lineChartController->makeVisibile();
 }
 
 void HomeController::onCloseView() const

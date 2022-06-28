@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 
     auto* homeView = new HomeView();
     auto* homeController = new HomeController(homeView);
-	homeView->show();
-	
+    homeController->makeVisibile();
+
     return QApplication::exec();
 }

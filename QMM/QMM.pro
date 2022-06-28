@@ -13,10 +13,13 @@ SOURCES += \
     main.cpp \
     Controller/controller.cpp \
     Controller/homecontroller.cpp \
+    Controller/linechartcontroller.cpp \
     View/view.cpp \
     View/homeview.cpp \
+    View/linechartview.cpp \
     Model/model.cpp \
     Model/homemodel.cpp \
+    Model/linechartmodel.cpp \
     transaction.cpp \
     account.cpp \
     json_import.cpp
@@ -24,10 +27,13 @@ SOURCES += \
 HEADERS += \
     Controller/controller.h \
     Controller/homecontroller.h \
+    Controller/linechartcontroller.h \
     View/view.h \
     View/homeview.h \
+    View/linechartview.h \
     Model/model.h \
     Model/homemodel.h \
+    Model/linechartmodel.h \
     transaction.h \
     account.h \
     json_import.h

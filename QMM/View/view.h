@@ -11,7 +11,7 @@ class View : public QWidget {
 
 private:
 
-    virtual void connectToController() const = 0;
+    virtual void connectWidgets() const = 0;
 
 public:
 
@@ -20,7 +20,7 @@ public:
      * @param size QSize definito di default a 720x480
      * @param parent Necessario per ogni QWidget, di default nullo
      */
-    explicit View(const QSize& size = QSize(720, 480), const QString& title = QString("QMM"), View* parent = nullptr);
+    explicit View(const QSize& size = QSize(1024, 768), const QString& title = QString("QMM"), View* parent = nullptr);
     /**
      * @brief Distruttore, definito virtuale nella classe base
      *  Lavora insieme al meccanismo di default della libreria QT

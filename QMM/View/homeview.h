@@ -24,16 +24,15 @@ class HomeView : public View
     Q_OBJECT
 
 public:
-    explicit HomeView(const QSize& size = QSize(720, 480), const QString& title = QString("QMM"), View* parent = nullptr);
+    explicit HomeView(const QSize& size = QSize(1024, 768), const QString& title = QString("QMM"), View* parent = nullptr);
     ~HomeView() = default;
 
 private:
 
-    // Controller* controller;
-    void connectToController() const override;
+    void connectWidgets() const override;
 
     // Elementi
-    QPushButton *graph1, *graph2, *graph3, *graph4, *graph5, *importBtn, *exportBtn, *addBtn;
+    QPushButton *linechart, *graph2, *graph3, *graph4, *graph5, *importBtn, *exportBtn, *addBtn;
     QLineEdit *name, *category;
     QDateEdit *date;
     QTextEdit *short_desc;
@@ -78,6 +77,7 @@ public slots:
 
 signals:
     void importButtonClicked();
+    void lineChartClicked();
 };
 
 #endif // HOMEVIEW_H

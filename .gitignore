@@ -1,35 +1,19 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# Build result
+*.qmake.stash
+moc*
+Makefile
 *.o
-*.obj
+QMM/QMM
 
-# Precompiled Headers
-*.gch
-*.pch
+# CLion
+.idea
+cmake-build-debug
+CMakeLists.txt
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# QTCreator
+build-QMM-Desktop-*
+.qtc_clangd
+*.user
 
 # Latex
 *.aux
@@ -39,10 +23,3 @@
 *.out
 *.synctex.gz
 *.toc
-
-# QTCreator
-build-QMM-Desktop-*
-*.pro.user*
-
-# IntelliJ
-.idea

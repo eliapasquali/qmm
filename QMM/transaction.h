@@ -2,6 +2,7 @@
 #define TRANSACTION_H
 
 #include <QDate>
+#include <QString>
 #include <map>
 
 enum Category {
@@ -13,7 +14,7 @@ enum Category {
     Tasse
 };
 
-const std::map<Category, std::string> enumToString {
+const std::map<Category, QString> enumToString {
     {Lavoro, "Lavoro"},
     {Casa, "Casa"},
     {Intrattenimento, "Intrattenimento"},
@@ -26,20 +27,19 @@ class Transaction
 {
 
 private:
-    std::string name;
+    QString name;
     double value;
     Category category;
     QDate date;
     bool type; // 0 income, 1 outcome
-    std::string short_desc;
+    QString short_desc;
 
 public:
-    Transaction(std::string n, double v, QDate d, Category cat, bool t =1, std::string sd = "");
-
+    Transaction(QString n, double v, QDate d, Category cat, bool t=1, QString sd = QString());
     ~Transaction() = default;
 
-    const std::string &getName() const;
-    void setName(const std::string &newName);
+    const QString& getName() const;
+    void setName(const QString& newName);
 
     double getValue() const;
     void setValue(double newValue);
@@ -54,9 +54,8 @@ public:
     bool getType() const;
     void setType(bool newType);
 
-    const std::string &getShort_desc() const;
-    void setShort_desc(const std::string &newShort_desc);
-
+    const QString& getShort_desc() const;
+    void setShort_desc(const QString& newShort_desc);
 };
 
 #endif // TRANSACTION_H

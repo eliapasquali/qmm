@@ -1,16 +1,17 @@
 #include "homeview.h"
 
-#include <QHeaderView>
-#include <QStringList>
-#include <QTextEdit>
-
-
-HomeView::HomeView(QWidget *parent)
-    : QWidget{parent}
+HomeView::HomeView(const QSize& size, const QString& title, View* parent) :
+    View(size, title, parent)
 {
     QLayout* mainLayout = finalLayout();
 
     setLayout(mainLayout);
+
+    connectToController();
+}
+
+void HomeView::connectToController() const {
+    connect(importBtn, &QPushButton::clicked, this, &HomeView::importButtonClicked);
 }
 
 QLayout* HomeView::insertButtons()
@@ -18,11 +19,11 @@ QLayout* HomeView::insertButtons()
     QHBoxLayout* buttonsLayout = new QHBoxLayout;
 
     std::vector<QPushButton*> buttons;
-    QPushButton* graph1 = new QPushButton("Graph 1");
-    QPushButton* graph2 = new QPushButton("Graph 2");
-    QPushButton* graph3 = new QPushButton("Graph 3");
-    QPushButton* graph4 = new QPushButton("Graph 4");
-    QPushButton* graph5 = new QPushButton("Graph 5");
+    graph1 = new QPushButton("Graph 1");
+    graph2 = new QPushButton("Graph 2");
+    graph3 = new QPushButton("Graph 3");
+    graph4 = new QPushButton("Graph 4");
+    graph5 = new QPushButton("Graph 5");
     buttons.push_back(graph1);
     buttons.push_back(graph2);
     buttons.push_back(graph3);
@@ -47,10 +48,10 @@ QGroupBox* HomeView::setupForm()
 
     // Creo form di inserimento ed elementi
     name = new QLineEdit;
-    QDoubleSpinBox* value = new QDoubleSpinBox;
-    QLineEdit* category = new QLineEdit;
-    QDateEdit* date = new QDateEdit;
-    QTextEdit* desc = new QTextEdit;
+    value = new QDoubleSpinBox;
+    category = new QLineEdit;
+    date = new QDateEdit;
+    short_desc = new QTextEdit;
 
     // Creo layout del form
     QFormLayout* formLayout = new QFormLayout;
@@ -59,10 +60,9 @@ QGroupBox* HomeView::setupForm()
     // Limitate, cambia in select
     formLayout->addRow("Categoria", category);
     formLayout->addRow("Data", date);
-    formLayout->addRow("Descrizione", desc);
+    formLayout->addRow("Descrizione", short_desc);
 
     form->setLayout(formLayout);
-
 
     return form;
 }
@@ -93,9 +93,9 @@ QLayout* HomeView::insertDataWidgets()
 
     // Colonna destra, per inserimento e salvataggio dei dati
     QVBoxLayout* rightColumn = new QVBoxLayout;
-    QPushButton* importBtn  = new QPushButton("Importa movimenti");
-    QPushButton* exportBtn  = new QPushButton("Esporta movimenti");
-    QPushButton* addBtn     = new QPushButton("Aggiungi movimento");
+    importBtn  = new QPushButton("Importa movimenti");
+    exportBtn  = new QPushButton("Esporta movimenti");
+    addBtn     = new QPushButton("Aggiungi movimento");
 
     rightColumn->addWidget(importBtn);
     rightColumn->addWidget(exportBtn);
@@ -105,8 +105,6 @@ QLayout* HomeView::insertDataWidgets()
     // Unione colonne
     dataWidgets->addItem(leftColumn);
     dataWidgets->addItem(rightColumn);
-
-    connect(importBtn, &QPushButton::clicked, this, &HomeView::importButtonClicked);
 
     return dataWidgets;
 }
@@ -129,11 +127,11 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
     movements->setRowCount(maxRows);
     int row=0;
     for( auto t : transactionVector ) {
-        movements->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(t.getName())));
+        movements->setItem(row, 0, new QTableWidgetItem(t.getName()));
         movements->setItem(row, 1, new QTableWidgetItem(QString::number(t.getValue())));
-        movements->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(enumToString.at(t.getCategory()))));
+        movements->setItem(row, 2, new QTableWidgetItem(enumToString.at(t.getCategory())));
         movements->setItem(row, 3, new QTableWidgetItem(t.getDate().toString("dd/MM/yyyy")));
-        movements->setItem(row, 4, new QTableWidgetItem(QString::fromStdString(t.getShort_desc())));
+        movements->setItem(row, 4, new QTableWidgetItem(t.getShort_desc()));
         row++;
     }
 }

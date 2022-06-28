@@ -1,0 +1,35 @@
+
+{
+"transactionList": [
+    {
+        "name" : "Spesa per settimana",
+        "value" : 150.39, 
+        "category" : 1,
+        "day": 2,
+        "month" : 6,
+        "year" : 2018,
+        "type" : true,
+        "short_desc" : "Spesa settimanale alla conad "  
+    },
+    {
+        "name" : "Stipendio",
+        "value" : 1377.12,
+        "category" : 0,
+        "day": 10,
+        "month" : 8,
+        "year" : 2019,
+        "type" : false,
+        "short_desc" : "Stipendio mensile di agosto, strordinari inclusi "  
+    },
+    {
+        "name" : "Risparmio vacanze",
+        "value" : 177.7,
+        "category" : 4,
+        "day": 10,
+        "month" : 6,
+        "year" : 2019,
+        "type" : true,
+        "short_desc" : "Soldi avanzati a giugno, messi da parte per vacanza in Spagna "  
+    }
+] 
+ }

@@ -1,0 +1,25 @@
+# Build result
+*.qmake.stash
+moc*
+Makefile
+*.o
+QMM
+
+# CLion
+.idea
+cmake-build-debug
+CMakeLists.txt
+
+# QTCreator
+build-QMM-Desktop-*
+.qtc_clangd
+*.user
+
+# Latex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc

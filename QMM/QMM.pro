@@ -1,33 +1,37 @@
-QT       += core gui
+QT += core gui charts
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
 
-CONFIG += c++17
+TARGET = QMM
+template = app
 
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+CONFIG += c++11
+
+DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
-    account.cpp \
-    homecontroller.cpp \
-    homeview.cpp \
     main.cpp \
-    json_import.cpp \
-    mainmodel.cpp \
-    transaction.cpp
+    Controller/controller.cpp \
+    Controller/homecontroller.cpp \
+    View/view.cpp \
+    View/homeview.cpp \
+    Model/model.cpp \
+    Model/homemodel.cpp \
+    transaction.cpp \
+    account.cpp \
+    json_import.cpp
 
 HEADERS += \
+    Controller/controller.h \
+    Controller/homecontroller.h \
+    View/view.h \
+    View/homeview.h \
+    Model/model.h \
+    Model/homemodel.h \
+    transaction.h \
     account.h \
-    homecontroller.h \
-    homeview.h \
-    json_import.h \
-    mainmodel.h \
-    transaction.h
+    json_import.h
 
-FORMS +=
+RESOURCES += \
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+QMAKE_LFLAGS += -no-pie

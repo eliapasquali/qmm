@@ -6,12 +6,10 @@ Account::Account()
 }
 
 
-
-
 std::vector<Transaction> Account::splitTransactions(bool type) const
 {
     std::vector<Transaction> result;
-    for(auto t : transactions) {
+    for(auto& t : transactions) {
         if(type) {
             if(t.getValue() >= 0) result.push_back(t);
         }else if(t.getValue() < 0) result.push_back(t);
@@ -20,8 +18,9 @@ std::vector<Transaction> Account::splitTransactions(bool type) const
 }
 
 
-double Account::getTotal(std::vector<Transaction> v) const
+double Account::getTotal(std::vector<Transaction>& v) const
 {
-    return 0; //std::accumulate(v.begin(), v.end(), 0);
+    double sum = 0;
+    for(auto& t : v) sum+=t.getValue();
+    return sum;
 }
-

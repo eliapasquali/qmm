@@ -1,9 +1,7 @@
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
-
 #include "transaction.h"
-#include <string>
 #include <vector>
 
 class Account
@@ -12,7 +10,7 @@ class Account
 private:
     double total;
     std::vector<Transaction> transactions;
-    std::string owner;
+    QString owner;
 
 public:
     Account();
@@ -32,7 +30,7 @@ public:
      * @param v std::vector contenente le transazioni da sommare
      * @return il totale calcolato
      */
-    double getTotal(std::vector<Transaction> v) const;
+    double getTotal(std::vector<Transaction> &v) const;
 
 };
 

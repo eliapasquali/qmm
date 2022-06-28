@@ -1,32 +1,44 @@
 #ifndef HOMEVIEW_H
 #define HOMEVIEW_H
 
+#include "view.h"
 #include <QWidget>
 #include <QLayout>
 #include <QPushButton>
-#include <QLabel>
 #include <QTableWidget>
-#include <QGroupBox>
-#include <QFormLayout>
 #include <QLineEdit>
 #include <QDoubleSpinBox>
 #include <QDateEdit>
+#include <QTextEdit>
+#include <QGroupBox>
+#include <QFormLayout>
+#include <QHeaderView>
+#include <QLabel>
 
 #include <iostream>
 #include <vector>
 #include "transaction.h"
 
-class HomeView : public QWidget
+class HomeView : public View
 {
     Q_OBJECT
+
 public:
-    HomeView(QWidget *parent = nullptr);
-    QTableWidget* movements;
+    explicit HomeView(const QSize& size = QSize(720, 480), const QString& title = QString("QMM"), View* parent = nullptr);
     ~HomeView() = default;
 
 private:
+
     // Controller* controller;
-    QLineEdit* name;
+    void connectToController() const override;
+
+    // Elementi
+    QPushButton *graph1, *graph2, *graph3, *graph4, *graph5, *importBtn, *exportBtn, *addBtn;
+    QLineEdit *name, *category;
+    QDateEdit *date;
+    QTextEdit *short_desc;
+    QDoubleSpinBox *value;
+    QTableWidget *movements;
 
     /**
      * @brief insertButtons crea la parte di home contenente i bottoni

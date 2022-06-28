@@ -11,7 +11,8 @@ QString JSONImport::filePicker()
     dialog.setFileMode(QFileDialog::ExistingFile);  // richiede un file esistente
     dialog.setNameFilter("*.json");     // accetta solo file JSON
 
-    // Apre la finestra che ti permette di selezionare i file da importare, salva il percorso assoluto del file selezionato
+    // Apre la finestra che ti permette di selezionare i file da importare,
+    // salva il percorso assoluto del file selezionato
     QString path;
     if (dialog.exec())
         path = dialog.selectedFiles().at(0);
@@ -56,12 +57,12 @@ std::vector<Transaction> JSONImport::getTransactionList(QJsonObject* jObject){
 
         //costtruisco la transaction usando le informazioni dell'oggetto JSON
         Transaction tmp_transaction(
-            arrayObject["name"].toString().toStdString(),
+            arrayObject["name"].toString(),
             arrayObject["value"].toDouble(),
             date,
             tmp_category,
             arrayObject["type"].toBool(),
-            arrayObject["short_desc"].toString().toStdString()
+            arrayObject["short_desc"].toString()
         );
 
         tmp_transaction_vector.push_back(tmp_transaction);

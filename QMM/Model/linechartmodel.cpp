@@ -12,5 +12,6 @@ std::map<int, double> LineChartModel::getMonthlyTotal() const{
         if(totals.find(month)!=totals.end()) value += totals.find(month)->second;
         totals.insert({month, value});
     }
+
     return totals;
 }

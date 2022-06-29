@@ -29,6 +29,7 @@ public:
     void insertPoint(const int month, const double value);
     // Inserisce praticamente le serie nel grafico
     void insertSeries();
+    void defineAxis(int lastMonth);
 
 };
 

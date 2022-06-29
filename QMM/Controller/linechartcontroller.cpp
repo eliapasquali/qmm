@@ -10,14 +10,14 @@ LineChartController::LineChartController(LineChartView* v, Model* m, Controller*
     auto monthlyTotals = getModel()->getMonthlyTotal();
     // Inserisci punti nella view
 
-    getView()->insertPoint(0,0);
+    getView()->insertPoint(1,0);
     for (auto month : monthlyTotals) {
         getView()->insertPoint(month.first, month.second);
     }
 
     // Riempie il grafico
     getView()->insertSeries();
-
+    getView()->defineAxis(monthlyTotals.rbegin()->first);
     connectView();
 }
 

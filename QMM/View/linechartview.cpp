@@ -18,7 +18,8 @@ LineChartView::LineChartView(const QSize& size, const QString& title, View* pare
 
 QChartView* LineChartView::createChart() {
     lineChart = new QChart();
-    lineChart->setTitle("Andamento delle spese nel tempo");
+    lineChart->setTitle("Andamento del saldo nel tempo");
+    lineChart->legend()->setVisible(false);
 
     dataSeries = new QLineSeries();
 
@@ -33,7 +34,22 @@ void LineChartView::insertPoint(const int month, const double value) {
 
 void LineChartView::insertSeries() {
     lineChart->addSeries(dataSeries);
-    lineChart->createDefaultAxes();
-    lineChart->axisX()->setTitleText("Mese");
-    lineChart->axisY()->setTitleText("Spesa");
+}
+
+void LineChartView::defineAxis(int lastMonth) {
+
+    auto axisX = new QValueAxis();
+    axisX->setTitleText("Mese");
+    axisX->setRange(1, lastMonth);
+    axisX->setLabelFormat("%d");
+    axisX->setTickCount(lastMonth);
+    lineChart->addAxis(axisX, Qt::AlignBottom);
+    dataSeries->attachAxis(axisX);
+
+    auto axisY = new QValueAxis();
+    axisY->setTitleText("Saldo");
+    axisY->setTickInterval(500);
+    lineChart->addAxis(axisY, Qt::AlignLeft);
+
+    dataSeries->attachAxis(axisY);
 }

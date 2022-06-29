@@ -4,7 +4,7 @@
 #include <QWidget>
 
 #include "View/view.h"
-#include "Model/model.cpp"
+#include "Model/model.h"
 
 class Controller : public QWidget
 {
@@ -19,9 +19,11 @@ public:
 
     virtual View* getView() const = 0;
     virtual Model* getModel() const = 0;
+    virtual void makeVisibile() const;
 
 private:
-    virtual void connectToView() const;
+    virtual void connectView() const;
+
 signals:
 
 public slots:

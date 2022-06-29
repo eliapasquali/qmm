@@ -11,23 +11,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    Controller/controller.cpp \
-    Controller/homecontroller.cpp \
-    View/view.cpp \
-    View/homeview.cpp \
-    Model/model.cpp \
-    Model/homemodel.cpp \
+    Controller/*.cpp \
+    View/*.cpp \
+    Model/*.cpp \
     transaction.cpp \
     account.cpp \
     json_import.cpp
 
 HEADERS += \
-    Controller/controller.h \
-    Controller/homecontroller.h \
-    View/view.h \
-    View/homeview.h \
-    Model/model.h \
-    Model/homemodel.h \
+    Controller/*.h \
+    View/*.h \
+    Model/*.h \
     transaction.h \
     account.h \
     json_import.h

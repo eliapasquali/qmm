@@ -2,8 +2,11 @@
 #define HOMECONTROLLER_H
 
 #include "controller.h"
+#include "linechartcontroller.h"
 #include "Model/homemodel.h"
+#include "Model/linechartmodel.h"
 #include "View/homeview.h"
+#include "View/linechartview.h"
 #include "json_import.h"
 
 class HomeController : public Controller
@@ -11,7 +14,7 @@ class HomeController : public Controller
     Q_OBJECT
 
 private:
-    void connectToView() const override;
+    void connectView() const override;
 
 public:
     HomeController(HomeView* v, HomeModel* m = new HomeModel(), Controller* parent = nullptr);
@@ -20,6 +23,7 @@ public:
 
 public slots:
     void checkTransactionList();
+    void createLineChart();
     void onCloseView() const override;
 
 signals:

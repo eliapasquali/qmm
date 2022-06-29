@@ -1,17 +1,22 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include <QWidget>
+#include "transaction.h"
+#include <vector>
 
-class Model : public QWidget
+class Model
 {
-    Q_OBJECT
+
+protected:
+    std::vector<Transaction> transactionList;
+
 public:
-    explicit Model() = default;
+    explicit Model();
     virtual ~Model() = default;
 
-signals:
-
+    void setList(std::vector<Transaction> &tList);
+    std::vector<Transaction> getList() const;
+    void updateList(std::vector<Transaction> &toBeAdded);
 };
 
 #endif // MODEL_H

@@ -7,11 +7,14 @@ HomeView::HomeView(const QSize& size, const QString& title, View* parent) :
 
     setLayout(mainLayout);
 
-    connectToController();
+    connectWidgets();
 }
 
-void HomeView::connectToController() const {
-    connect(importBtn, &QPushButton::clicked, this, &HomeView::importButtonClicked);
+void HomeView::connectWidgets() const {
+    connect(importBtn, &QPushButton::clicked,
+            this, &HomeView::importButtonClicked);
+    connect(linechart, &QPushButton::clicked,
+            this, &HomeView::lineChartClicked);
 }
 
 QLayout* HomeView::insertButtons()
@@ -19,12 +22,12 @@ QLayout* HomeView::insertButtons()
     QHBoxLayout* buttonsLayout = new QHBoxLayout;
 
     std::vector<QPushButton*> buttons;
-    graph1 = new QPushButton("Graph 1");
+    linechart = new QPushButton("Andamento\nperiodico");
     graph2 = new QPushButton("Graph 2");
     graph3 = new QPushButton("Graph 3");
     graph4 = new QPushButton("Graph 4");
     graph5 = new QPushButton("Graph 5");
-    buttons.push_back(graph1);
+    buttons.push_back(linechart);
     buttons.push_back(graph2);
     buttons.push_back(graph3);
     buttons.push_back(graph4);

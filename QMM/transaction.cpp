@@ -4,9 +4,15 @@ const QString &Transaction::getName() const { return name; }
 
 void Transaction::setName(const QString &newName) { name = newName; }
 
-double Transaction::getValue() const { return value; }
+double Transaction::getValue() const {
+    auto sign_value = (type) ? -value : value;
+    return sign_value;
+}
 
-void Transaction::setValue(double newValue) { value = newValue; }
+void Transaction::setValue(double newValue) { 
+    type = (value<0) ? true : false;
+    value = newValue;
+}
 
 Category Transaction::getCategory() const { return category; }
 

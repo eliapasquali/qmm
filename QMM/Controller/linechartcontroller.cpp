@@ -2,9 +2,22 @@
 
 void LineChartController::connectView() const {}
 
-LineChartController::LineChartController(LineChartView* v, LineChartModel* m, Controller* parent) :
-    Controller(v, m, parent)
+LineChartController::LineChartController(LineChartView* v, Model* m, Controller* parent) :
+    Controller(v, new LineChartModel(m), parent)
 {
+
+    // Prendi transazioni dal modello
+    auto monthlyTotals = getModel()->getMonthlyTotal();
+    // Inserisci punti nella view
+
+    getView()->insertPoint(0,0);
+    for (auto month : monthlyTotals) {
+        getView()->insertPoint(month.first, month.second);
+    }
+
+    // Riempie il grafico
+    getView()->insertSeries();
+
     connectView();
 }
 

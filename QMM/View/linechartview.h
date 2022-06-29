@@ -2,6 +2,7 @@
 #define LINECHARTVIEW_H
 
 #include "view.h"
+#include "transaction.h"
 
 #include <QtCharts>
 #include <QLayout>
@@ -22,6 +23,13 @@ public:
     ~LineChartView() = default;
 
     QChartView* createChart();
+
+    // Funzioni di supporto alla creazione del grafico
+    // Inserisce punti nella serie corretta
+    void insertPoint(const int month, const double value);
+    // Inserisce praticamente le serie nel grafico
+    void insertSeries();
+
 };
 
 #endif // LINECHARTVIEW_H

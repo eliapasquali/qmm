@@ -22,7 +22,7 @@ QLayout* HomeView::insertButtons()
     QHBoxLayout* buttonsLayout = new QHBoxLayout;
 
     std::vector<QPushButton*> buttons;
-    linechart = new QPushButton("Andamento periodico");
+    linechart = new QPushButton("Andamento\nperiodico");
     graph2 = new QPushButton("Graph 2");
     graph3 = new QPushButton("Graph 3");
     graph4 = new QPushButton("Graph 4");

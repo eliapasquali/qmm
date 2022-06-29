@@ -4,6 +4,7 @@
 #include "controller.h"
 #include "View/linechartview.h"
 #include "Model/linechartmodel.h"
+#include <iostream>
 
 class LineChartController : public Controller
 {
@@ -13,10 +14,11 @@ private:
     void connectView() const override;
 
 public:
-    explicit LineChartController(LineChartView* v, LineChartModel* m = new LineChartModel(), Controller* parent = nullptr);
+    explicit LineChartController(LineChartView* v, Model* m, Controller* parent = nullptr);
 
     LineChartView* getView() const override;
     LineChartModel* getModel() const override;
+
 
 public slots:
     void onCloseView() const override;

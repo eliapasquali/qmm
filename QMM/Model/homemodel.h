@@ -2,20 +2,13 @@
 #define HOMEMODEL_H
 
 #include "model.h"
-#include "transaction.h"
-#include <vector>
-#include <iostream>
 
 class HomeModel : public Model
 {
 
 public:
-    explicit HomeModel() = default;
-    std::vector<Transaction> getTransactionList();
-    void updateTransactionList(std::vector<Transaction> &toBeAdded);
+    explicit HomeModel();
 
-private:
-    std::vector<Transaction> transactionList;
 };
 
 #endif // MAINMODEL_H

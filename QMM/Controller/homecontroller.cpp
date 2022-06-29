@@ -28,17 +28,18 @@ void HomeController::checkTransactionList()
 {
     auto m = getModel();
     auto toBeAdded = JSONImport::getTransactionList(JSONImport::getJSONObject());
-    m->updateTransactionList(toBeAdded);
-    emit checkedTransactionList(m->getTransactionList());
+    m->updateList(toBeAdded);
+    emit checkedTransactionList(m->getList());
 }
 
 void HomeController::createLineChart()
 {
     auto m = getModel();
-    auto transactions = m->getTransactionList();
+    auto transactions = m->getList();
     auto lineChartView = new LineChartView();
-    lineChartView->setTitle("Spesa per categoria");
-    auto lineChartController = new LineChartController(lineChartView, new LineChartModel(), this);
+    lineChartView->setTitle("Andamento periodico");
+    auto lineChartController = new LineChartController(lineChartView, m, this);
+    lineChartController->getModel()->setList(transactions);
     lineChartController->makeVisibile();
 }
 

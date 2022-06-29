@@ -4,7 +4,7 @@
 #include <QWidget>
 
 #include "View/view.h"
-#include "Model/model.cpp"
+#include "Model/model.h"
 
 class Controller : public QWidget
 {

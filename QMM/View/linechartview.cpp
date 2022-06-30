@@ -48,7 +48,7 @@ void LineChartView::defineAxis(int lastMonth) {
 
     auto axisY = new QValueAxis();
     axisY->setTitleText("Saldo");
-    axisY->setTickInterval(500);
+    //axisY->setTickInterval(500);
     lineChart->addAxis(axisY, Qt::AlignLeft);
 
     dataSeries->attachAxis(axisY);

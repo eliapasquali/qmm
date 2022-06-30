@@ -11,20 +11,38 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    Controller/*.cpp \
-    View/*.cpp \
-    Model/*.cpp \
+    Controller/linechartcontroller.cpp \
+    Controller/homecontroller.cpp \
+    Controller/controller.cpp \
+    View/view.cpp \
+    View/homeview.cpp \
+    View/linechartview.cpp \
+    Model/model.cpp \
+    Model/linechartmodel.cpp \
+    Model/homemodel.cpp \
     transaction.cpp \
     account.cpp \
-    json_import.cpp
+    json_import.cpp \
+    View/piechartview.cpp \
+    Controller/piechartcontroller.cpp \
+    Model/piechartmodel.cpp
 
 HEADERS += \
-    Controller/*.h \
-    View/*.h \
-    Model/*.h \
+    Controller/linechartcontroller.h \
+    Controller/homecontroller.h \
+    Controller/controller.h \
+    View/view.h \
+    View/homeview.h \
+    View/linechartview.h \
+    Model/model.h \
+    Model/linechartmodel.h \
+    Model/homemodel.h \
     transaction.h \
     account.h \
-    json_import.h
+    json_import.h \
+    View/piechartview.h \
+    Controller/piechartcontroller.h \
+    Model/piechartmodel.h
 
 RESOURCES += \
 

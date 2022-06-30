@@ -32,7 +32,7 @@ private:
     void connectWidgets() const override;
 
     // Elementi
-    QPushButton *linechart, *graph2, *graph3, *graph4, *graph5, *importBtn, *exportBtn, *addBtn;
+    QPushButton *linechart, *pieChartBtn, *graph3, *graph4, *graph5, *importBtn, *exportBtn, *addBtn;
     QLineEdit *name, *category;
     QDateEdit *date;
     QTextEdit *short_desc;
@@ -78,6 +78,7 @@ public slots:
 signals:
     void importButtonClicked();
     void lineChartClicked();
+    void pieChartClicked();
 };
 
 #endif // HOMEVIEW_H

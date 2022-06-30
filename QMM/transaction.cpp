@@ -22,9 +22,9 @@ const QDate &Transaction::getDate() const { return date; }
 
 void Transaction::setDate(const QDate &newDate) { date = newDate; }
 
-bool Transaction::getType() const { return type; }
+bool Transaction::isOutcome() const { return type; }
 
-void Transaction::setType(bool newType) { type = newType; }
+void Transaction::setOutcome(bool newType) { type = newType; }
 
 const QString &Transaction::getShort_desc() const { return short_desc; }
 

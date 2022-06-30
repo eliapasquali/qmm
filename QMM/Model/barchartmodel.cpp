@@ -27,10 +27,11 @@ std::map<int, double> BarChartModel::calculateMonthlyTotals(Category cat) const
 
     for(auto t : transactionList) {
         auto transactionCat = t.getCategory();
-        auto transactionMonth = t.getDate().month();
-        auto transactionValue = t.getValue();
 
-        if(transactionCat==cat) {
+        if(transactionCat==cat && t.isOutcome()) {
+            auto transactionMonth = t.getDate().month();
+            auto transactionValue = t.getValue();
+
             auto monthlyTotal = monthlyTotals.find(transactionMonth);
             monthlyTotal->second += transactionValue;
         }

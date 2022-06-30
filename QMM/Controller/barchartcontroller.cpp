@@ -12,7 +12,7 @@ BarChartController::BarChartController(BarChartView* v, Model* m, Controller* pa
 
     for(auto cat : categories) {
         auto monthlyTotals = getModel()->calculateMonthlyTotals(cat);
-        for(auto m : monthlyTotals) getView()->insertInSet(cat, m.second);
+        for(auto m : monthlyTotals) getView()->insertInSet(cat, m.second*-1);
     }
 
     getView()->insertSeries();

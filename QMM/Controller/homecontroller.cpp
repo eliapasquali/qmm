@@ -50,7 +50,7 @@ void HomeController::createBarChart()
     auto m = getModel();
     auto transactions = m->getList();
     auto barChartView = new BarChartView();
-    barChartView->setTitle("Spese per categoria");
+    barChartView->setTitle("Uscite mensili per categoria");
     auto barChartController = new BarChartController(barChartView, m, this);
     barChartController->getModel()->setList(transactions);
     barChartController->makeVisibile();

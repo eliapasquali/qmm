@@ -18,7 +18,7 @@ BarChartView::BarChartView(const QSize& size, const QString& title, View* parent
 
 QChartView* BarChartView::createChart() {
     barChart = new QChart();
-    barChart->setTitle("Spese mensili per categoria");
+    barChart->setTitle("Uscite mensili per categoria");
     barChart->setAnimationOptions(QChart::SeriesAnimations);
     barChart->legend()->setAlignment(Qt::AlignBottom);
 
@@ -31,8 +31,9 @@ QChartView* BarChartView::createChart() {
 }
 
 void BarChartView::defineSets(const std::vector<Category>& categories) {
-    for(auto c : categories)
+    for(auto c : categories) {
         sets.insert({c, new QBarSet(enumToString.at(c))});
+    }
 }
 
 void BarChartView::insertInSet(const Category set, const double value) {
@@ -40,7 +41,11 @@ void BarChartView::insertInSet(const Category set, const double value) {
 }
 
 void BarChartView::insertSeries() {
-    for(auto s : sets) bars->append(s.second);
+    for(auto s : sets) {
+        bars->append(s.second);
+    }
+
+    barChart->addSeries(bars);
 }
 
 void BarChartView::defineAxis() {

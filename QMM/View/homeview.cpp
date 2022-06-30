@@ -25,7 +25,7 @@ QLayout* HomeView::insertButtons()
 
     std::vector<QPushButton*> buttons;
     linechart = new QPushButton("Andamento\nperiodico");
-    barchart = new QPushButton("Spesa per\ncategoria");
+    barchart = new QPushButton("Uscite per\ncategoria");
     graph3 = new QPushButton("Graph 3");
     graph4 = new QPushButton("Graph 4");
     graph5 = new QPushButton("Graph 5");

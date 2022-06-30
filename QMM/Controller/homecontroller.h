@@ -3,10 +3,13 @@
 
 #include "controller.h"
 #include "linechartcontroller.h"
+#include "barchartcontroller.h"
 #include "Model/homemodel.h"
 #include "Model/linechartmodel.h"
+#include "Model/barchartmodel.h"
 #include "View/homeview.h"
 #include "View/linechartview.h"
+#include "View/barchartview.h"
 #include "json_import.h"
 
 class HomeController : public Controller
@@ -24,6 +27,7 @@ public:
 public slots:
     void checkTransactionList();
     void createLineChart();
+    void createBarChart();
     void onCloseView() const override;
 
 signals:

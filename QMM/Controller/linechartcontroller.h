@@ -4,7 +4,6 @@
 #include "controller.h"
 #include "View/linechartview.h"
 #include "Model/linechartmodel.h"
-#include <iostream>
 
 class LineChartController : public Controller
 {

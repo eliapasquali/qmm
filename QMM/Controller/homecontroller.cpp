@@ -22,6 +22,8 @@ void HomeController::connectView() const {
             view, &HomeView::displayTransaction);
     connect(view, &HomeView::lineChartClicked,
             this, &HomeController::createLineChart);
+    connect(view, &HomeView::barChartClicked,
+            this, &HomeController::createBarChart);
 }
 
 void HomeController::checkTransactionList()
@@ -41,6 +43,17 @@ void HomeController::createLineChart()
     auto lineChartController = new LineChartController(lineChartView, m, this);
     lineChartController->getModel()->setList(transactions);
     lineChartController->makeVisibile();
+}
+
+void HomeController::createBarChart()
+{
+    auto m = getModel();
+    auto transactions = m->getList();
+    auto barChartView = new BarChartView();
+    barChartView->setTitle("Spese per categoria");
+    auto barChartController = new BarChartController(barChartView, m, this);
+    barChartController->getModel()->setList(transactions);
+    barChartController->makeVisibile();
 }
 
 void HomeController::onCloseView() const

@@ -1,0 +1,114 @@
+{
+ "transactionList": [
+{
+"name": "consequat irure  " , 
+"value": 1628.93, 
+"category": 3, 
+"day": 1, 
+"month": 1, 
+"year": 2022, 
+"type": 0, 
+"short_desc": "Nisi anim pariatur laboris consectetur laboris aliqua laborum ut dolore.  " 
+},
+{
+"name": "Spesa per settimana  " , 
+"value": -150.39, 
+"category": 1, 
+"day": 2, 
+"month": 6, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "Spesa settimanale alla conad   " 
+},
+{
+"name": "Stipendio  " , 
+"value": 1377.12, 
+"category": 0, 
+"day": 10, 
+"month": 8, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "Stipendio mensile di agosto, strordinari inclusi   " 
+},
+{
+"name": "Risparmio vacanze  " , 
+"value": 177.7, 
+"category": 4, 
+"day": 10, 
+"month": 6, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "Soldi avanzati a giugno, messi da parte per vacanza in Spagna   " 
+},
+{
+"name": "Transazione falsa 1  " , 
+"value": -756.2, 
+"category": 4, 
+"day": 14, 
+"month": 6, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "desc   " 
+},
+{
+"name": "Transazione falsa 2  " , 
+"value": 26.2, 
+"category": 2, 
+"day": 14, 
+"month": 8, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "desc   " 
+},
+{
+"name": "Transazione falsa 3  " , 
+"value": -123.2, 
+"category": 3, 
+"day": 14, 
+"month": 4, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "desc   " 
+},
+{
+"name": "Transazione falsa 4  " , 
+"value": 36.2, 
+"category": 4, 
+"day": 14, 
+"month": 2, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "desc   " 
+},
+{
+"name": "Transazione falsa 5  " , 
+"value": -6.2, 
+"category": 5, 
+"day": 14, 
+"month": 4, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "desc   " 
+},
+{
+"name": "Transazione falsa 6  " , 
+"value": 26.2, 
+"category": 1, 
+"day": 14, 
+"month": 3, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "desc   " 
+},
+{
+"name": "Transazione falsa 7  " , 
+"value": -156.2, 
+"category": 4, 
+"day": 14, 
+"month": 6, 
+"year": 2019, 
+"type": 0, 
+"short_desc": "desc   " 
+}
+]
+}

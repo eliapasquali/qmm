@@ -5,6 +5,7 @@
 #include "linechartcontroller.h"
 #include "barchartcontroller.h"
 #include "scatterchartcontroller.h"
+#include "piechartcontroller.h"
 #include "Model/homemodel.h"
 #include "Model/linechartmodel.h"
 #include "Model/barchartmodel.h"
@@ -13,6 +14,7 @@
 #include "View/linechartview.h"
 #include "View/barchartview.h"
 #include "View/scatterchartview.h"
+#include "View/piechartview.h"
 #include "json_import.h"
 
 class HomeController : public Controller
@@ -32,6 +34,7 @@ public slots:
     void createLineChart();
     void createBarChart();
     void createScatterChart();
+    void createPieChart();
     void onCloseView() const override;
 
 signals:

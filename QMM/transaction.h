@@ -56,6 +56,7 @@ public:
 
     const QString& getShort_desc() const;
     void setShort_desc(const QString& newShort_desc);
+
 };
 
 #endif // TRANSACTION_H

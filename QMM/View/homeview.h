@@ -32,7 +32,7 @@ private:
     void connectWidgets() const override;
 
     // Elementi
-    QPushButton *linechart, *barchart, *graph3, *scatterchart, *graph5, *importBtn, *exportBtn, *addBtn;
+    QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *graph5, *importBtn, *exportBtn, *addBtn;
     QLineEdit *name, *category;
     QDateEdit *date;
     QTextEdit *short_desc;
@@ -80,6 +80,7 @@ signals:
     void lineChartClicked();
     void barChartClicked();
     void scatterChartClicked();
+    void pieChartClicked();
 };
 
 #endif // HOMEVIEW_H

@@ -4,6 +4,7 @@
 #include "model.h"
 #include <map>
 #include <limits>
+#include <cmath>
 
 class LineChartModel : public Model
 {

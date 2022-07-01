@@ -32,6 +32,9 @@ std::pair<double, double> LineChartModel::getRange() const {
         if(t.second > max) max = t.second;
     }
 
+    // Arrotonda alla migliaia poi +1000
+    min = ((std::floor(min/ 1000))-1) * 1000;
+    max = ((std::ceil(max/ 1000))+1) * 1000;
     auto range = std::pair<double, double>{min, max};
     return range;
 }

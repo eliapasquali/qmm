@@ -24,6 +24,8 @@ void HomeController::connectView() const {
             this, &HomeController::createLineChart);
     connect(view, &HomeView::barChartClicked,
             this, &HomeController::createBarChart);
+    connect(view, &HomeView::pieChartClicked,
+            this, &HomeController::createPieChart);
 }
 
 void HomeController::checkTransactionList()
@@ -55,6 +57,18 @@ void HomeController::createBarChart()
     barChartController->getModel()->setList(transactions);
     barChartController->makeVisibile();
 }
+
+void HomeController::createPieChart()
+{
+    auto m = getModel();
+    auto transactions = m->getList();
+    auto p = new PieChartView();
+    p->setTitle("Spese per tipologia");
+    auto pieChartController = new PieChartController(p, m, this);
+    pieChartController->getModel()->setList(transactions);
+    pieChartController->makeVisibile();
+}
+
 
 void HomeController::onCloseView() const
 {

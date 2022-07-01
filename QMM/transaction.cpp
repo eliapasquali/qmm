@@ -30,5 +30,7 @@ const QString &Transaction::getShort_desc() const { return short_desc; }
 
 void Transaction::setShort_desc(const QString &newShort_desc) { short_desc = newShort_desc; }
 
+
+
 Transaction::Transaction(QString n, double v, QDate d,  Category cat, bool t, QString sd)
     :  name(n), value(v), category(cat), date(d), type(t), short_desc(sd) {}

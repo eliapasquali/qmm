@@ -2,6 +2,7 @@
 #define LINECHARTCONTROLLER_H
 
 #include "controller.h"
+#include "transaction.h"
 #include "View/linechartview.h"
 #include "Model/linechartmodel.h"
 

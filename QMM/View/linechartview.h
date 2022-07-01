@@ -21,7 +21,10 @@ private:
     void connectWidgets() const override;
 
 public:
-    explicit LineChartView(const QSize& size = QSize(720, 480), const QString& title = QString("QMM"), View* parent = nullptr);
+    explicit LineChartView(const QSize& size = QSize(720, 480),
+                           const QString& title = QString("QMM"),
+                           View* parent = nullptr);
+
     ~LineChartView() = default;
 
     QChartView* createChart();

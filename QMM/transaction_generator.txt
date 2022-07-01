@@ -1,0 +1,17 @@
+https://json-generator.com/
+
+Giorni fino a 31 rompono il programma (es 31/2)
+[
+  '{{repeat(5, 50)}}',
+  {
+    name: '{{lorem(2, "words")}}',
+    value: '{{floating(0, 5000, 2)}}',
+    category: '{{integer(0, 5)}}',
+    day: '{{integer(1,29)}}',
+    month: '{{integer(1,12)}}',
+    year: '2022',
+    type: '{{bool()}}',
+    short_desc: '{{lorem(1, "sentences")}}'
+  }
+]
+  

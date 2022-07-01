@@ -78,7 +78,7 @@ public slots:
 signals:
     void importButtonClicked();
     void lineChartClicked();
-        void barChartClicked();
+    void barChartClicked();
 };
 
 #endif // HOMEVIEW_H

@@ -51,8 +51,8 @@ public:
     const QDate &getDate() const;
     void setDate(const QDate &newDate);
 
-    bool getType() const;
-    void setType(bool newType);
+    bool isOutcome() const;
+    void setOutcome(bool newType);
 
     const QString& getShort_desc() const;
     void setShort_desc(const QString& newShort_desc);

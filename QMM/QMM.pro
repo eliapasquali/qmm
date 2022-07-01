@@ -11,45 +11,51 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    Controller/linechartcontroller.cpp \
-    Controller/homecontroller.cpp \
     Controller/controller.cpp \
+    Controller/homecontroller.cpp \
+    Controller/linechartcontroller.cpp \
+    Controller/barchartcontroller.cpp \
+    Controller/piechartcontroller.cpp \
+    Controller/scatterchartcontroller.cpp \
     View/view.cpp \
     View/homeview.cpp \
     View/linechartview.cpp \
+    View/barchartview.cpp \
+    View/piechartview.cpp \
+    View/scatterchartview.cpp \
     Model/model.cpp \
-    Model/linechartmodel.cpp \
     Model/homemodel.cpp \
+    Model/linechartmodel.cpp \
+    Model/piechartmodel.cpp \
+    Model/barchartmodel.cpp \
+    Model/scatterchartmodel.cpp \
     transaction.cpp \
     account.cpp \
-    json_import.cpp \
-    Model/barchartmodel.cpp \
-    View/barchartview.cpp \
-    Controller/barchartcontroller.cpp \
-        View/piechartview.cpp \
-    Controller/piechartcontroller.cpp \
-    Model/piechartmodel.cpp \
-    json_export.cpp
+    json_export.cpp \
+    json_import.cpp
 
 HEADERS += \
     Controller/linechartcontroller.h \
     Controller/homecontroller.h \
     Controller/controller.h \
+    Controller/barchartcontroller.h \
+    Controller/piechartcontroller.h \
+    Controller/scatterchartcontroller.h \
     View/view.h \
     View/homeview.h \
     View/linechartview.h \
+    View/barchartview.h \
+    View/piechartview.h \
+    View/scatterchartview.h \
     Model/model.h \
     Model/linechartmodel.h \
     Model/homemodel.h \
+    Model/barchartmodel.h \
+    Model/piechartmodel.h \
+    Model/scatterchartmodel.h \
     transaction.h \
     account.h \
     json_import.h \
-    Model/barchartmodel.h \
-    View/barchartview.h \
-    Controller/barchartcontroller.h \
-    View/piechartview.h \
-    Controller/piechartcontroller.h \
-    Model/piechartmodel.h \
     json_export.h
 
 RESOURCES += \

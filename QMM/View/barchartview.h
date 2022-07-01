@@ -21,7 +21,7 @@ private:
 
 public:
     explicit BarChartView(const QSize& size = QSize(720, 480),
-                          const QString& title = QString("QMM"),
+                          const QString& title = QString("Uscite per categoria"),
                           View* parent = nullptr);
 
     ~BarChartView() = default;

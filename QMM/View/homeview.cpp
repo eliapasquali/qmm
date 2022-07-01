@@ -17,6 +17,8 @@ void HomeView::connectWidgets() const {
             this, &HomeView::lineChartClicked);
     connect(barchart, &QPushButton::clicked,
             this, &HomeView::barChartClicked);
+    connect(scatterchart, &QPushButton::clicked,
+            this, &HomeView::scatterChartClicked);
     connect(pieChartBtn, &QPushButton::clicked,
             this, &HomeView::pieChartClicked);
 }
@@ -29,12 +31,12 @@ QLayout* HomeView::insertButtons()
     linechart = new QPushButton("Andamento\nperiodico");
     barchart = new QPushButton("Uscite per\ncategoria");
     pieChartBtn = new QPushButton("Spese per tipologia");
-    graph4 = new QPushButton("Graph 4");
+    scatterchart = new QPushButton("Tutte le\n transazioni");
     graph5 = new QPushButton("Graph 5");
     buttons.push_back(linechart);
     buttons.push_back(barchart);
     buttons.push_back(pieChartBtn);
-    buttons.push_back(graph4);
+    buttons.push_back(scatterchart);
     buttons.push_back(graph5);
 
     const QSize BUTTON_SIZE = QSize(150,50);

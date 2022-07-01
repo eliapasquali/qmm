@@ -4,8 +4,6 @@
 #include "view.h"
 #include "transaction.h"
 
-#include <iostream>
-
 #include <QtCharts>
 #include <QLayout>
 #include <QLineSeries>

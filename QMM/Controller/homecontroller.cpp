@@ -24,6 +24,8 @@ void HomeController::connectView() const {
             this, &HomeController::createLineChart);
     connect(view, &HomeView::barChartClicked,
             this, &HomeController::createBarChart);
+    connect(view, &HomeView::scatterChartClicked,
+            this, &HomeController::createScatterChart);
     connect(view, &HomeView::pieChartClicked,
             this, &HomeController::createPieChart);
 }
@@ -56,6 +58,17 @@ void HomeController::createBarChart()
     auto barChartController = new BarChartController(barChartView, m, this);
     barChartController->getModel()->setList(transactions);
     barChartController->makeVisibile();
+}
+
+void HomeController::createScatterChart()
+{
+    auto m = getModel();
+    auto transactions = m->getList();
+    auto scatterChartView = new ScatterChartView();
+    scatterChartView->setTitle("Tutte le transazioni");
+    auto scatterChartController = new ScatterChartController(scatterChartView, m, this);
+    scatterChartController->getModel()->setList(transactions);
+    scatterChartController->makeVisibile();
 }
 
 void HomeController::createPieChart()

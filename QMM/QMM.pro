@@ -28,7 +28,8 @@ SOURCES += \
     Controller/barchartcontroller.cpp \
         View/piechartview.cpp \
     Controller/piechartcontroller.cpp \
-    Model/piechartmodel.cpp
+    Model/piechartmodel.cpp \
+    json_export.cpp
 
 HEADERS += \
     Controller/linechartcontroller.h \
@@ -48,7 +49,8 @@ HEADERS += \
     Controller/barchartcontroller.h \
     View/piechartview.h \
     Controller/piechartcontroller.h \
-    Model/piechartmodel.h
+    Model/piechartmodel.h \
+    json_export.h
 
 RESOURCES += \
 

@@ -18,6 +18,8 @@ void HomeController::connectView() const {
     auto view = getView();
     connect(view, &HomeView::importButtonClicked,
             this, &HomeController::checkTransactionList);
+    connect(view, &HomeView::exportButtonClicked,
+            this, &HomeController::exportTransaction);
     connect(this, &HomeController::checkedTransactionList,
             view, &HomeView::displayTransaction);
     connect(view, &HomeView::lineChartClicked,
@@ -34,6 +36,13 @@ void HomeController::checkTransactionList()
     auto toBeAdded = JSONImport::getTransactionList(JSONImport::getJSONObject());
     m->updateList(toBeAdded);
     emit checkedTransactionList(m->getList());
+}
+
+void HomeController::exportTransaction()
+{
+    std::cout << "ciao";
+    auto m = getModel();
+    json_export::exportTransaction(m->getList());
 }
 
 void HomeController::createLineChart()

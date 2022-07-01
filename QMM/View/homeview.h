@@ -77,6 +77,7 @@ public slots:
 
 signals:
     void importButtonClicked();
+    void exportButtonClicked();
     void lineChartClicked();
     void barChartClicked();
     void pieChartClicked();

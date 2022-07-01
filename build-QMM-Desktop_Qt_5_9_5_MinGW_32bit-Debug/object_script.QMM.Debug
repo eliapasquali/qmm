@@ -18,6 +18,7 @@ INPUT(
 ./debug\piechartview.o
 ./debug\piechartcontroller.o
 ./debug\piechartmodel.o
+./debug\json_export.o
 ./debug\moc_linechartcontroller.o
 ./debug\moc_homecontroller.o
 ./debug\moc_controller.o

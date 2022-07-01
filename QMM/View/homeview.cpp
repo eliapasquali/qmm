@@ -13,6 +13,8 @@ HomeView::HomeView(const QSize& size, const QString& title, View* parent) :
 void HomeView::connectWidgets() const {
     connect(importBtn, &QPushButton::clicked,
             this, &HomeView::importButtonClicked);
+    connect(exportBtn, &QPushButton::clicked,
+            this, &HomeView::exportButtonClicked);
     connect(linechart, &QPushButton::clicked,
             this, &HomeView::lineChartClicked);
     connect(barchart, &QPushButton::clicked,

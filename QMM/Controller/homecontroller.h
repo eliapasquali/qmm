@@ -13,6 +13,7 @@
 #include "View/barchartview.h"
 #include "View/piechartview.h"
 #include "json_import.h"
+#include "json_export.h"
 
 class HomeController : public Controller
 {
@@ -28,6 +29,7 @@ public:
 
 public slots:
     void checkTransactionList();
+    void exportTransaction();
     void createLineChart();
     void createBarChart();
     void createPieChart();

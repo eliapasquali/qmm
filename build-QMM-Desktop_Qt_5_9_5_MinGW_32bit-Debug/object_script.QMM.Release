@@ -18,6 +18,7 @@ INPUT(
 ./release\piechartview.o
 ./release\piechartcontroller.o
 ./release\piechartmodel.o
+./release\json_export.o
 ./release\moc_linechartcontroller.o
 ./release\moc_homecontroller.o
 ./release\moc_controller.o

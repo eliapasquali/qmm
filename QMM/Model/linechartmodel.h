@@ -3,9 +3,13 @@
 
 #include "model.h"
 #include <map>
+#include <limits>
 
 class LineChartModel : public Model
 {
+
+private:
+    std::map<int, double> totals;
 
 public:
     /**
@@ -14,7 +18,9 @@ public:
      */
     explicit LineChartModel(Model* baseModel);
 
-    std::map<int, double> getMonthlyTotal() const;
+    void calculateMonthlyTotals();
+    std::map<int, double> getMonthlyTotals() const;
+    std::pair<double, double> getRange() const;
 };
 
 #endif // LINECHARTMODEL_H

@@ -48,9 +48,11 @@ void HomeController::createLineChart()
 void HomeController::createPieChart()
 {
     auto m = getModel();
+    auto transactions = m->getList();
     auto p = new PieChartView();
     p->setTitle("Spese per tipologia");
     auto pieChartController = new PieChartController(p, m, this);
+    pieChartController->getModel()->setList(transactions);
     pieChartController->makeVisibile();
 }
 

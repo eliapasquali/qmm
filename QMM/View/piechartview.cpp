@@ -1,6 +1,5 @@
 #include "piechartview.h"
 
-#include <QVBoxLayout>
 
 void PieChartView::connectWidgets() const
 {
@@ -11,6 +10,41 @@ PieChartView::PieChartView(const QSize &size, const QString &title, View *parent
 {
     QLayout* mainLayout = new QVBoxLayout();
 
+    QChartView* chartView = new QChartView(createChart());
+
+    mainLayout->addWidget(chartView);
+
     setLayout(mainLayout);
 
 }
+
+QChart* PieChartView::createChart()
+{
+
+    series = new QPieSeries();
+
+    chart = new QChart();
+
+    chart->setTitle("Spesa per categoria");
+    chart->legend()->hide();
+
+    return chart;
+}
+
+
+
+void PieChartView::addCategories(Category c, double value)
+{
+    auto catIter = enumToString.find(c);
+    QString catName = catIter->second;
+
+    series->append(catName,value);
+}
+
+void PieChartView::insertSeries()
+{
+    chart->addSeries(series);
+}
+
+
+

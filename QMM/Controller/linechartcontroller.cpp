@@ -8,6 +8,7 @@ LineChartController::LineChartController(LineChartView* v, Model* m, Controller*
 
     // Prendi transazioni dal modello
     auto monthlyTotals = getModel()->getMonthlyTotal();
+
     // Inserisci punti nella view
 
     getView()->insertPoint(1,0);

@@ -11,9 +11,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    Controller/linechartcontroller.cpp \
-    Controller/homecontroller.cpp \
     Controller/controller.cpp \
+    Controller/homecontroller.cpp \
+    Controller/linechartcontroller.cpp \
     Controller/barchartcontroller.cpp \
     Controller/piechartcontroller.cpp \
     Controller/scatterchartcontroller.cpp \
@@ -23,16 +23,16 @@ SOURCES += \
     View/barchartview.cpp \
     View/piechartview.cpp \
     View/scatterchartview.cpp \
-    Model/piechartmodel.cpp \
     Model/model.cpp \
-    Model/linechartmodel.cpp \
     Model/homemodel.cpp \
+    Model/linechartmodel.cpp \
+    Model/piechartmodel.cpp \
     Model/barchartmodel.cpp \
     Model/scatterchartmodel.cpp \
     transaction.cpp \
     account.cpp \
     json_import.cpp
-
+    
 HEADERS += \
     Controller/linechartcontroller.h \
     Controller/homecontroller.h \

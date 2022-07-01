@@ -26,7 +26,7 @@ QChart* PieChartView::createChart()
     chart = new QChart();
 
     chart->setTitle("Spesa per categoria");
-    chart->legend()->hide();
+    chart->legend()->setVisible(true);
 
     return chart;
 }

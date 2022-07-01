@@ -12,7 +12,7 @@ PieChartModel::PieChartModel(Model* baseModel)
 void PieChartModel::calculateCategories()
 {
     for(auto t : transactionList){
-        if(std::find(categories.begin(), categories.end(), t.getCategory()) == categories.end())
+        if(std::find(categories.begin(), categories.end(), t.getCategory()) == categories.end() && t.isOutcome())
             categories.push_back(t.getCategory());
     }
 

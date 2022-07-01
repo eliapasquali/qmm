@@ -73,7 +73,7 @@
     {
         "name" : "Transazione falsa 5",
         "value" : 6.2,
-        "category" : 4,
+        "category" : 2,
         "day": 14,
         "month" : 4,
         "year" : 2019,
@@ -83,7 +83,7 @@
     {
         "name" : "Transazione falsa 6",
         "value" : 26.2,
-        "category" : 4,
+        "category" : 2,
         "day": 14,
         "month" : 3,
         "year" : 2019,

@@ -7,17 +7,23 @@ LineChartController::LineChartController(LineChartView* v, Model* m, Controller*
 {
 
     // Prendi transazioni dal modello
-    auto monthlyTotals = getModel()->getMonthlyTotal();
+    auto monthlyTotals = getModel()->getMonthlyTotals();
+    int lastMonth = 12; double min = 0; double max = 0;
     // Inserisci punti nella view
 
-    getView()->insertPoint(1,0);
-    for (auto month : monthlyTotals) {
-        getView()->insertPoint(month.first, month.second);
+    if(!monthlyTotals.empty()) {
+        for (auto month : monthlyTotals) {
+            getView()->insertPoint(month.first, month.second);
+        }
+        lastMonth = monthlyTotals.rbegin()->first;
+        auto range = getModel()->getRange();
+        min = range.first; max = range.second;
     }
 
     // Riempie il grafico
     getView()->insertSeries();
-    getView()->defineAxis(monthlyTotals.rbegin()->first);
+    // Crea assi
+    getView()->defineAxis(lastMonth, min, max);
     connectView();
 }
 

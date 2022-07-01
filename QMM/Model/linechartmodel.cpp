@@ -2,10 +2,11 @@
 
 LineChartModel::LineChartModel(Model* baseModel) {
     transactionList = baseModel->getList();
+    calculateMonthlyTotals();
 }
 
-std::map<int, double> LineChartModel::getMonthlyTotal() const{
-    std::map<int, double> totals;
+void LineChartModel::calculateMonthlyTotals()
+{
     for(auto t : transactionList) {
         auto month = t.getDate().month();
         auto value = t.getValue();
@@ -13,5 +14,24 @@ std::map<int, double> LineChartModel::getMonthlyTotal() const{
         totals.insert({month, value});
     }
 
+    auto firstMonth = totals.begin()->first;
+    for(int i=1; i<firstMonth; i++) totals.insert({i, 0});
+
+}
+
+std::map<int, double> LineChartModel::getMonthlyTotals() const{
     return totals;
+}
+
+std::pair<double, double> LineChartModel::getRange() const {
+    auto min = std::numeric_limits<double>::max();
+    auto max = std::numeric_limits<double>::min();
+
+    for(auto t : totals) {
+        if(t.second < min) min = t.second;
+        if(t.second > max) max = t.second;
+    }
+
+    auto range = std::pair<double, double>{min, max};
+    return range;
 }

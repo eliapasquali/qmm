@@ -36,7 +36,7 @@ void LineChartView::insertSeries() {
     lineChart->addSeries(dataSeries);
 }
 
-void LineChartView::defineAxis(int lastMonth) {
+void LineChartView::defineAxis(int lastMonth, double min, double max) {
 
     auto axisX = new QValueAxis();
     axisX->setTitleText("Mese");
@@ -46,10 +46,20 @@ void LineChartView::defineAxis(int lastMonth) {
     lineChart->addAxis(axisX, Qt::AlignBottom);
     dataSeries->attachAxis(axisX);
 
+
     auto axisY = new QValueAxis();
     axisY->setTitleText("Saldo");
     axisY->setTickInterval(500);
+    axisY->setRange(min, max);
     lineChart->addAxis(axisY, Qt::AlignLeft);
-
     dataSeries->attachAxis(axisY);
+
+    auto positive = new QCategoryAxis;
+    positive->append("0", 0);
+    positive->append(QString(), min);
+    positive->append(QString(), max);
+    positive->setGridLineColor(QColor(255, 0, 0, 127));
+    lineChart->addAxis(positive, Qt::AlignRight);
+    dataSeries->attachAxis(positive);
+
 }

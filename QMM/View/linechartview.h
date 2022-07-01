@@ -4,6 +4,8 @@
 #include "view.h"
 #include "transaction.h"
 
+#include <iostream>
+
 #include <QtCharts>
 #include <QLayout>
 #include <QLineSeries>
@@ -14,7 +16,7 @@ class LineChartView : public View
 
 private:
     QChart* lineChart;
-    QLineSeries* dataSeries;
+    QLineSeries *dataSeries;
 
     void connectWidgets() const override;
 
@@ -27,9 +29,10 @@ public:
     // Funzioni di supporto alla creazione del grafico
     // Inserisce punti nella serie corretta
     void insertPoint(const int month, const double value);
+    // Definisce asse zeri
     // Inserisce praticamente le serie nel grafico
     void insertSeries();
-    void defineAxis(int lastMonth);
+    void defineAxis(int lastMonth, double min, double max);
 
 };
 

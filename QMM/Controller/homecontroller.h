@@ -37,6 +37,7 @@ public slots:
     void createBarChart();
     void createScatterChart();
     void createPieChart();
+    void insertTransaction(Transaction t);
     void onCloseView() const override;
 
 signals:

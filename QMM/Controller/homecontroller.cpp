@@ -30,6 +30,8 @@ void HomeController::connectView() const {
             this, &HomeController::createScatterChart);
     connect(view, &HomeView::pieChartClicked,
             this, &HomeController::createPieChart);
+    connect(view, &HomeView::createdTransaction,
+            this, &HomeController::insertTransaction);
 }
 
 void HomeController::checkTransactionList()
@@ -37,6 +39,13 @@ void HomeController::checkTransactionList()
     auto m = getModel();
     auto toBeAdded = JSONImport::getTransactionList(JSONImport::getJSONObject());
     m->updateList(toBeAdded);
+    emit checkedTransactionList(m->getList());
+}
+
+void HomeController::insertTransaction(Transaction t)
+{
+    auto m = getModel();
+    m->addTransaction(t);
     emit checkedTransactionList(m->getList());
 }
 

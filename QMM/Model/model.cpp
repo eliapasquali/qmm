@@ -15,3 +15,9 @@ void Model::updateList(std::vector<Transaction> &toBeAdded) {
                            toBeAdded.begin(),
                            toBeAdded.end());
 }
+
+void Model::addTransaction(Transaction t)
+{
+    transactionList.push_back(t);
+}
+

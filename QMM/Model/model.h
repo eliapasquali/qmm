@@ -17,6 +17,7 @@ public:
     void setList(std::vector<Transaction> &tList);
     std::vector<Transaction> getList() const;
     void updateList(std::vector<Transaction> &toBeAdded);
+    void addTransaction(Transaction t);
 };
 
 #endif // MODEL_H

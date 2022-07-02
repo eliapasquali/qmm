@@ -1,3 +1,4 @@
+
 #include "linechartview.h"
 
 void LineChartView::connectWidgets() const {}

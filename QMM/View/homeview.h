@@ -16,6 +16,7 @@
 #include <QLabel>
 
 #include <iostream>
+#include <qcombobox.h>
 #include <vector>
 #include "transaction.h"
 
@@ -27,13 +28,15 @@ public:
     explicit HomeView(const QSize& size = QSize(1024, 768), const QString& title = QString("QMM"), View* parent = nullptr);
     ~HomeView() = default;
 
+
 private:
 
     void connectWidgets() const override;
 
     // Elementi
     QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *graph5, *importBtn, *exportBtn, *addBtn;
-    QLineEdit *name, *category;
+    QLineEdit *name;
+    QComboBox *category, *type;
     QDateEdit *date;
     QTextEdit *short_desc;
     QDoubleSpinBox *value;
@@ -74,6 +77,7 @@ private:
 
 public slots:
     void displayTransaction(std::vector<Transaction> transactionVector);
+    void createTransaction();
 
 signals:
     void importButtonClicked();
@@ -82,6 +86,8 @@ signals:
     void barChartClicked();
     void scatterChartClicked();
     void pieChartClicked();
+    void addButtonClicked();
+    void createdTransaction(Transaction t);
 };
 
 #endif // HOMEVIEW_H

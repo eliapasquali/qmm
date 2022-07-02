@@ -10,6 +10,7 @@ HomeView::HomeView(const QSize& size, const QString& title, View* parent) :
     connectWidgets();
 }
 
+
 void HomeView::connectWidgets() const {
     connect(importBtn, &QPushButton::clicked,
             this, &HomeView::importButtonClicked);
@@ -23,6 +24,9 @@ void HomeView::connectWidgets() const {
             this, &HomeView::scatterChartClicked);
     connect(pieChartBtn, &QPushButton::clicked,
             this, &HomeView::pieChartClicked);
+    connect(addBtn, &QPushButton::clicked,
+            this, &HomeView::createTransaction);
+
 }
 
 QLayout* HomeView::insertButtons()
@@ -60,9 +64,22 @@ QGroupBox* HomeView::setupForm()
     // Creo form di inserimento ed elementi
     name = new QLineEdit;
     value = new QDoubleSpinBox;
-    category = new QLineEdit;
+    category = new QComboBox;
+    //type = new QComboBox;
     date = new QDateEdit;
     short_desc = new QTextEdit;
+
+    //setto i valori del menu a tendina di category
+    category->addItem("Lavoro");
+    category->addItem("Casa");
+    category->addItem("Intrattenimento");
+    category->addItem("Salute");
+    category->addItem("Risparmi");
+    category->addItem("Tasse");
+
+    //setto i valori del menu a tendina di type
+    //type->addItem("Spesa");
+    //type->addItem("Introito");
 
     // Creo layout del form
     QFormLayout* formLayout = new QFormLayout;
@@ -133,6 +150,7 @@ QLayout* HomeView::finalLayout()
     return homeLayout;
 }
 
+
 void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
     int maxRows = transactionVector.size();
     movements->setRowCount(maxRows);
@@ -145,4 +163,18 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
         movements->setItem(row, 4, new QTableWidgetItem(t.getShort_desc()));
         row++;
     }
+}
+
+// funzione che crea la transazione prendendo i valori dal form e la passa allo slot insertTransaction del homecontroller
+void HomeView::createTransaction()
+{
+    Category cat;
+    bool type = (value->value() < 0);
+    for(auto i : enumToString)
+        if (i.second == category->currentText())
+            cat = i.first;
+
+    Transaction t(name->text(), value->value(), date->date(), cat,type,short_desc->toPlainText());
+
+    emit createdTransaction(t);
 }

@@ -23,7 +23,7 @@ void json_export::exportTransaction(std::vector<Transaction> toBeExported)
         for(auto t = toBeExported.begin(); t != toBeExported.end(); t++){
             out << "{\n"
             << "\"name\": " << "\"" << t->getName() << " \" , \n"
-            << "\"value\": " << t->getValue() << ", \n"
+            << "\"value\": " << abs(t->getValue()) << ", \n"
             << "\"category\": " << t->getCategory() << ", \n"
             << "\"day\": " << t->getDate().day() << ", \n"
             << "\"month\": " << t->getDate().month() << ", \n"

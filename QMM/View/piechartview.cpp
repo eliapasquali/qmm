@@ -12,6 +12,7 @@ PieChartView::PieChartView(const QSize &size, const QString &title, View *parent
     QLayout* mainLayout = new QVBoxLayout();
 
     QChartView* chartView = new QChartView(createChart());
+    chartView->setRenderHint(QPainter::Antialiasing);
 
     mainLayout->addWidget(chartView);
 
@@ -29,6 +30,7 @@ QChart* PieChartView::createChart()
     chart->setTitle("Spesa per categoria");
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignRight);
+
 
     return chart;
 }

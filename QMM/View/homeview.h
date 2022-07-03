@@ -16,6 +16,7 @@
 #include <QLabel>
 
 #include <iostream>
+#include <qcombobox.h>
 #include <vector>
 #include "transaction.h"
 
@@ -33,11 +34,13 @@ private:
 
     // Elementi
     QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *areaChart, *importBtn, *exportBtn, *addBtn;
-    QLineEdit *name, *category;
+    QLineEdit *name;
+    QComboBox *category, *type;
     QDateEdit *date;
     QTextEdit *short_desc;
     QDoubleSpinBox *value;
     QTableWidget *movements;
+
 
     /**
      * @brief insertButtons crea la parte di home contenente i bottoni
@@ -74,6 +77,7 @@ private:
 
 public slots:
     void displayTransaction(std::vector<Transaction> transactionVector);
+    void createTransaction();
 
 signals:
     void importButtonClicked();
@@ -83,6 +87,8 @@ signals:
     void scatterChartClicked();
     void pieChartClicked();
     void areaChartClicked();
+    void addButtonClicked();
+    void createdTransaction(Transaction t);
 };
 
 #endif // HOMEVIEW_H

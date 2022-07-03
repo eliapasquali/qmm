@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QSize>
 #include <QCloseEvent>
+#include <QMessageBox>
 
 class View : public QWidget {
 
@@ -14,6 +15,7 @@ private:
     virtual void connectWidgets() const = 0;
 
 public:
+    static void errorMessage(QString s); // per avere messaggi di errore personalizzati in base all errore che viene fuori
 
     /**
      * @brief Costruttore base di View, con valori di default

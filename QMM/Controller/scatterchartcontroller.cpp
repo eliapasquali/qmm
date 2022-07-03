@@ -11,7 +11,7 @@ ScatterChartController::ScatterChartController(ScatterChartView* v, Model* m, Co
     getView()->defineSeries(categories);
 
     for(auto t : transaction) {
-        getView()->insertInSerie(t.getCategory(), t.getDate(), t.getValue());
+        //getView()->insertInSerie(t.getCategory(), t.getDate(), t.getValue());
     }
 
 

@@ -42,6 +42,7 @@ public slots:
     void createScatterChart();
     void createPieChart();
     void createAreaChart();
+    void insertTransaction(Transaction t);
     void onCloseView() const override;
 
 signals:

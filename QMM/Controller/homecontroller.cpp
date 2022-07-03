@@ -30,6 +30,8 @@ void HomeController::connectView() const {
             this, &HomeController::createScatterChart);
     connect(view, &HomeView::pieChartClicked,
             this, &HomeController::createPieChart);
+    connect(view, &HomeView::areaChartClicked,
+            this, &HomeController::createAreaChart);
 }
 
 void HomeController::checkTransactionList()
@@ -91,6 +93,16 @@ void HomeController::createPieChart()
     pieChartController->makeVisibile();
 }
 
+void HomeController::createAreaChart()
+{
+    auto m = getModel();
+    auto transactions = m->getList();
+    auto v = new AreaChartView();
+    v->setTitle("Uscite mensili per categoria");
+    auto areaChartController = new AreaChartController(v, m, this);
+    areaChartController->getModel()->setList(transactions);
+    areaChartController->makeVisibile();
+}
 
 void HomeController::onCloseView() const
 {

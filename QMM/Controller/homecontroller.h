@@ -6,15 +6,19 @@
 #include "barchartcontroller.h"
 #include "scatterchartcontroller.h"
 #include "piechartcontroller.h"
+#include "areachartcontroller.h"
 #include "Model/homemodel.h"
 #include "Model/linechartmodel.h"
 #include "Model/barchartmodel.h"
 #include "Model/scatterchartmodel.h"
+#include "Model/piechartmodel.h"
+#include "Model/areachartmodel.h"
 #include "View/homeview.h"
 #include "View/linechartview.h"
 #include "View/barchartview.h"
 #include "View/scatterchartview.h"
 #include "View/piechartview.h"
+#include "View/areachartview.h"
 #include "json_import.h"
 #include "json_export.h"
 
@@ -37,6 +41,7 @@ public slots:
     void createBarChart();
     void createScatterChart();
     void createPieChart();
+    void createAreaChart();
     void onCloseView() const override;
 
 signals:

@@ -163,7 +163,7 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
         movements->setItem(row, 1, new QTableWidgetItem(QString::number(t.getValue())));
         movements->setItem(row, 2, new QTableWidgetItem(enumToString.at(t.getCategory())));
         movements->setItem(row, 3, new QTableWidgetItem(t.getDate().toString("dd/MM/yyyy")));
-        movements->setItem(row, 4, new QTableWidgetItem(t.getShort_desc()));
+        movements->setItem(row, 4, new QTableWidgetItem(t.getShortDesc()));
         row++;
     }
 }

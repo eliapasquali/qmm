@@ -19,7 +19,7 @@ void PieChartModel::calculateCategories()
 }
 
 
-std::map<Category, double> PieChartModel::getTotalPerCategories()
+std::map<Category, double> PieChartModel::getTotalPerCategories() const
 {
     std::map<Category, double> totalPerCategories;
 

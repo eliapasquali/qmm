@@ -65,7 +65,7 @@ QGroupBox* HomeView::setupForm()
     name = new QLineEdit;
     value = new QDoubleSpinBox;
     category = new QComboBox;
-    //type = new QComboBox;
+    type = new QComboBox;
     date = new QDateEdit;
     short_desc = new QTextEdit;
 
@@ -78,12 +78,13 @@ QGroupBox* HomeView::setupForm()
     category->addItem("Tasse");
 
     //setto i valori del menu a tendina di type
-    //type->addItem("Spesa");
-    //type->addItem("Introito");
+    type->addItem("Spesa");
+    type->addItem("Introito");
 
     // Creo layout del form
     QFormLayout* formLayout = new QFormLayout;
     formLayout->addRow("Nome", name);
+    formLayout->addRow("Type", type);
     formLayout->addRow("Valore", value);
     // Limitate, cambia in select
     formLayout->addRow("Categoria", category);
@@ -170,13 +171,14 @@ void HomeView::createTransaction()
 {
     if(name->text() != ""){
         Category cat;
-        bool type = (value->value() < 0);
+        bool spesa = type->currentText().toStdString() == "Spesa";
+
 
         for(auto i : enumToString)
             if (i.second == category->currentText())
                 cat = i.first;
 
-        Transaction t(name->text(), value->value(), date->date(), cat,type,short_desc->toPlainText());
+        Transaction t(name->text(), value->value(), date->date(), cat,spesa,short_desc->toPlainText());
 
         emit createdTransaction(t);
     }

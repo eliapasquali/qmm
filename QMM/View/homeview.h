@@ -28,7 +28,6 @@ public:
     explicit HomeView(const QSize& size = QSize(1024, 768), const QString& title = QString("QMM"), View* parent = nullptr);
     ~HomeView() = default;
 
-
 private:
 
     void connectWidgets() const override;
@@ -41,6 +40,7 @@ private:
     QTextEdit *short_desc;
     QDoubleSpinBox *value;
     QTableWidget *movements;
+
 
     /**
      * @brief insertButtons crea la parte di home contenente i bottoni

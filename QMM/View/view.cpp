@@ -21,3 +21,11 @@ void View::closeEvent(QCloseEvent *closeEvent) {
     closeEvent->accept();
     emit closeView();
 }
+
+// funzione per mostrare messaggi di errore
+void View::errorMessage(QString s)
+{
+    QMessageBox msgBox;
+    msgBox.setText(s);
+    msgBox.exec();
+}

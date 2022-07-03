@@ -168,13 +168,19 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
 // funzione che crea la transazione prendendo i valori dal form e la passa allo slot insertTransaction del homecontroller
 void HomeView::createTransaction()
 {
-    Category cat;
-    bool type = (value->value() < 0);
-    for(auto i : enumToString)
-        if (i.second == category->currentText())
-            cat = i.first;
+    if(name->text() != ""){
+        Category cat;
+        bool type = (value->value() < 0);
 
-    Transaction t(name->text(), value->value(), date->date(), cat,type,short_desc->toPlainText());
+        for(auto i : enumToString)
+            if (i.second == category->currentText())
+                cat = i.first;
 
-    emit createdTransaction(t);
+        Transaction t(name->text(), value->value(), date->date(), cat,type,short_desc->toPlainText());
+
+        emit createdTransaction(t);
+    }
+    else
+        errorMessage("è neccessario un nome per inserire la transazione");
+
 }

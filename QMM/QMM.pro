@@ -10,6 +10,9 @@ CONFIG += c++11
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
+    Controller/areachartcontroller.cpp \
+    Model/areachartmodel.cpp \
+    View/areachartview.cpp \
     main.cpp \
     Controller/controller.cpp \
     Controller/homecontroller.cpp \
@@ -35,12 +38,15 @@ SOURCES += \
     json_import.cpp
 
 HEADERS += \
+    Controller/areachartcontroller.h \
     Controller/linechartcontroller.h \
     Controller/homecontroller.h \
     Controller/controller.h \
     Controller/barchartcontroller.h \
     Controller/piechartcontroller.h \
     Controller/scatterchartcontroller.h \
+    Model/areachartmodel.h \
+    View/areachartview.h \
     View/view.h \
     View/homeview.h \
     View/linechartview.h \

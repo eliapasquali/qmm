@@ -2,7 +2,6 @@
 #define LINECHARTMODEL_H
 
 #include "model.h"
-#include <map>
 #include <limits>
 #include <cmath>
 

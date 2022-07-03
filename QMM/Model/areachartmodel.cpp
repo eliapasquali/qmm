@@ -1,5 +1,4 @@
 #include "areachartmodel.h"
-#include <iostream>
 
 AreaChartModel::AreaChartModel(Model* baseModel)
 {

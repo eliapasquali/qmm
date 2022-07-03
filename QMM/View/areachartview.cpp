@@ -1,5 +1,5 @@
 #include "areachartview.h"
-#include <iostream>
+
 void AreaChartView::connectWidgets() const {}
 
 AreaChartView::AreaChartView(const QSize &size, const QString &title, View *parent)
@@ -12,8 +12,6 @@ AreaChartView::AreaChartView(const QSize &size, const QString &title, View *pare
     layout->addWidget(chartView);
 
     setLayout(layout);
-
-    connectWidgets();
 }
 
 Category AreaChartView::selectCategory(std::vector<Category> categories) const {
@@ -50,7 +48,6 @@ void AreaChartView::defineSeries() {
 
 void AreaChartView::insertInSerie(const int month, const double value)
 {
-    std::cout<<"mese "<< month << " val " << value << std::endl;
     upper->append(month, value);
 }
 

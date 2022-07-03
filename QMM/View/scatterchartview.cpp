@@ -12,8 +12,6 @@ ScatterChartView::ScatterChartView(const QSize& size, const QString& title, View
     layout->addWidget(chartView);
 
     setLayout(layout);
-
-    connectWidgets();
 }
 
 QChartView* ScatterChartView::createChart() {

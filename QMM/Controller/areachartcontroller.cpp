@@ -1,5 +1,4 @@
 #include "areachartcontroller.h"
-#include <iostream>
 
 void AreaChartController::connectView() const {}
 
@@ -19,8 +18,6 @@ AreaChartController::AreaChartController(AreaChartView* v, Model* m, Controller*
     for(auto t : totals) getView()->insertInSerie(t.first, t.second);
     getView()->insertSerie(selected);
     getView()->defineAxis(max);
-
-    connectView();
 }
 
 AreaChartView* AreaChartController::getView() const

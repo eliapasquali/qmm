@@ -14,11 +14,8 @@ ScatterChartController::ScatterChartController(ScatterChartView* v, Model* m, Co
         getView()->insertInSerie(t.getCategory(), t.getDate(), t.getValue());
     }
 
-
     getView()->insertSeries();
     getView()->defineAxis(getModel()->getTimeRange(), getModel()->getValueRange());
-
-    connectView();
 }
 
 ScatterChartView* ScatterChartController::getView() const

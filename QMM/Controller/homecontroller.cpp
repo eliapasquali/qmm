@@ -39,8 +39,8 @@ void HomeController::connectView() const {
 void HomeController::checkTransactionList()
 {
     auto m = getModel();
-    auto toBeAdded = JSONImport::getTransactionList(JSONImport::getJSONObject());
-    m->updateList(toBeAdded);
+    auto newList = JSONImport::getTransactionList(JSONImport::getJSONObject());
+    m->setList(newList);
     emit checkedTransactionList(m->getList());
 }
 
@@ -53,7 +53,6 @@ void HomeController::insertTransaction(Transaction t)
 
 void HomeController::exportTransaction()
 {
-    std::cout << "ciao";
     auto m = getModel();
     json_export::exportTransaction(m->getList());
 }

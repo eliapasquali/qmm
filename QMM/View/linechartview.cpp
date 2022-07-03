@@ -13,8 +13,6 @@ LineChartView::LineChartView(const QSize& size, const QString& title, View* pare
     layout->addWidget(chartView);
 
     setLayout(layout);
-
-    connectWidgets();
 }
 
 QChartView* LineChartView::createChart() {

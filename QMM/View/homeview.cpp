@@ -66,9 +66,11 @@ QGroupBox* HomeView::setupForm()
     // Creo form di inserimento ed elementi
     name = new QLineEdit;
     value = new QDoubleSpinBox;
+    value->setMaximum(1000000); // Limite al valore
     category = new QComboBox;
     type = new QComboBox;
     date = new QDateEdit;
+    date->setDisplayFormat("dd/MM/yyyy"); // Formato italiano per inserimento data
     short_desc = new QTextEdit;
 
     //setto i valori del menu a tendina di category
@@ -171,20 +173,15 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
 // funzione che crea la transazione prendendo i valori dal form e la passa allo slot insertTransaction del homecontroller
 void HomeView::createTransaction()
 {
-    if(name->text() != ""){
-        Category cat;
+    if(!name->text().isEmpty()){
+        auto t_cat = static_cast<Category>(category->currentIndex());
         bool spesa = type->currentText().toStdString() == "Spesa";
 
-
-        for(auto i : enumToString)
-            if (i.second == category->currentText())
-                cat = i.first;
-
-        Transaction t(name->text(), value->value(), date->date(), cat,spesa,short_desc->toPlainText());
+        Transaction t(name->text(), value->value(), date->date(), t_cat, spesa, short_desc->toPlainText());
 
         emit createdTransaction(t);
     }
     else
-        errorMessage("è neccessario un nome per inserire la transazione");
+        errorMessage("Necessario un nome per inserire la transazione");
 
 }

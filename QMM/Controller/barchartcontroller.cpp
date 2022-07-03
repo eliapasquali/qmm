@@ -17,8 +17,6 @@ BarChartController::BarChartController(BarChartView* v, Model* m, Controller* pa
 
     getView()->insertSeries();
     getView()->defineAxis();
-
-    connectView();
 }
 
 BarChartView* BarChartController::getView() const

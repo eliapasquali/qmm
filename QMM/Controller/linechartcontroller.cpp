@@ -24,8 +24,6 @@ LineChartController::LineChartController(LineChartView* v, Model* m, Controller*
     getView()->insertSeries();
     // Crea assi
     getView()->defineAxis(lastMonth, min, max);
-
-    connectView();
 }
 
 LineChartView* LineChartController::getView() const

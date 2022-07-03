@@ -15,8 +15,7 @@
 #include <QHeaderView>
 #include <QLabel>
 
-#include <iostream>
-#include <qcombobox.h>
+#include <QComboBox>
 #include <vector>
 #include "transaction.h"
 

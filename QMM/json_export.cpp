@@ -22,13 +22,13 @@ void json_export::exportTransaction(std::vector<Transaction> toBeExported)
         // qui ci vanno un po di escape per le virgolette
         for(auto t = toBeExported.begin(); t != toBeExported.end(); t++){
             out << "{\n"
-            << "\"name\": " << "\"" << t->getName() << " \" , \n"
+            << "\"name\": " << "\"" << t->getName() << " \", \n"
             << "\"value\": " << abs(t->getValue()) << ", \n"
             << "\"category\": " << t->getCategory() << ", \n"
             << "\"day\": " << t->getDate().day() << ", \n"
             << "\"month\": " << t->getDate().month() << ", \n"
             << "\"year\": " << t->getDate().year() << ", \n"
-            << "\"type\": " << t->isOutcome() << ", \n"
+            << "\"type\": " << ((t->isOutcome()) ? "true" : "false") << ", \n"
             << "\"short_desc\": " << "\"" << t->getShort_desc() << " \" \n";
 
             // vedere se c'è metodo migliore

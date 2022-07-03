@@ -118,11 +118,14 @@ void HomeController::createAreaChart()
 {
     auto m = getModel();
     auto transactions = m->getList();
-    auto v = new AreaChartView();
-    v->setTitle("Uscite mensili per categoria");
-    auto areaChartController = new AreaChartController(v, m, this);
-    areaChartController->getModel()->setList(transactions);
-    areaChartController->makeVisibile();
+    if(!transactions.empty()) {
+        auto v = new AreaChartView();
+        v->setTitle("Uscite mensili per categoria");
+        auto areaChartController = new AreaChartController(v, m, this);
+        areaChartController->getModel()->setList(transactions);
+        areaChartController->makeVisibile();
+    }
+    else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
 }
 
 void HomeController::onCloseView() const

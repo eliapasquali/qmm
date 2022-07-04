@@ -199,7 +199,7 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
 // funzione che crea la transazione prendendo i valori dal form e la passa allo slot insertTransaction del homecontroller
 void HomeView::createTransaction()
 {
-    if(!name->text().isEmpty()){
+    if(!name->text().isEmpty() && value->value() != 0){
         auto t_cat = static_cast<Category>(category->currentIndex());
         bool spesa = type->currentText().toStdString() == "Spesa";
 
@@ -208,6 +208,6 @@ void HomeView::createTransaction()
         emit createdTransaction(t);
     }
     else
-        errorMessage("Necessario un nome per inserire la transazione");
+        errorMessage("Necessario un nome e/o un valore per inserire la transazione");
 
 }

@@ -15,8 +15,7 @@
 #include <QHeaderView>
 #include <QLabel>
 
-#include <iostream>
-#include <qcombobox.h>
+#include <QComboBox>
 #include <vector>
 #include "transaction.h"
 
@@ -73,6 +72,11 @@ private:
      * finale della home
      * @return layout completo della home
      */
+
+    QLayout* importExportButtonLayout();
+
+
+
     QLayout* finalLayout();
 
 public slots:

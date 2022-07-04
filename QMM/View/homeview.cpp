@@ -66,9 +66,11 @@ QGroupBox* HomeView::setupForm()
     // Creo form di inserimento ed elementi
     name = new QLineEdit;
     value = new QDoubleSpinBox;
+    value->setMaximum(1000000); // Limite al valore
     category = new QComboBox;
     type = new QComboBox;
     date = new QDateEdit;
+    date->setDisplayFormat("dd/MM/yyyy"); // Formato italiano per inserimento data
     short_desc = new QTextEdit;
 
     //setto i valori del menu a tendina di category
@@ -93,6 +95,21 @@ QGroupBox* HomeView::setupForm()
     formLayout->addRow("Data", date);
     formLayout->addRow("Descrizione", short_desc);
 
+
+    // Bottone per l'inserimento della transazione
+    addBtn = new QPushButton("Aggiungi movimento");
+    addBtn->setFixedSize(300,50);
+
+    // layout del bottone per l0'inserimento della transizione
+    QHBoxLayout* buttonsLayout = new QHBoxLayout;
+
+    buttonsLayout->setContentsMargins(25,20,12,50);
+    buttonsLayout->setAlignment(Qt::AlignCenter);
+    buttonsLayout->addWidget(addBtn);
+
+
+    formLayout->addRow(buttonsLayout);
+
     form->setLayout(formLayout);
 
     return form;
@@ -104,7 +121,7 @@ void HomeView::setupTransactionTable()
     // righe in base a transazioni ricevute
     // Definizione politiche di espansione
     QHeaderView* movementsHeader = movements->horizontalHeader();
-    movementsHeader->setSectionResizeMode(QHeaderView::Stretch);
+    movementsHeader->setSectionResizeMode(QHeaderView::Interactive);
     QStringList hLabel = { "Nome", "Valore", "Categoria", "Data", "Descrizione" };
     movements->setHorizontalHeaderLabels(hLabel);
 }
@@ -114,24 +131,21 @@ QLayout* HomeView::insertDataWidgets()
     QHBoxLayout* dataWidgets = new QHBoxLayout;
 
     // Colonna sinistra, con i valori estratti
+    QLabel* listaMov = new QLabel("Lista movimenti");
     QVBoxLayout* leftColumn = new QVBoxLayout;
-    QLabel* totalLabel = new QLabel("Prova");
     movements = new QTableWidget();
     setupTransactionTable();
 
-    leftColumn->addWidget(totalLabel);
+    leftColumn->addWidget(listaMov);
     leftColumn->addWidget(movements);
 
     // Colonna destra, per inserimento e salvataggio dei dati
     QVBoxLayout* rightColumn = new QVBoxLayout;
-    importBtn  = new QPushButton("Importa movimenti");
-    exportBtn  = new QPushButton("Esporta movimenti");
-    addBtn     = new QPushButton("Aggiungi movimento");
+    QLabel* inserimMov = new QLabel("Inserimento transazione");
 
-    rightColumn->addWidget(importBtn);
-    rightColumn->addWidget(exportBtn);
+    rightColumn->addWidget(inserimMov);
     rightColumn->addWidget(setupForm());
-    rightColumn->addWidget(addBtn);
+    rightColumn->setContentsMargins(10,5,0,0);
 
     // Unione colonne
     dataWidgets->addItem(leftColumn);
@@ -140,10 +154,24 @@ QLayout* HomeView::insertDataWidgets()
     return dataWidgets;
 }
 
+QLayout *HomeView::importExportButtonLayout()
+{
+    QHBoxLayout* importExportLayout = new QHBoxLayout;
+
+    importBtn  = new QPushButton("Importa movimenti");
+    exportBtn  = new QPushButton("Esporta movimenti");
+
+    importExportLayout->addWidget(importBtn);
+    importExportLayout->addWidget(exportBtn);
+
+    return importExportLayout;
+}
+
 QLayout* HomeView::finalLayout()
 {
     QVBoxLayout* homeLayout = new QVBoxLayout;
 
+    homeLayout->addItem(importExportButtonLayout());
     homeLayout->addItem(insertDataWidgets());
     homeLayout->addItem(insertButtons());
 
@@ -163,7 +191,7 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
         movements->setItem(row, 1, new QTableWidgetItem(QString::number(t.getValue())));
         movements->setItem(row, 2, new QTableWidgetItem(enumToString.at(t.getCategory())));
         movements->setItem(row, 3, new QTableWidgetItem(t.getDate().toString("dd/MM/yyyy")));
-        movements->setItem(row, 4, new QTableWidgetItem(t.getShort_desc()));
+        movements->setItem(row, 4, new QTableWidgetItem(t.getShortDesc()));
         row++;
     }
 }
@@ -171,20 +199,15 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
 // funzione che crea la transazione prendendo i valori dal form e la passa allo slot insertTransaction del homecontroller
 void HomeView::createTransaction()
 {
-    if(name->text() != ""){
-        Category cat;
+    if(!name->text().isEmpty()){
+        auto t_cat = static_cast<Category>(category->currentIndex());
         bool spesa = type->currentText().toStdString() == "Spesa";
 
-
-        for(auto i : enumToString)
-            if (i.second == category->currentText())
-                cat = i.first;
-
-        Transaction t(name->text(), value->value(), date->date(), cat,spesa,short_desc->toPlainText());
+        Transaction t(name->text(), value->value(), date->date(), t_cat, spesa, short_desc->toPlainText());
 
         emit createdTransaction(t);
     }
     else
-        errorMessage("è neccessario un nome per inserire la transazione");
+        errorMessage("Necessario un nome per inserire la transazione");
 
 }

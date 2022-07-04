@@ -23,7 +23,7 @@ public:
     std::vector<Category> getCategories() const;
 
 
-    std::map<int, double> calculateMonthlyTotals(Category cat) const;
+    std::map<int, double> calculateMonthlyTotals(Category cat, int year) const;
 };
 
 #endif // BARCHARTMODEL_H

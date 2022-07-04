@@ -4,22 +4,19 @@ PieChartModel::PieChartModel(Model* baseModel)
 {
     transactionList = baseModel->getList();
     calculateCategories();
-    //stampa();
 }
-#include <iostream>
-
 
 void PieChartModel::calculateCategories()
 {
     for(auto t : transactionList){
-        if(std::find(categories.begin(), categories.end(), t.getCategory()) == categories.end() && t.isOutcome())
+        if(std::find(categories.begin(),
+                     categories.end(),
+                     t.getCategory()) == categories.end() && t.isOutcome())
             categories.push_back(t.getCategory());
     }
-
 }
 
-
-std::map<Category, double> PieChartModel::getTotalPerCategories()
+std::map<Category, double> PieChartModel::getTotalPerCategories(int year) const
 {
     std::map<Category, double> totalPerCategories;
 
@@ -27,9 +24,8 @@ std::map<Category, double> PieChartModel::getTotalPerCategories()
         totalPerCategories.insert({c,0});
     }
 
-
     for(auto t : transactionList){
-        if(t.isOutcome()){
+        if(t.isOutcome() && t.getDate().year()==year){
             auto transactionCat = t.getCategory();
             auto transactionValue = t.getValue();
 
@@ -37,8 +33,6 @@ std::map<Category, double> PieChartModel::getTotalPerCategories()
             categoria->second += transactionValue;
         }
     }
-
-
 
     return totalPerCategories;
 }

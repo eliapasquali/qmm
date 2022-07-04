@@ -33,7 +33,6 @@ SOURCES += \
     Model/barchartmodel.cpp \
     Model/scatterchartmodel.cpp \
     transaction.cpp \
-    account.cpp \
     json_export.cpp \
     json_import.cpp
 
@@ -60,7 +59,6 @@ HEADERS += \
     Model/piechartmodel.h \
     Model/scatterchartmodel.h \
     transaction.h \
-    account.h \
     json_import.h \
     json_export.h
 

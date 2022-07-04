@@ -12,8 +12,6 @@ BarChartView::BarChartView(const QSize& size, const QString& title, View* parent
     layout->addWidget(chartView);
 
     setLayout(layout);
-
-    connectWidgets();
 }
 
 QChartView* BarChartView::createChart() {

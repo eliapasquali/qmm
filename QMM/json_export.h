@@ -10,6 +10,8 @@
 #include <qfile.h>
 #include <qiodevice.h>
 #include <qtextstream.h>
+#include <qfiledialog.h>
+#include <QJsonObject>
 
 class json_export
 {

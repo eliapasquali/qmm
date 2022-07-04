@@ -2,24 +2,24 @@
 
 LineChartModel::LineChartModel(Model* baseModel) {
     transactionList = baseModel->getList();
-    calculateMonthlyTotals();
 }
 
-void LineChartModel::calculateMonthlyTotals()
+std::map<int, double> LineChartModel::calculateMonthlyTotals(int year)
 {
     for(auto t : transactionList) {
-        auto month = t.getDate().month();
-        auto value = t.getValue();
-        if(totals.find(month)!=totals.end()) value += totals.find(month)->second;
-        totals.insert({month, value});
+        auto t_month = t.getDate().month();
+        auto t_year = t.getDate().year();
+        auto t_value = t.getValue();
+        if(t_year == year) {
+            if(totals.find(t_month)!=totals.end())
+                t_value += totals.find(t_month)->second;
+            totals.insert({t_month, t_value});
+        }
     }
 
     auto firstMonth = totals.begin()->first;
     for(int i=1; i<firstMonth; i++) totals.insert({i, 0});
 
-}
-
-std::map<int, double> LineChartModel::getMonthlyTotals() const{
     return totals;
 }
 

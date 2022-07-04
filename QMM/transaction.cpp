@@ -26,7 +26,7 @@ bool Transaction::isOutcome() const { return type; }
 
 void Transaction::setOutcome(bool newType) { type = newType; }
 
-const QString &Transaction::getShort_desc() const { return short_desc; }
+const QString &Transaction::getShortDesc() const { return short_desc; }
 
 void Transaction::setShort_desc(const QString &newShort_desc) { short_desc = newShort_desc; }
 

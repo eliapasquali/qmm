@@ -1,5 +1,4 @@
 #include "areachartcontroller.h"
-#include <iostream>
 
 void AreaChartController::connectView() const {}
 
@@ -10,7 +9,8 @@ AreaChartController::AreaChartController(AreaChartView* v, Model* m, Controller*
     auto categories = getModel()->getCategories();
     auto selected = getView()->selectCategory(categories);
 
-    getModel()->calculateCategoryTotals(selected);
+    getView()->setYear(getModel()->getYearRange());
+    getModel()->calculateCategoryTotals(selected, getView()->getYear());
 
     auto totals = getModel()->getCategoryTotals();
     auto max = getModel()->getMax();
@@ -19,8 +19,6 @@ AreaChartController::AreaChartController(AreaChartView* v, Model* m, Controller*
     for(auto t : totals) getView()->insertInSerie(t.first, t.second);
     getView()->insertSerie(selected);
     getView()->defineAxis(max);
-
-    connectView();
 }
 
 AreaChartView* AreaChartController::getView() const

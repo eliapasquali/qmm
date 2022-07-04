@@ -54,7 +54,7 @@ public:
     bool isOutcome() const;
     void setOutcome(bool newType);
 
-    const QString& getShort_desc() const;
+    const QString& getShortDesc() const;
     void setShort_desc(const QString& newShort_desc);
 
 };

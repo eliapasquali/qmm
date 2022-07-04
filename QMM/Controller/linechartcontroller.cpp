@@ -5,11 +5,13 @@ void LineChartController::connectView() const {}
 LineChartController::LineChartController(LineChartView* v, Model* m, Controller* parent) :
     Controller(v, new LineChartModel(m), parent)
 {
+    getView()->setYear(getModel()->getYearRange());
 
     // Prendi transazioni dal modello
-    auto monthlyTotals = getModel()->getMonthlyTotals();
+    auto monthlyTotals = getModel()->calculateMonthlyTotals(getView()->getYear());
     int lastMonth = 12; double min = 0; double max = 0;
     // Inserisci punti nella view
+
 
     if(!monthlyTotals.empty()) {
         for (auto month : monthlyTotals) {
@@ -24,8 +26,6 @@ LineChartController::LineChartController(LineChartView* v, Model* m, Controller*
     getView()->insertSeries();
     // Crea assi
     getView()->defineAxis(lastMonth, min, max);
-
-    connectView();
 }
 
 LineChartView* LineChartController::getView() const

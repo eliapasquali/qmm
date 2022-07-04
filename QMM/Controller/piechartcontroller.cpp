@@ -1,24 +1,20 @@
 #include "piechartcontroller.h"
 
 
-void PieChartController::connectView() const
+void PieChartController::connectView() const {}
+
+PieChartController::PieChartController(PieChartView *v, Model *m, Controller *c)
+    : Controller(v , new PieChartModel(m) , c)
 {
+    getView()->setYear(getModel()->getYearRange());
 
-}
-
-PieChartController::PieChartController(PieChartView *v, Model *m, Controller *c) : Controller(v , new PieChartModel(m) , c){
-     auto totalPerCategories = getModel()->getTotalPerCategories();
-
+    auto totalPerCategories = getModel()->getTotalPerCategories(getView()->getYear());
 
     for(auto cat : totalPerCategories){
         getView()->addCategories(cat.first, cat.second);
     }
 
-
     getView()->insertSeries();
-
-
-    connectView();
 }
 
 PieChartView *PieChartController::getView() const

@@ -18,7 +18,7 @@ public:
     std::vector<Transaction> getList() const;
     void updateList(std::vector<Transaction> &toBeAdded);
     void addTransaction(Transaction t);
-    std::pair<int, int> getYearRange();
+    std::vector<int> getYearRange();
 };
 
 #endif // MODEL_H

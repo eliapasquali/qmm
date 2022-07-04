@@ -21,17 +21,18 @@ void Model::addTransaction(Transaction t)
     transactionList.push_back(t);
 }
 
-std::pair<int,int> Model::getYearRange()
+std::vector<int> Model::getYearRange()
 {
-    auto minYear =  std::numeric_limits<int>::max();
-    auto maxYear = std::numeric_limits<int>::min();
-
+    std::map<int, bool> present;
     for(auto t : transactionList) {
-        if(t.getDate().year() < minYear) minYear = t.getDate().year();
-        if(t.getDate().year() > maxYear) maxYear = t.getDate().year();
+        auto t_year = t.getDate().year();
+        present.insert({t_year, true});
     }
 
-    std::pair<int,int> range({minYear, maxYear});
+    std::vector<int> range;
+    for(auto y : present)
+        range.push_back(y.first);
+
     return range;
 }
 

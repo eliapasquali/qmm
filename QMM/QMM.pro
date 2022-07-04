@@ -3,7 +3,7 @@ QT += core gui charts
 greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
 
 TARGET = QMM
-template = app
+TEMPLATE = app
 
 CONFIG += c++11
 
@@ -62,6 +62,9 @@ HEADERS += \
     json_import.h \
     json_export.h
 
-RESOURCES += \
+RESOURCES = \
+    resources.qrc
+
+ICON = Resources/icon.ico
 
 QMAKE_LFLAGS += -no-pie

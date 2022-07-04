@@ -4,6 +4,7 @@ moc*
 Makefile
 *.o
 QMM/QMM
+QMM/qrc_resources.cpp
 
 # CLion
 .idea

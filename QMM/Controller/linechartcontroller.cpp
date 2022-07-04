@@ -5,8 +5,6 @@ void LineChartController::connectView() const {}
 LineChartController::LineChartController(LineChartView* v, Model* m, Controller* parent) :
     Controller(v, new LineChartModel(m), parent)
 {
-    getView()->setYear(getModel()->getYearRange());
-
     // Prendi transazioni dal modello
     auto monthlyTotals = getModel()->calculateMonthlyTotals(getView()->getYear());
     int lastMonth = 12; double min = 0; double max = 0;

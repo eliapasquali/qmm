@@ -50,7 +50,7 @@ public:
      * @brief Metodo di supporto per la selezione dell'anno da utilizare nei vari
      *          componenti delle View
      */
-    void setYear(const std::vector<int>& range);
+    bool setYear(const std::vector<int>& range);
 
     /**
      * @brief Ritorna l'anno selezionato dal QDialog

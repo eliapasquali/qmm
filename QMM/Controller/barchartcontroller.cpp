@@ -8,7 +8,6 @@ BarChartController::BarChartController(BarChartView* v, Model* m, Controller* pa
     // Ritorna dati dal model
     auto categories = getModel()->getCategories();
 
-    getView()->setYear(getModel()->getYearRange());
     getView()->defineSets(categories);
 
     for(auto cat : categories) {

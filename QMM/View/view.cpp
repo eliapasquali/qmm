@@ -5,7 +5,7 @@ View::View(const QSize &size, const QString& title, View *parent) : QWidget(pare
     setTitle(title);
 }
 
-void View::setYear(const std::vector<int>& range)
+bool View::setYear(const std::vector<int>& range)
 {
     QStringList yearList;
     for(int y : range) yearList.append(QString::number(y));
@@ -15,9 +15,11 @@ void View::setYear(const std::vector<int>& range)
                                                  "Seleziona anno",
                                                  "Anno",
                                                  yearList, 0, false, &ok);
-    year = *range.begin(); // Default al primo anno del range
+
     if(ok && !dialogResult.isEmpty())
         year = dialogResult.toInt();
+
+    return ok;
 }
 
 View::~View() {

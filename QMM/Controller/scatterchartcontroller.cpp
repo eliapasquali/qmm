@@ -8,7 +8,6 @@ ScatterChartController::ScatterChartController(ScatterChartView* v, Model* m, Co
     auto transaction = getModel()->getList();
     auto categories = getModel()->getCategories();
 
-    getView()->setYear(getModel()->getYearRange());
     getView()->defineSeries(categories);
 
     for(auto t : transaction) {

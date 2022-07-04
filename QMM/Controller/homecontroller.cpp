@@ -61,12 +61,15 @@ void HomeController::createLineChart()
 {
     auto m = getModel();
     auto transactions = m->getList();
+    auto years = m->getYearRange();
     if(!transactions.empty()){
         auto lineChartView = new LineChartView();
-        lineChartView->setTitle("Andamento periodico");
-        auto lineChartController = new LineChartController(lineChartView, m, this);
-        lineChartController->getModel()->setList(transactions);
-        lineChartController->makeVisibile();
+        if(lineChartView->setYear(years)) {
+            lineChartView->setTitle("Andamento periodico");
+            auto lineChartController = new LineChartController(lineChartView, m, this);
+            lineChartController->getModel()->setList(transactions);
+            lineChartController->makeVisibile();
+        } else delete lineChartView;
     }
     else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
 }
@@ -75,12 +78,15 @@ void HomeController::createBarChart()
 {
     auto m = getModel();
     auto transactions = m->getList();
+    auto years = m->getYearRange();
     if(!transactions.empty()){
         auto barChartView = new BarChartView();
-        barChartView->setTitle("Uscite mensili per categoria");
-        auto barChartController = new BarChartController(barChartView, m, this);
-        barChartController->getModel()->setList(transactions);
-        barChartController->makeVisibile();
+        if(barChartView->setYear(years)) {
+            barChartView->setTitle("Uscite mensili per categoria");
+            auto barChartController = new BarChartController(barChartView, m, this);
+            barChartController->getModel()->setList(transactions);
+            barChartController->makeVisibile();
+        } else delete barChartView;
     }
     else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
 }
@@ -89,12 +95,15 @@ void HomeController::createScatterChart()
 {
     auto m = getModel();
     auto transactions = m->getList();
+    auto years = m->getYearRange();
     if(!transactions.empty()){
         auto scatterChartView = new ScatterChartView();
-        scatterChartView->setTitle("Tutte le transazioni");
-        auto scatterChartController = new ScatterChartController(scatterChartView, m, this);
-        scatterChartController->getModel()->setList(transactions);
-        scatterChartController->makeVisibile();
+        if(scatterChartView->setYear(years)) {
+            scatterChartView->setTitle("Tutte le transazioni");
+            auto scatterChartController = new ScatterChartController(scatterChartView, m, this);
+            scatterChartController->getModel()->setList(transactions);
+            scatterChartController->makeVisibile();
+        } else delete scatterChartView;
     }
     else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
 }
@@ -103,12 +112,15 @@ void HomeController::createPieChart()
 {
     auto m = getModel();
     auto transactions = m->getList();
+    auto years = m->getYearRange();
     if(!transactions.empty()){
-    auto p = new PieChartView();
-        p->setTitle("Spese per tipologia");
-        auto pieChartController = new PieChartController(p, m, this);
-        pieChartController->getModel()->setList(transactions);
-        pieChartController->makeVisibile();
+        auto p = new PieChartView();
+        if(p->setYear(years)) {
+            p->setTitle("Spese per tipologia");
+            auto pieChartController = new PieChartController(p, m, this);
+            pieChartController->getModel()->setList(transactions);
+            pieChartController->makeVisibile();
+        } else delete p;
     }
     else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
 }
@@ -117,12 +129,15 @@ void HomeController::createAreaChart()
 {
     auto m = getModel();
     auto transactions = m->getList();
+    auto years = m->getYearRange();
     if(!transactions.empty()) {
         auto v = new AreaChartView();
-        v->setTitle("Uscite mensili per categoria");
-        auto areaChartController = new AreaChartController(v, m, this);
-        areaChartController->getModel()->setList(transactions);
-        areaChartController->makeVisibile();
+        if(v->setYear(years)) {
+            v->setTitle("Uscite mensili per categoria");
+            auto areaChartController = new AreaChartController(v, m, this);
+            areaChartController->getModel()->setList(transactions);
+            areaChartController->makeVisibile();
+        } else delete v;
     }
     else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
 }

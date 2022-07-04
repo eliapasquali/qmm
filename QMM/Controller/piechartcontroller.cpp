@@ -6,8 +6,6 @@ void PieChartController::connectView() const {}
 PieChartController::PieChartController(PieChartView *v, Model *m, Controller *c)
     : Controller(v , new PieChartModel(m) , c)
 {
-    getView()->setYear(getModel()->getYearRange());
-
     auto totalPerCategories = getModel()->getTotalPerCategories(getView()->getYear());
 
     for(auto cat : totalPerCategories){

@@ -9,7 +9,6 @@ AreaChartController::AreaChartController(AreaChartView* v, Model* m, Controller*
     auto categories = getModel()->getCategories();
     auto selected = getView()->selectCategory(categories);
 
-    getView()->setYear(getModel()->getYearRange());
     getModel()->calculateCategoryTotals(selected, getView()->getYear());
 
     auto totals = getModel()->getCategoryTotals();

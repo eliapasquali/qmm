@@ -1,18 +1,24 @@
-#ifndef VIEW_H
+﻿#ifndef VIEW_H
 #define VIEW_H
 
 #include <QWidget>
 #include <QSize>
 #include <QCloseEvent>
 #include <QMessageBox>
+#include <QInputDialog>
 
 class View : public QWidget {
 
     Q_OBJECT
 
 private:
-
+    /**
+     * @brief Metodo di supporto per la connessione di signal e slot dei vari widget
+     *          presenti all'interno della view
+     */
     virtual void connectWidgets() const = 0;
+
+    int year; // Anno di riferimento per grafici e componenti view
 
 public:
     static void errorMessage(QString s); // per avere messaggi di errore personalizzati in base all errore che viene fuori
@@ -40,6 +46,17 @@ public:
      */
     void setTitle(const QString& title);
 
+    /**
+     * @brief Metodo di supporto per la selezione dell'anno da utilizare nei vari
+     *          componenti delle View
+     */
+    void setYear(std::pair<int, int> range);
+
+    /**
+     * @brief Ritorna l'anno selezionato dal QDialog
+     * @return int anno
+     */
+    int getYear() const;
     /**
      * @brief Quando si richiede la chiusura della finestra viene inviato il
      *  segnale closeView dalla View al Controller

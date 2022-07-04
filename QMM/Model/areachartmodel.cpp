@@ -19,10 +19,10 @@ std::vector<Category> AreaChartModel::getCategories() const {
     return names;
 }
 
-void AreaChartModel::calculateCategoryTotals(Category cat)
+void AreaChartModel::calculateCategoryTotals(Category cat, int year)
 {
     for(auto t : transactionList) {
-        if(t.getCategory() == cat && t.isOutcome()) {
+        if(t.getCategory() == cat && t.getDate().year()==year && t.isOutcome()) {
             auto month = t.getDate().month();
             auto value = t.getValue() *-1;
             if(totals.find(month)!=totals.end()) value += totals.find(month)->second;

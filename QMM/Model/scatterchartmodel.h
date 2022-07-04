@@ -10,7 +10,6 @@ class ScatterChartModel : public Model
 
 private:
     std::map<Category, bool> categories;
-    std::pair<int, int> timeRange;
     std::pair<double, double> valueRange;
 
 public:
@@ -23,7 +22,6 @@ public:
     void calculateAllAttributes();
 
     std::vector<Category> getCategories() const;
-    std::pair<int, int> getTimeRange() const;
     std::pair<double, double> getValueRange() const;
 };
 

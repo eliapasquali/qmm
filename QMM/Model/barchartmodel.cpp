@@ -19,7 +19,7 @@ std::vector<Category> BarChartModel::getCategories() const {
     return names;
 }
 
-std::map<int, double> BarChartModel::calculateMonthlyTotals(Category cat) const
+std::map<int, double> BarChartModel::calculateMonthlyTotals(Category cat, int year) const
 {
     std::map<int, double> monthlyTotals;
 
@@ -27,8 +27,9 @@ std::map<int, double> BarChartModel::calculateMonthlyTotals(Category cat) const
 
     for(auto t : transactionList) {
         auto transactionCat = t.getCategory();
+        auto transactionYear = t.getDate().year();
 
-        if(transactionCat==cat && t.isOutcome()) {
+        if(transactionCat==cat && transactionYear==year && t.isOutcome()) {
             auto transactionMonth = t.getDate().month();
             auto transactionValue = t.getValue();
 

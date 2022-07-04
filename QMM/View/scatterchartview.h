@@ -33,7 +33,7 @@ public:
 
     void insertSeries();
 
-    void defineAxis(const std::pair<int, int> &time, const std::pair<double, double> &value);
+    void defineAxis(const std::pair<double, double> &value);
 };
 
 #endif // SCATTERCHARTVIEW_H

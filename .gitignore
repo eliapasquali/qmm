@@ -11,7 +11,7 @@ cmake-build-debug
 CMakeLists.txt
 
 # QTCreator
-build-QMM-Desktop-*
+build-QMM-Desktop_*
 .qtc_clangd
 *.user
 

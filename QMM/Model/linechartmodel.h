@@ -2,7 +2,6 @@
 #define LINECHARTMODEL_H
 
 #include "model.h"
-#include <map>
 #include <limits>
 #include <cmath>
 
@@ -19,7 +18,7 @@ public:
      */
     explicit LineChartModel(Model* baseModel);
 
-    void calculateMonthlyTotals();
+    std::map<int, double> calculateMonthlyTotals(int year);
     std::map<int, double> getMonthlyTotals() const;
     std::pair<double, double> getRange() const;
 };

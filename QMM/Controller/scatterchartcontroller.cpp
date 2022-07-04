@@ -8,17 +8,15 @@ ScatterChartController::ScatterChartController(ScatterChartView* v, Model* m, Co
     auto transaction = getModel()->getList();
     auto categories = getModel()->getCategories();
 
+    getView()->setYear(getModel()->getYearRange());
     getView()->defineSeries(categories);
 
     for(auto t : transaction) {
-        //getView()->insertInSerie(t.getCategory(), t.getDate(), t.getValue());
+        getView()->insertInSerie(t.getCategory(), t.getDate(), t.getValue());
     }
 
-
     getView()->insertSeries();
-    getView()->defineAxis(getModel()->getTimeRange(), getModel()->getValueRange());
-
-    connectView();
+    getView()->defineAxis(getModel()->getValueRange());
 }
 
 ScatterChartView* ScatterChartController::getView() const

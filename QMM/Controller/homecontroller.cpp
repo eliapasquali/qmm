@@ -30,6 +30,8 @@ void HomeController::connectView() const {
             this, &HomeController::createScatterChart);
     connect(view, &HomeView::pieChartClicked,
             this, &HomeController::createPieChart);
+    connect(view, &HomeView::areaChartClicked,
+            this, &HomeController::createAreaChart);
     connect(view, &HomeView::createdTransaction,
             this, &HomeController::insertTransaction);
 }
@@ -37,8 +39,8 @@ void HomeController::connectView() const {
 void HomeController::checkTransactionList()
 {
     auto m = getModel();
-    auto toBeAdded = JSONImport::getTransactionList(JSONImport::getJSONObject());
-    m->updateList(toBeAdded);
+    auto newList = JSONImport::getTransactionList(JSONImport::getJSONObject());
+    m->setList(newList);
     emit checkedTransactionList(m->getList());
 }
 
@@ -51,7 +53,6 @@ void HomeController::insertTransaction(Transaction t)
 
 void HomeController::exportTransaction()
 {
-    std::cout << "ciao";
     auto m = getModel();
     json_export::exportTransaction(m->getList());
 }
@@ -112,6 +113,19 @@ void HomeController::createPieChart()
     else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
 }
 
+void HomeController::createAreaChart()
+{
+    auto m = getModel();
+    auto transactions = m->getList();
+    if(!transactions.empty()) {
+        auto v = new AreaChartView();
+        v->setTitle("Uscite mensili per categoria");
+        auto areaChartController = new AreaChartController(v, m, this);
+        areaChartController->getModel()->setList(transactions);
+        areaChartController->makeVisibile();
+    }
+    else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
+}
 
 void HomeController::onCloseView() const
 {

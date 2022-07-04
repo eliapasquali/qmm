@@ -12,15 +12,12 @@ ScatterChartView::ScatterChartView(const QSize& size, const QString& title, View
     layout->addWidget(chartView);
 
     setLayout(layout);
-
-    connectWidgets();
 }
 
 QChartView* ScatterChartView::createChart() {
     scatterChart = new QChart();
 
     scatterChart->setTitle("Transazioni");
-    scatterChart->legend()->setMarkerShape(QLegend::MarkerShapeFromSeries);
 
     auto view = new QChartView(scatterChart, this);
     view->setRenderHint(QPainter::Antialiasing);
@@ -50,13 +47,14 @@ void ScatterChartView::insertInSerie(const Category serie, const QDate &date, co
 void ScatterChartView::insertSeries()
 {
     for(auto s : series) scatterChart->addSeries(s.second);
+    scatterChart->legend()->setMarkerShape(QLegend::MarkerShapeFromSeries);
 }
 
-void ScatterChartView::defineAxis(const std::pair<int, int>& time, const std::pair<double, double>& value) {
+void ScatterChartView::defineAxis(const std::pair<double, double>& value) {
 
     auto axisX = new QDateTimeAxis();
     axisX->setFormat("dd-MM");
-    axisX->setRange(QDateTime(QDate(time.first, 1, 1), QTime()), QDateTime(QDate(time.second, 12, 31), QTime()));
+    axisX->setRange(QDateTime(QDate(getYear(), 1, 1), QTime()), QDateTime(QDate(getYear(), 12, 31), QTime()));
     scatterChart->addAxis(axisX, Qt::AlignBottom);
 
     auto axisY = new QValueAxis();

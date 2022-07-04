@@ -8,17 +8,16 @@ BarChartController::BarChartController(BarChartView* v, Model* m, Controller* pa
     // Ritorna dati dal model
     auto categories = getModel()->getCategories();
 
+    getView()->setYear(getModel()->getYearRange());
     getView()->defineSets(categories);
 
     for(auto cat : categories) {
-        auto monthlyTotals = getModel()->calculateMonthlyTotals(cat);
+        auto monthlyTotals = getModel()->calculateMonthlyTotals(cat, getView()->getYear());
         for(auto m : monthlyTotals) getView()->insertInSet(cat, m.second*-1);
     }
 
     getView()->insertSeries();
     getView()->defineAxis();
-
-    connectView();
 }
 
 BarChartView* BarChartController::getView() const

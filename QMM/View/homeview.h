@@ -15,8 +15,7 @@
 #include <QHeaderView>
 #include <QLabel>
 
-#include <iostream>
-#include <qcombobox.h>
+#include <QComboBox>
 #include <vector>
 #include "transaction.h"
 
@@ -33,7 +32,7 @@ private:
     void connectWidgets() const override;
 
     // Elementi
-    QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *graph5, *importBtn, *exportBtn, *addBtn;
+    QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *areaChart, *importBtn, *exportBtn, *addBtn;
     QLineEdit *name;
     QComboBox *category, *type;
     QDateEdit *date;
@@ -91,6 +90,7 @@ signals:
     void barChartClicked();
     void scatterChartClicked();
     void pieChartClicked();
+    void areaChartClicked();
     void addButtonClicked();
     void createdTransaction(Transaction t);
 };

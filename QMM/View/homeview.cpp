@@ -24,6 +24,8 @@ void HomeView::connectWidgets() const {
             this, &HomeView::scatterChartClicked);
     connect(pieChartBtn, &QPushButton::clicked,
             this, &HomeView::pieChartClicked);
+    connect(areaChart, &QPushButton::clicked,
+            this, &HomeView::areaChartClicked);
     connect(addBtn, &QPushButton::clicked,
             this, &HomeView::createTransaction);
 
@@ -37,13 +39,13 @@ QLayout* HomeView::insertButtons()
     linechart = new QPushButton("Andamento\nperiodico");
     barchart = new QPushButton("Uscite per\ncategoria");
     pieChartBtn = new QPushButton("Spese per tipologia");
-    scatterchart = new QPushButton("Tutte le\n transazioni");
-    graph5 = new QPushButton("Graph 5");
+    scatterchart = new QPushButton("Tutte le\ntransazioni");
+    areaChart = new QPushButton("Uscite mensili\nper categoria");
     buttons.push_back(linechart);
     buttons.push_back(barchart);
     buttons.push_back(pieChartBtn);
     buttons.push_back(scatterchart);
-    buttons.push_back(graph5);
+    buttons.push_back(areaChart);
 
     const QSize BUTTON_SIZE = QSize(150,50);
     for(auto b : buttons){
@@ -64,9 +66,11 @@ QGroupBox* HomeView::setupForm()
     // Creo form di inserimento ed elementi
     name = new QLineEdit;
     value = new QDoubleSpinBox;
+    value->setMaximum(1000000); // Limite al valore
     category = new QComboBox;
-    //type = new QComboBox;
+    type = new QComboBox;
     date = new QDateEdit;
+    date->setDisplayFormat("dd/MM/yyyy"); // Formato italiano per inserimento data
     short_desc = new QTextEdit;
 
     //setto i valori del menu a tendina di category
@@ -78,12 +82,13 @@ QGroupBox* HomeView::setupForm()
     category->addItem("Tasse");
 
     //setto i valori del menu a tendina di type
-    //type->addItem("Spesa");
-    //type->addItem("Introito");
+    type->addItem("Spesa");
+    type->addItem("Introito");
 
     // Creo layout del form
     QFormLayout* formLayout = new QFormLayout;
     formLayout->addRow("Nome", name);
+    formLayout->addRow("Type", type);
     formLayout->addRow("Valore", value);
     // Limitate, cambia in select
     formLayout->addRow("Categoria", category);
@@ -186,7 +191,7 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
         movements->setItem(row, 1, new QTableWidgetItem(QString::number(t.getValue())));
         movements->setItem(row, 2, new QTableWidgetItem(enumToString.at(t.getCategory())));
         movements->setItem(row, 3, new QTableWidgetItem(t.getDate().toString("dd/MM/yyyy")));
-        movements->setItem(row, 4, new QTableWidgetItem(t.getShort_desc()));
+        movements->setItem(row, 4, new QTableWidgetItem(t.getShortDesc()));
         row++;
     }
 }
@@ -194,19 +199,15 @@ void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
 // funzione che crea la transazione prendendo i valori dal form e la passa allo slot insertTransaction del homecontroller
 void HomeView::createTransaction()
 {
-    if(name->text() != ""){
-        Category cat;
-        bool type = (value->value() < 0);
+    if(!name->text().isEmpty()){
+        auto t_cat = static_cast<Category>(category->currentIndex());
+        bool spesa = type->currentText().toStdString() == "Spesa";
 
-        for(auto i : enumToString)
-            if (i.second == category->currentText())
-                cat = i.first;
-
-        Transaction t(name->text(), value->value(), date->date(), cat,type,short_desc->toPlainText());
+        Transaction t(name->text(), value->value(), date->date(), t_cat, spesa, short_desc->toPlainText());
 
         emit createdTransaction(t);
     }
     else
-        errorMessage("è neccessario un nome per inserire la transazione");
+        errorMessage("Necessario un nome per inserire la transazione");
 
 }

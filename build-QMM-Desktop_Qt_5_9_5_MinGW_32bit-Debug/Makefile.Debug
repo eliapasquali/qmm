@@ -311,6 +311,9 @@ debug/moc_linechartcontroller.cpp: ../QMM/Controller/controller.h \
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -564,7 +567,6 @@ debug/moc_linechartcontroller.cpp: ../QMM/Controller/controller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -623,7 +625,6 @@ debug/moc_linechartcontroller.cpp: ../QMM/Controller/controller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -863,6 +864,9 @@ debug/moc_homecontroller.cpp: ../QMM/Controller/controller.h \
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -1117,7 +1121,6 @@ debug/moc_homecontroller.cpp: ../QMM/Controller/controller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -1176,7 +1179,6 @@ debug/moc_homecontroller.cpp: ../QMM/Controller/controller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -1443,6 +1445,9 @@ debug/moc_controller.cpp: D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QWi
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -1557,6 +1562,9 @@ debug/moc_barchartcontroller.cpp: ../QMM/Controller/controller.h \
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -1810,7 +1818,6 @@ debug/moc_barchartcontroller.cpp: ../QMM/Controller/controller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -1869,7 +1876,6 @@ debug/moc_barchartcontroller.cpp: ../QMM/Controller/controller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -2108,6 +2114,9 @@ debug/moc_scatterchartcontroller.cpp: ../QMM/Controller/controller.h \
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -2361,7 +2370,6 @@ debug/moc_scatterchartcontroller.cpp: ../QMM/Controller/controller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -2420,7 +2428,6 @@ debug/moc_scatterchartcontroller.cpp: ../QMM/Controller/controller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -2657,6 +2664,9 @@ debug/moc_view.cpp: D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QWidget \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/View/view.h \
 		debug/moc_predefs.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/bin/moc.exe
@@ -2765,6 +2775,9 @@ debug/moc_homeview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QLayout \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qlayoutitem.h \
@@ -2815,6 +2828,7 @@ debug/moc_homeview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qheaderview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QLabel \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qlabel.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QString \
@@ -2926,6 +2940,9 @@ debug/moc_linechartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
@@ -3177,7 +3194,6 @@ debug/moc_linechartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -3236,7 +3252,6 @@ debug/moc_linechartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -3474,6 +3489,9 @@ debug/moc_barchartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
@@ -3725,7 +3743,6 @@ debug/moc_barchartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -3784,7 +3801,6 @@ debug/moc_barchartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -4021,6 +4037,9 @@ debug/moc_piechartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
@@ -4273,7 +4292,6 @@ debug/moc_piechartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -4332,7 +4350,6 @@ debug/moc_piechartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -4570,6 +4587,9 @@ debug/moc_scatterchartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
@@ -4821,7 +4841,6 @@ debug/moc_scatterchartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -4880,7 +4899,6 @@ debug/moc_scatterchartview.cpp: ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -5135,6 +5153,9 @@ debug/main.o: ../QMM/main.cpp ../QMM/Controller/homecontroller.h \
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -5389,7 +5410,6 @@ debug/main.o: ../QMM/main.cpp ../QMM/Controller/homecontroller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -5448,7 +5468,6 @@ debug/main.o: ../QMM/main.cpp ../QMM/Controller/homecontroller.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -5714,6 +5733,9 @@ debug/controller.o: ../QMM/Controller/controller.cpp ../QMM/Controller/controlle
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -5826,6 +5848,9 @@ debug/homecontroller.o: ../QMM/Controller/homecontroller.cpp ../QMM/Controller/h
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -6080,7 +6105,6 @@ debug/homecontroller.o: ../QMM/Controller/homecontroller.cpp ../QMM/Controller/h
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -6139,7 +6163,6 @@ debug/homecontroller.o: ../QMM/Controller/homecontroller.cpp ../QMM/Controller/h
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -6405,6 +6428,9 @@ debug/linechartcontroller.o: ../QMM/Controller/linechartcontroller.cpp ../QMM/Co
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -6658,7 +6684,6 @@ debug/linechartcontroller.o: ../QMM/Controller/linechartcontroller.cpp ../QMM/Co
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -6717,7 +6742,6 @@ debug/linechartcontroller.o: ../QMM/Controller/linechartcontroller.cpp ../QMM/Co
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -6955,6 +6979,9 @@ debug/barchartcontroller.o: ../QMM/Controller/barchartcontroller.cpp ../QMM/Cont
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -7208,7 +7235,6 @@ debug/barchartcontroller.o: ../QMM/Controller/barchartcontroller.cpp ../QMM/Cont
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -7267,7 +7293,6 @@ debug/barchartcontroller.o: ../QMM/Controller/barchartcontroller.cpp ../QMM/Cont
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -7504,6 +7529,9 @@ debug/piechartcontroller.o: ../QMM/Controller/piechartcontroller.cpp ../QMM/Cont
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -7758,7 +7786,6 @@ debug/piechartcontroller.o: ../QMM/Controller/piechartcontroller.cpp ../QMM/Cont
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -7817,7 +7844,6 @@ debug/piechartcontroller.o: ../QMM/Controller/piechartcontroller.cpp ../QMM/Cont
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -8055,6 +8081,9 @@ debug/scatterchartcontroller.o: ../QMM/Controller/scatterchartcontroller.cpp ../
 		../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/Model/model.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
@@ -8308,7 +8337,6 @@ debug/scatterchartcontroller.o: ../QMM/Controller/scatterchartcontroller.cpp ../
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -8367,7 +8395,6 @@ debug/scatterchartcontroller.o: ../QMM/Controller/scatterchartcontroller.cpp ../
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -8601,7 +8628,10 @@ debug/view.o: ../QMM/View/view.cpp ../QMM/View/view.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qvector2d.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\view.o ..\QMM\View\view.cpp
 
 debug/homeview.o: ../QMM/View/homeview.cpp ../QMM/View/homeview.h \
@@ -8708,6 +8738,9 @@ debug/homeview.o: ../QMM/View/homeview.cpp ../QMM/View/homeview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QLayout \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qlayoutitem.h \
@@ -8758,6 +8791,7 @@ debug/homeview.o: ../QMM/View/homeview.cpp ../QMM/View/homeview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qheaderview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QLabel \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qlabel.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QString
@@ -8867,6 +8901,9 @@ debug/linechartview.o: ../QMM/View/linechartview.cpp ../QMM/View/linechartview.h
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
@@ -9118,7 +9155,6 @@ debug/linechartview.o: ../QMM/View/linechartview.cpp ../QMM/View/linechartview.h
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -9177,7 +9213,6 @@ debug/linechartview.o: ../QMM/View/linechartview.cpp ../QMM/View/linechartview.h
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -9413,6 +9448,9 @@ debug/barchartview.o: ../QMM/View/barchartview.cpp ../QMM/View/barchartview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
@@ -9664,7 +9702,6 @@ debug/barchartview.o: ../QMM/View/barchartview.cpp ../QMM/View/barchartview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -9723,7 +9760,6 @@ debug/barchartview.o: ../QMM/View/barchartview.cpp ../QMM/View/barchartview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -9958,6 +9994,9 @@ debug/piechartview.o: ../QMM/View/piechartview.cpp ../QMM/View/piechartview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
@@ -10210,7 +10249,6 @@ debug/piechartview.o: ../QMM/View/piechartview.cpp ../QMM/View/piechartview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -10269,7 +10307,6 @@ debug/piechartview.o: ../QMM/View/piechartview.cpp ../QMM/View/piechartview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \
@@ -10505,6 +10542,9 @@ debug/scatterchartview.o: ../QMM/View/scatterchartview.cpp ../QMM/View/scatterch
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/qtouchdevice.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QSize \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtGui/QCloseEvent \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/QMessageBox \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
+		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		../QMM/transaction.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/QDate \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtCore/qdatetime.h \
@@ -10756,7 +10796,6 @@ debug/scatterchartview.o: ../QMM/View/scatterchartview.cpp ../QMM/View/scatterch
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcheckbox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolordialog.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolormap.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcolumnview.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -10815,7 +10854,6 @@ debug/scatterchartview.o: ../QMM/View/scatterchartview.cpp ../QMM/View/scatterch
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmdisubwindow.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenu.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmessagebox.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qmouseeventtransition.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qopenglwidget.h \
 		D:/Programmi/Qt/5.9.5/mingw53_32/include/QtWidgets/qplaintextedit.h \

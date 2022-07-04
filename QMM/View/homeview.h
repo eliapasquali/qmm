@@ -73,6 +73,11 @@ private:
      * finale della home
      * @return layout completo della home
      */
+
+    QLayout* importExportButtonLayout();
+
+
+
     QLayout* finalLayout();
 
 public slots:

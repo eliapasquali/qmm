@@ -41,7 +41,7 @@ public slots:
      * @brief Chiede alla View di inserire la lista, se già presente una
      * la sovrascrive
      */
-    void checkTransactionList();
+    void importTransaction();
     /**
      * @brief Esporta la lista di transazioni presenti nella View
      */

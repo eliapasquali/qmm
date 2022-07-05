@@ -17,7 +17,7 @@ HomeModel* HomeController::getModel() const {
 void HomeController::connectView() const {
     auto view = getView();
     connect(view, &HomeView::importButtonClicked,
-            this, &HomeController::checkTransactionList);
+            this, &HomeController::importTransaction);
     connect(view, &HomeView::exportButtonClicked,
             this, &HomeController::exportTransaction);
     connect(this, &HomeController::checkedTransactionList,
@@ -36,7 +36,7 @@ void HomeController::connectView() const {
             this, &HomeController::insertTransaction);
 }
 
-void HomeController::checkTransactionList()
+void HomeController::importTransaction()
 {
     auto m = getModel();
     auto newList = JSONImport::getTransactionList(JSONImport::getJSONObject());

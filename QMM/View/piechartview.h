@@ -26,7 +26,7 @@ public:
     ~PieChartView() = default;
 
     QChart* createChart();
-    void addCategories(Category c, double value);
+    void addCategories(Category c, const double value);
     void insertSeries();
 
 };

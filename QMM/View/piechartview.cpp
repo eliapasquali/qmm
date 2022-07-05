@@ -37,7 +37,7 @@ QChart* PieChartView::createChart()
 
 
 
-void PieChartView::addCategories(Category c, double value)
+void PieChartView::addCategories(const Category c, const double value)
 {
     auto catIter = enumToString.find(c);
     QString catName = catIter->second;

@@ -2,7 +2,7 @@
 
 Model::Model() {}
 
-void Model::setList(std::vector<Transaction> &tList) {
+void Model::setList(const std::vector<Transaction> &tList) {
     transactionList = tList;
 }
 
@@ -10,13 +10,13 @@ std::vector<Transaction> Model::getList() const {
     return transactionList;
 }
 
-void Model::updateList(std::vector<Transaction> &toBeAdded) {
+void Model::updateList(const std::vector<Transaction> &toBeAdded) {
     transactionList.insert(transactionList.end(),
                            toBeAdded.begin(),
                            toBeAdded.end());
 }
 
-void Model::addTransaction(Transaction t)
+void Model::addTransaction(const Transaction& t)
 {
     transactionList.push_back(t);
 }

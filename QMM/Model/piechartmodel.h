@@ -14,7 +14,7 @@ private:
 public:
     explicit PieChartModel(Model* baseModel);
 
-    std::map<Category,double> getTotalPerCategories(int year) const;
+    std::map<Category,double> getTotalPerCategories(const int year) const;
 
     void calculateCategories();
 };

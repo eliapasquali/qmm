@@ -35,7 +35,7 @@ void LineChartView::insertSeries() {
     lineChart->addSeries(dataSeries);
 }
 
-void LineChartView::defineAxis(int lastMonth, double min, double max) {
+void LineChartView::defineAxis(const int lastMonth, const double min, const double max) {
 
     auto axisX = new QValueAxis();
     axisX->setTitleText("Mese");

@@ -1,6 +1,6 @@
 #include "json_export.h"
 
-void json_export::exportTransaction(std::vector<Transaction> toBeExported)
+void json_export::exportTransaction(const std::vector<Transaction> toBeExported)
 {
     if(!toBeExported.empty()){
 

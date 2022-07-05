@@ -14,10 +14,10 @@ public:
     explicit Model();
     virtual ~Model() = default;
 
-    void setList(std::vector<Transaction> &tList);
+    void setList(const std::vector<Transaction> &tList);
     std::vector<Transaction> getList() const;
-    void updateList(std::vector<Transaction> &toBeAdded);
-    void addTransaction(Transaction t);
+    void updateList(const std::vector<Transaction> &toBeAdded);
+    void addTransaction(const Transaction& t);
     std::vector<int> getYearRange();
 
     bool isOnlyIncome() const;

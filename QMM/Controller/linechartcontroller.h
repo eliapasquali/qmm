@@ -14,7 +14,9 @@ private:
     void connectView() const override;
 
 public:
-    explicit LineChartController(LineChartView* v, Model* m, Controller* parent = nullptr);
+    explicit LineChartController(LineChartView* v,
+                                 Model* m,
+                                 Controller* parent = nullptr);
 
     LineChartView* getView() const override;
     LineChartModel* getModel() const override;

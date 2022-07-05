@@ -44,7 +44,7 @@ void HomeController::checkTransactionList()
     emit checkedTransactionList(m->getList());
 }
 
-void HomeController::insertTransaction(Transaction t)
+void HomeController::insertTransaction(const Transaction& t)
 {
     auto m = getModel();
     m->addTransaction(t);

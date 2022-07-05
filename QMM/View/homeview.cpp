@@ -182,7 +182,7 @@ QLayout* HomeView::finalLayout()
 }
 
 
-void HomeView::displayTransaction(std::vector<Transaction> transactionVector){
+void HomeView::displayTransaction(const std::vector<Transaction>& transactionVector){
     int maxRows = transactionVector.size();
     movements->setRowCount(maxRows);
     int row=0;

@@ -42,11 +42,11 @@ public slots:
     void createScatterChart();
     void createPieChart();
     void createAreaChart();
-    void insertTransaction(Transaction t);
+    void insertTransaction(const Transaction& t);
     void onCloseView() const override;
 
 signals:
-    void checkedTransactionList(std::vector<Transaction> p);
+    void checkedTransactionList(const std::vector<Transaction>& p);
 
 };
 

@@ -35,14 +35,14 @@ private:
     QString short_desc;
 
 public:
-    Transaction(QString n, double v, QDate d, Category cat, bool t=1, QString sd = QString());
+    Transaction(const QString &n, const double v, const QDate &d, const Category cat, const bool t=1, const QString &sd = QString());
     ~Transaction() = default;
 
     const QString& getName() const;
     void setName(const QString& newName);
 
     double getValue() const;
-    void setValue(double newValue);
+    void setValue(const double newValue);
 
     Category getCategory() const;
     void setCategory(Category newCategory);

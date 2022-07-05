@@ -4,7 +4,7 @@ LineChartModel::LineChartModel(Model* baseModel) {
     transactionList = baseModel->getList();
 }
 
-std::map<int, double> LineChartModel::calculateMonthlyTotals(int year)
+std::map<int, double> LineChartModel::calculateMonthlyTotals(const int year)
 {
     for(auto t : transactionList) {
         auto t_month = t.getDate().month();

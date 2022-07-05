@@ -14,7 +14,9 @@ public:
     View* view;
     Model* model;
 
-    explicit Controller(View* v, Model* m, QWidget *parent = nullptr);
+    explicit Controller(View* v,
+                        Model* m,
+                        QWidget *parent = nullptr);
     virtual ~Controller();
 
     virtual View* getView() const = 0;

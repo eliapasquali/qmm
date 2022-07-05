@@ -14,7 +14,9 @@ private:
     void connectView() const override;
 
 public:
-    explicit BarChartController(BarChartView* v, Model* m, Controller* parent = nullptr);
+    explicit BarChartController(BarChartView* v,
+                                Model* m,
+                                Controller* parent = nullptr);
 
     BarChartView* getView() const override;
     BarChartModel* getModel() const override;

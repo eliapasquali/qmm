@@ -19,7 +19,7 @@ std::vector<Category> BarChartModel::getCategories() const {
     return names;
 }
 
-std::map<int, double> BarChartModel::calculateMonthlyTotals(Category cat, int year) const
+std::map<int, double> BarChartModel::calculateMonthlyTotals(const Category cat, const int year) const
 {
     std::map<int, double> monthlyTotals;
 

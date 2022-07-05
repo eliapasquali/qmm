@@ -14,7 +14,7 @@ AreaChartView::AreaChartView(const QSize &size, const QString &title, View *pare
     setLayout(layout);
 }
 
-Category AreaChartView::selectCategory(std::vector<Category> categories) const {
+Category AreaChartView::selectCategory(const std::vector<Category> categories) const {
     QStringList catList;
     for(auto c : categories) catList.append(enumToString.at(c));
     bool ok = false;
@@ -42,7 +42,7 @@ QChartView* AreaChartView::createChart() {
 void AreaChartView::defineSeries() {
     upper = new QLineSeries();
     lower = new QLineSeries();
-    for(int i=1; i<12; i++) lower->append(i, 0);
+    for(int i=1; i<=12; i++) lower->append(i, 0);
 
 }
 

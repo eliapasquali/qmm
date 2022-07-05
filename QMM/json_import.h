@@ -29,7 +29,7 @@ public:
      * @param jObject Oggetto contenente le informazioni del JSON
      * @return std::vector delle transazioni
      */
-    static std::vector<Transaction> getTransactionList(QJsonObject* jObject);
+    static std::vector<Transaction> getTransactionList(const QJsonObject* jObject);
 };
 
 #endif // JSON_IMPORT_H

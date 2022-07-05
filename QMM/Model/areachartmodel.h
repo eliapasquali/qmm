@@ -19,7 +19,7 @@ public:
     void calculateCategories();
     std::vector<Category> getCategories() const;
 
-    void calculateCategoryTotals(Category cat, int year);
+    void calculateCategoryTotals(const Category cat, const int year);
     std::map<int, double> getCategoryTotals() const;
     double getMax() const;
 };

@@ -41,7 +41,7 @@ QJsonObject* JSONImport::getJSONObject(){
 }
 
 // metodo che prende l'oggetto JSON e costruisce un vettore di transactions da utilizzare poi nel modello
-std::vector<Transaction> JSONImport::getTransactionList(QJsonObject* jObject){
+std::vector<Transaction> JSONImport::getTransactionList(const QJsonObject* jObject){
 
     QJsonValue value = jObject->value("transactionList");
     QJsonArray JSONarray = value.toArray();

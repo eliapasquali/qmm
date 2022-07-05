@@ -19,7 +19,7 @@ public:
     /**
      * @brief exportTransaction fa l'esportazione delle transizioni nel file e il percorso selezionato
      */
-    static void exportTransaction(std::vector<Transaction> toBeExported);
+    static void exportTransaction(const std::vector<Transaction> toBeExported);
 
 
 };

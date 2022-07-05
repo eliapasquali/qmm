@@ -9,7 +9,7 @@ double Transaction::getValue() const {
     return sign_value;
 }
 
-void Transaction::setValue(double newValue) { 
+void Transaction::setValue(const double newValue) {
     type = (value<0) ? true : false;
     value = newValue;
 }
@@ -32,5 +32,5 @@ void Transaction::setShort_desc(const QString &newShort_desc) { short_desc = new
 
 
 
-Transaction::Transaction(QString n, double v, QDate d,  Category cat, bool t, QString sd)
+Transaction::Transaction(const QString& n, const double v, const QDate& d, const Category cat, const bool t, const QString& sd)
     :  name(n), value(v), category(cat), date(d), type(t), short_desc(sd) {}

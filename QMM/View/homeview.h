@@ -80,7 +80,7 @@ private:
     QLayout* finalLayout();
 
 public slots:
-    void displayTransaction(std::vector<Transaction> transactionVector);
+    void displayTransaction(const std::vector<Transaction> &transactionVector);
     void createTransaction();
 
 signals:
@@ -92,7 +92,7 @@ signals:
     void pieChartClicked();
     void areaChartClicked();
     void addButtonClicked();
-    void createdTransaction(Transaction t);
+    void createdTransaction(const Transaction& t);
 };
 
 #endif // HOMEVIEW_H

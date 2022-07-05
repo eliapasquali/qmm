@@ -33,7 +33,7 @@ public:
     // Definisce asse zeri
     // Inserisce praticamente le serie nel grafico
     void insertSeries();
-    void defineAxis(int lastMonth, double min, double max);
+    void defineAxis(const int lastMonth, const double min, const double max);
 
 };
 

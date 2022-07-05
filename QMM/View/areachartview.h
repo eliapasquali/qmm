@@ -29,7 +29,7 @@ public:
     QChartView* createChart();
 
     // Funzioni di supporto
-    Category selectCategory(std::vector<Category>) const;
+    Category selectCategory(const std::vector<Category>) const;
     void defineSeries();
     void insertInSerie(const int month, const double value);
     void insertSerie(const Category cat);

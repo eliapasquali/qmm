@@ -18,7 +18,7 @@ public:
      */
     explicit LineChartModel(Model* baseModel);
 
-    std::map<int, double> calculateMonthlyTotals(int year);
+    std::map<int, double> calculateMonthlyTotals(const int year);
     std::map<int, double> getMonthlyTotals() const;
     std::pair<double, double> getRange() const;
 };

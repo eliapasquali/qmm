@@ -12,10 +12,21 @@ private:
 
 
 public:
+    /**
+     * @brief PieChartModel costruisce di copia dal modello della Home
+     * @param baseModel modello preso dalla home
+     */
     explicit PieChartModel(Model* baseModel);
 
+    /**
+     * @brief Calcola i totali mensili per le categorie presenti nell'anno indicato
+     * @param year Anno di cui calcolare le spese
+     */
     std::map<Category,double> getTotalPerCategories(const int year) const;
 
+    /**
+     * @brief Calcola le categorie presenti nella transazioni
+     */
     void calculateCategories();
 };
 

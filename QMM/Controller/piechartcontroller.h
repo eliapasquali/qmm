@@ -12,7 +12,9 @@ class PieChartController : public Controller
 private:
     void connectView() const override;
 public:
-    explicit PieChartController(PieChartView* v,Model* m, Controller* c = nullptr);
+    explicit PieChartController(PieChartView* v,
+                                Model* m,
+                                Controller* c = nullptr);
 
     PieChartView* getView() const override;
     PieChartModel* getModel() const override;

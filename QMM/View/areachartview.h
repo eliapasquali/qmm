@@ -26,13 +26,40 @@ public:
 
     ~AreaChartView() = default;
 
+    /**
+     * @brief Si occupa di predisporre la View con il grafico
+     * @return QChartView da inserire nella View
+     */
     QChartView* createChart();
 
-    // Funzioni di supporto
+    /**
+     * @brief Crea un QDialog per selezionare la categoria da visualizzare
+     * @return Categoria selezionata
+     */
     Category selectCategory(const std::vector<Category>) const;
+
+    /**
+     * @brief Definisce le due serie per creare le aree
+     */
     void defineSeries();
+
+    /**
+     * @brief Inserisce i punti nella upper series
+     * @param month Mese del totale
+     * @param value Totale del mese
+     */
     void insertInSerie(const int month, const double value);
+
+    /**
+     * @brief Inserisce le due serie nel grafico
+     * @param cat Categoria da cui creare il nome della serie
+     */
     void insertSerie(const Category cat);
+
+    /**
+     * @brief Definisce gli assi del grafico
+     * @param max Massimo totale presente
+     */
     void defineAxis(const double max) const;
 };
 

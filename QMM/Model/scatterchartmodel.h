@@ -19,9 +19,21 @@ public:
      */
     explicit ScatterChartModel(Model* baseModel);
 
+    /**
+     * @brief Metodo che calcola le categorie presenti nella lista delle transazioni
+     * e il range di valori
+     */
     void calculateAllAttributes();
 
+    /**
+     * @brief Ritorna le categorie presenti
+     * @return vettore delle categorie
+     */
     std::vector<Category> getCategories() const;
+    /**
+     * @brief Ritorna il range di valori
+     * @return pair del range
+     */
     std::pair<double, double> getValueRange() const;
 };
 

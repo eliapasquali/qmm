@@ -12,14 +12,39 @@ protected:
 
 public:
     explicit Model();
+    /**
+     * @brief Distruttore virtuale alla base della gerarchia
+     */
     virtual ~Model() = default;
 
+    /**
+     * @brief Inserisce la lista passata all'interno del Model
+     * @param tList lista da inserire
+     */
     void setList(const std::vector<Transaction> &tList);
+
+    /**
+     * @brief Ritorna la lista presente nel Model
+     * @return vettore delle transazioni
+     */
     std::vector<Transaction> getList() const;
-    void updateList(const std::vector<Transaction> &toBeAdded);
+
+    /**
+     * @brief Aggiunge una transazione al Model
+     * @param t Transazione da aggiungere
+     */
     void addTransaction(const Transaction& t);
+
+    /**
+     * @brief Calcola tutti gli anni delle transazioni presenti
+     * @return vettore degli anni
+     */
     std::vector<int> getYearRange();
 
+    /**
+     * @brief Controlla la tipologia delle transazioni presenti
+     * @return true se presenti solo entrate
+     */
     bool isOnlyIncome() const;
 };
 

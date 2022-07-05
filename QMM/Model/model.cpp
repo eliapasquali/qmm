@@ -10,12 +10,6 @@ std::vector<Transaction> Model::getList() const {
     return transactionList;
 }
 
-void Model::updateList(const std::vector<Transaction> &toBeAdded) {
-    transactionList.insert(transactionList.end(),
-                           toBeAdded.begin(),
-                           toBeAdded.end());
-}
-
 void Model::addTransaction(const Transaction& t)
 {
     transactionList.push_back(t);

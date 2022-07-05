@@ -25,14 +25,30 @@ public:
 
     ~LineChartView() = default;
 
+    /**
+     * @brief Si occupa di predisporre la View con il grafico
+     * @return QChartView da inserire nella View
+     */
     QChartView* createChart();
 
-    // Funzioni di supporto alla creazione del grafico
-    // Inserisce punti nella serie corretta
+    /**
+     * @brief Inserisce i punti nella serie
+     * @param month Mese da inserire
+     * @param value Totale del mese
+     */
     void insertPoint(const int month, const double value);
-    // Definisce asse zeri
-    // Inserisce praticamente le serie nel grafico
+
+    /**
+     * @brief Inserisce la serie nel grafico
+     */
     void insertSeries();
+
+    /**
+     * @brief Definisce gli assi del grafico, con limiti corretti
+     * @param lastMonth Ultimo punto su asse x
+     * @param min Minimo per asse y
+     * @param max Massimo per asse y
+     */
     void defineAxis(const int lastMonth, const double min, const double max);
 
 };

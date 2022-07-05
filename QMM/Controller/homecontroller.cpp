@@ -79,7 +79,7 @@ void HomeController::createBarChart()
     auto m = getModel();
     auto transactions = m->getList();
     auto years = m->getYearRange();
-    if(!transactions.empty()){
+    if(!transactions.empty() && !m->isOnlyIncome()){
         auto barChartView = new BarChartView();
         if(barChartView->setYear(years)) {
             barChartView->setTitle("Uscite mensili per categoria");
@@ -88,7 +88,7 @@ void HomeController::createBarChart()
             barChartController->makeVisibile();
         } else delete barChartView;
     }
-    else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
+    else getView()->errorMessage("Dati insufficienti, inserire almeno una spesa");
 }
 
 void HomeController::createScatterChart()
@@ -113,7 +113,7 @@ void HomeController::createPieChart()
     auto m = getModel();
     auto transactions = m->getList();
     auto years = m->getYearRange();
-    if(!transactions.empty()){
+    if(!transactions.empty() && !m->isOnlyIncome()){
         auto p = new PieChartView();
         if(p->setYear(years)) {
             p->setTitle("Spese per tipologia");
@@ -122,7 +122,7 @@ void HomeController::createPieChart()
             pieChartController->makeVisibile();
         } else delete p;
     }
-    else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
+    else getView()->errorMessage("Dati insufficienti, inserire almeno una spesa");
 }
 
 void HomeController::createAreaChart()
@@ -130,7 +130,7 @@ void HomeController::createAreaChart()
     auto m = getModel();
     auto transactions = m->getList();
     auto years = m->getYearRange();
-    if(!transactions.empty()) {
+    if(!transactions.empty() && !m->isOnlyIncome()) {
         auto v = new AreaChartView();
         if(v->setYear(years)) {
             v->setTitle("Uscite mensili per categoria");
@@ -139,7 +139,7 @@ void HomeController::createAreaChart()
             areaChartController->makeVisibile();
         } else delete v;
     }
-    else getView()->errorMessage("Dati insufficienti, inserire almeno una transazione");
+    else getView()->errorMessage("Dati insufficienti, inserire almeno una spesa");
 }
 
 void HomeController::onCloseView() const

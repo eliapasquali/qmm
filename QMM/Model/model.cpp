@@ -36,3 +36,13 @@ std::vector<int> Model::getYearRange()
     return range;
 }
 
+bool Model::isOnlyIncome() const
+{
+    for(auto t : transactionList){
+        if(t.isOutcome()) return false;
+    }
+
+    return true;
+}
+
+

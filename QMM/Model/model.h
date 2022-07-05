@@ -19,6 +19,8 @@ public:
     void updateList(std::vector<Transaction> &toBeAdded);
     void addTransaction(Transaction t);
     std::vector<int> getYearRange();
+
+    bool isOnlyIncome() const;
 };
 
 #endif // MODEL_H

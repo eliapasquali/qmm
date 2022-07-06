@@ -120,12 +120,16 @@ QGroupBox* HomeView::setupForm()
 void HomeView::setupTransactionTable()
 {
     movements->setColumnCount(6);
+    movements->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
     // righe in base a transazioni ricevute
     // Definizione politiche di espansione
     QHeaderView* movementsHeader = movements->horizontalHeader();
     movementsHeader->setSectionResizeMode(QHeaderView::Interactive);
+
     QStringList hLabel = { "Nome", "Valore", "Categoria", "Data", "Descrizione",""};
     movements->setHorizontalHeaderLabels(hLabel);
+    movements->setColumnWidth(5, 30);
 }
 
 QLayout* HomeView::insertDataWidgets()
@@ -192,6 +196,7 @@ void HomeView::displayTransaction(const std::vector<Transaction>& transactionVec
     int row=0;
     for( auto t : transactionVector ) {
         deleteBtn = new QPushButton("x");
+
         connect(deleteBtn, &QPushButton::clicked, this, [this]{deleteButtonClicked(movements->currentRow());});
 
         movements->setItem(row, 0, new QTableWidgetItem(t.getName()));

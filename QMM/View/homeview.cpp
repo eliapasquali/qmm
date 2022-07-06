@@ -88,7 +88,7 @@ QGroupBox* HomeView::setupForm()
     // Creo layout del form
     QFormLayout* formLayout = new QFormLayout;
     formLayout->addRow("Nome", name);
-    formLayout->addRow("Type", type);
+    formLayout->addRow("Tipo", type);
     formLayout->addRow("Valore", value);
     // Limitate, cambia in select
     formLayout->addRow("Categoria", category);

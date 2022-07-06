@@ -15,6 +15,11 @@ void Model::addTransaction(const Transaction& t)
     transactionList.push_back(t);
 }
 
+void Model::removeTransaction(int index)
+{
+    transactionList.erase(transactionList.begin() + index);
+}
+
 std::vector<int> Model::getYearRange()
 {
     std::map<int, bool> present;

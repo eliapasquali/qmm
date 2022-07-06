@@ -72,6 +72,10 @@ public slots:
      */
     void insertTransaction(const Transaction& t);
     /**
+     * @brief Cancella la transazione dal vettore delle transazioni
+     */
+    void deleteTransaction(int indexTransaction);
+    /**
      * @brief Gestisce l'evento di chiusura
      */
     void onCloseView() const override;

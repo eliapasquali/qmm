@@ -34,6 +34,8 @@ void HomeController::connectView() const {
             this, &HomeController::createAreaChart);
     connect(view, &HomeView::createdTransaction,
             this, &HomeController::insertTransaction);
+    connect(view, &HomeView::deleteButtonClicked,
+            this, &HomeController::deleteTransaction);
 }
 
 void HomeController::importTransaction()
@@ -48,6 +50,13 @@ void HomeController::insertTransaction(const Transaction& t)
 {
     auto m = getModel();
     m->addTransaction(t);
+    emit checkedTransactionList(m->getList());
+}
+
+void HomeController::deleteTransaction(int indexTransaction)
+{
+    auto m = getModel();
+    m->removeTransaction(indexTransaction);
     emit checkedTransactionList(m->getList());
 }
 

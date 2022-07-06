@@ -32,7 +32,7 @@ private:
     void connectWidgets() const override;
 
     // Elementi
-    QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *areaChart, *importBtn, *exportBtn, *addBtn;
+    QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *areaChart, *importBtn, *exportBtn, *addBtn, *deleteBtn;
     QLineEdit *name;
     QComboBox *category, *type;
     QDateEdit *date;
@@ -86,12 +86,14 @@ public slots:
 signals:
     void importButtonClicked();
     void exportButtonClicked();
+    void addButtonClicked();
+    void deleteButtonClicked(int indexTransaction);
+
     void lineChartClicked();
     void barChartClicked();
     void scatterChartClicked();
     void pieChartClicked();
     void areaChartClicked();
-    void addButtonClicked();
     void createdTransaction(const Transaction& t);
 };
 

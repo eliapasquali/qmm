@@ -36,6 +36,12 @@ public:
     void addTransaction(const Transaction& t);
 
     /**
+     * @brief Elimina una transizione per indice
+     * @param index indice della transizione da eliminare
+     */
+    void removeTransaction(int index);
+
+    /**
      * @brief Calcola tutti gli anni delle transazioni presenti
      * @return vettore degli anni
      */

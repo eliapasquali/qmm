@@ -16,6 +16,7 @@ void HomeView::connectWidgets() const {
             this, &HomeView::importButtonClicked);
     connect(exportBtn, &QPushButton::clicked,
             this, &HomeView::exportButtonClicked);
+
     connect(linechart, &QPushButton::clicked,
             this, &HomeView::lineChartClicked);
     connect(barchart, &QPushButton::clicked,
@@ -87,6 +88,7 @@ QGroupBox* HomeView::setupForm()
 
     // Creo layout del form
     QFormLayout* formLayout = new QFormLayout;
+
     formLayout->addRow("Nome", name);
     formLayout->addRow("Type", type);
     formLayout->addRow("Valore", value);
@@ -117,12 +119,12 @@ QGroupBox* HomeView::setupForm()
 
 void HomeView::setupTransactionTable()
 {
-    movements->setColumnCount(5);
+    movements->setColumnCount(6);
     // righe in base a transazioni ricevute
     // Definizione politiche di espansione
     QHeaderView* movementsHeader = movements->horizontalHeader();
     movementsHeader->setSectionResizeMode(QHeaderView::Interactive);
-    QStringList hLabel = { "Nome", "Valore", "Categoria", "Data", "Descrizione" };
+    QStringList hLabel = { "Nome", "Valore", "Categoria", "Data", "Descrizione",""};
     movements->setHorizontalHeaderLabels(hLabel);
 }
 
@@ -183,15 +185,23 @@ QLayout* HomeView::finalLayout()
 
 
 void HomeView::displayTransaction(const std::vector<Transaction>& transactionVector){
+
+
     int maxRows = transactionVector.size();
     movements->setRowCount(maxRows);
     int row=0;
     for( auto t : transactionVector ) {
+        deleteBtn = new QPushButton("x");
+        connect(deleteBtn, &QPushButton::clicked, this, [this]{deleteButtonClicked(movements->currentRow());});
+
         movements->setItem(row, 0, new QTableWidgetItem(t.getName()));
         movements->setItem(row, 1, new QTableWidgetItem(QString::number(t.getValue())));
         movements->setItem(row, 2, new QTableWidgetItem(enumToString.at(t.getCategory())));
         movements->setItem(row, 3, new QTableWidgetItem(t.getDate().toString("dd/MM/yyyy")));
         movements->setItem(row, 4, new QTableWidgetItem(t.getShortDesc()));
+        movements->setCellWidget(row, 5, deleteBtn);
+
+
         row++;
     }
 }

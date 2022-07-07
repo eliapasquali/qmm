@@ -132,8 +132,8 @@ void HomeView::setupTransactionTable()
     movements->setColumnWidth(1, 90);
     movements->setColumnWidth(2, 100);
     movements->setColumnWidth(3, 90);
-    movements->setColumnWidth(4, 150);
-    movements->setColumnWidth(5, 10);
+    movements->setColumnWidth(4, 160);
+    movements->setColumnWidth(5, 30);
 }
 
 QLayout* HomeView::insertDataWidgets()

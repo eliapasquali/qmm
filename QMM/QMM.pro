@@ -65,6 +65,6 @@ HEADERS += \
 RESOURCES = \
     resources.qrc
 
-ICON = Resources/icon.ico
+ICON = Resources/qmm_icon.ico
 
 QMAKE_LFLAGS += -no-pie

@@ -34,7 +34,7 @@ void HomeView::connectWidgets() const {
 
 QLayout* HomeView::insertButtons()
 {
-    QHBoxLayout* buttonsLayout = new QHBoxLayout(this);
+    QHBoxLayout* buttonsLayout = new QHBoxLayout();
 
     std::vector<QPushButton*> buttons;
     linechart = new QPushButton("Andamento\nperiodico", this);
@@ -86,7 +86,7 @@ QGroupBox* HomeView::setupForm()
     type->addItem("Introito");
 
     // Creo layout del form
-    QFormLayout* formLayout = new QFormLayout(this);
+    QFormLayout* formLayout = new QFormLayout();
 
     formLayout->addRow("Nome", name);
     formLayout->addRow("Tipo", type);
@@ -102,7 +102,7 @@ QGroupBox* HomeView::setupForm()
     addBtn->setFixedSize(300,50);
 
     // layout del bottone per l0'inserimento della transizione
-    QHBoxLayout* buttonsLayout = new QHBoxLayout(this);
+    QHBoxLayout* buttonsLayout = new QHBoxLayout();
 
     buttonsLayout->setContentsMargins(25,20,12,50);
     buttonsLayout->setAlignment(Qt::AlignCenter);
@@ -138,11 +138,11 @@ void HomeView::setupTransactionTable()
 
 QLayout* HomeView::insertDataWidgets()
 {
-    QHBoxLayout* dataWidgets = new QHBoxLayout(this);
+    QHBoxLayout* dataWidgets = new QHBoxLayout();
 
     // Colonna sinistra, con i valori estratti
     QLabel* listaMov = new QLabel("Lista movimenti", this);
-    QVBoxLayout* leftColumn = new QVBoxLayout(this);
+    QVBoxLayout* leftColumn = new QVBoxLayout();
     movements = new QTableWidget(this);
     setupTransactionTable();
 
@@ -150,7 +150,7 @@ QLayout* HomeView::insertDataWidgets()
     leftColumn->addWidget(movements);
 
     // Colonna destra, per inserimento e salvataggio dei dati
-    QVBoxLayout* rightColumn = new QVBoxLayout(this);
+    QVBoxLayout* rightColumn = new QVBoxLayout();
     QLabel* inserimMov = new QLabel("Inserimento transazione", this);
 
     rightColumn->addWidget(inserimMov);
@@ -166,7 +166,7 @@ QLayout* HomeView::insertDataWidgets()
 
 QLayout *HomeView::importExportButtonLayout()
 {
-    QHBoxLayout* importExportLayout = new QHBoxLayout(this);
+    QHBoxLayout* importExportLayout = new QHBoxLayout();
 
     importBtn  = new QPushButton("Importa movimenti", this);
     exportBtn  = new QPushButton("Esporta movimenti", this);

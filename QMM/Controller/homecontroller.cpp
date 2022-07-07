@@ -52,7 +52,7 @@ void HomeController::importTransaction()
         }
 
         if(doc->isNull()){
-            getView()->errorMessage("Operazione cancellata");
+            getView()->errorMessage("File non valido");
             return;
         }
 

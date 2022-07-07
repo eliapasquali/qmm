@@ -2,8 +2,9 @@
 
   <qresource prefix="/">
 
-    <file>Resources/icon.ico</file>
-
+    <file>Resources/qmm_icon.ico</file>
+    <file>Resources/x_icon.ico</file>
+    
   </qresource>
 
 </RCC>

@@ -57,7 +57,7 @@ void AreaChartView::insertSerie(const Category cat) {
     areaChart->addSeries(serie);
 }
 
-void AreaChartView::defineAxis(const double max) const {
+void AreaChartView::defineAxis(const double max) {
     auto axisX = new QValueAxis();
     axisX->setTitleText("Mese");
     axisX->setRange(1, 12);

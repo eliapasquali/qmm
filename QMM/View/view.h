@@ -26,10 +26,11 @@ public:
      * @param size QSize definito di default a 720x480
      * @param parent Necessario per ogni QWidget, di default nullo
      */
-    explicit View(const QSize& size = QSize(1024, 768), const QString& title = QString("QMM"), View* parent = nullptr);
+    explicit View(const QSize& size = QSize(1280, 720), const QString& title = QString("QMM"), View* parent = nullptr);
     /**
      * @brief Distruttore, definito virtuale nella classe base
-     *  Lavora insieme al meccanismo di default della libreria QT
+     *  Lavora insieme al meccanismo di default della libreria QT, che si occupa di eliminare i
+     *  widget alla distruzione del "top-level element"
      */
     virtual ~View();
 

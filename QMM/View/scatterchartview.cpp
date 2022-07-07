@@ -18,6 +18,8 @@ QChartView* ScatterChartView::createChart() {
     scatterChart = new QChart();
 
     scatterChart->setTitle("Transazioni");
+    scatterChart->setAnimationOptions(QChart::SeriesAnimations);
+    scatterChart->setAnimationEasingCurve(QEasingCurve::InOutCubic);
 
     auto view = new QChartView(scatterChart, this);
     view->setRenderHint(QPainter::Antialiasing);

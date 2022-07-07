@@ -26,7 +26,7 @@ QChart* PieChartView::createChart()
     series = new QPieSeries();
 
     chart = new QChart();
-
+    chart->setAnimationOptions(QChart::AllAnimations);
     chart->setTitle("Spesa per categoria");
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignRight);

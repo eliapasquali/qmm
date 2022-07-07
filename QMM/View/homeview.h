@@ -24,7 +24,7 @@ class HomeView : public View
     Q_OBJECT
 
 public:
-    explicit HomeView(const QSize& size = QSize(1024, 768), const QString& title = QString("QMM"), View* parent = nullptr);
+    explicit HomeView(const QSize& size = QSize(1280, 720), const QString& title = QString("QMM"), View* parent = nullptr);
     ~HomeView() = default;
 
 private:
@@ -32,7 +32,7 @@ private:
     void connectWidgets() const override;
 
     // Elementi
-    QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *areaChart, *importBtn, *exportBtn, *addBtn, *deleteBtn;
+    QPushButton *linechart, *barchart, *pieChartBtn, *scatterchart, *areaChart, *importBtn, *exportBtn, *addBtn;
     QLineEdit *name;
     QComboBox *category, *type;
     QDateEdit *date;

@@ -34,23 +34,22 @@ void HomeView::connectWidgets() const {
 
 QLayout* HomeView::insertButtons()
 {
-    QHBoxLayout* buttonsLayout = new QHBoxLayout;
+    QHBoxLayout* buttonsLayout = new QHBoxLayout(this);
 
     std::vector<QPushButton*> buttons;
-    linechart = new QPushButton("Andamento\nperiodico");
-    barchart = new QPushButton("Uscite per\ncategoria");
-    pieChartBtn = new QPushButton("Spese per tipologia");
-    scatterchart = new QPushButton("Tutte le\ntransazioni");
-    areaChart = new QPushButton("Uscite mensili\nper categoria");
+    linechart = new QPushButton("Andamento\nperiodico", this);
+    barchart = new QPushButton("Uscite per\ncategoria", this);
+    pieChartBtn = new QPushButton("Spese per tipologia", this);
+    scatterchart = new QPushButton("Tutte le\ntransazioni", this);
+    areaChart = new QPushButton("Uscite mensili\nper categoria", this);
     buttons.push_back(linechart);
     buttons.push_back(barchart);
     buttons.push_back(pieChartBtn);
     buttons.push_back(scatterchart);
     buttons.push_back(areaChart);
 
-    const QSize BUTTON_SIZE = QSize(150,50);
     for(auto b : buttons){
-        b->setFixedSize(BUTTON_SIZE);
+        b->setFixedSize(QSize(150, 50));
         buttonsLayout->addWidget(b);
     }
 
@@ -62,17 +61,17 @@ QLayout* HomeView::insertButtons()
 
 QGroupBox* HomeView::setupForm()
 {
-    QGroupBox* form = new QGroupBox;
+    QGroupBox* form = new QGroupBox(this);
 
     // Creo form di inserimento ed elementi
-    name = new QLineEdit;
-    value = new QDoubleSpinBox;
+    name = new QLineEdit(this);
+    value = new QDoubleSpinBox(this);
     value->setMaximum(1000000); // Limite al valore
-    category = new QComboBox;
-    type = new QComboBox;
-    date = new QDateEdit;
+    category = new QComboBox(this);
+    type = new QComboBox(this);
+    date = new QDateEdit(this);
     date->setDisplayFormat("dd/MM/yyyy"); // Formato italiano per inserimento data
-    short_desc = new QTextEdit;
+    short_desc = new QTextEdit(this);
 
     //setto i valori del menu a tendina di category
     category->addItem("Lavoro");
@@ -87,7 +86,7 @@ QGroupBox* HomeView::setupForm()
     type->addItem("Introito");
 
     // Creo layout del form
-    QFormLayout* formLayout = new QFormLayout;
+    QFormLayout* formLayout = new QFormLayout(this);
 
     formLayout->addRow("Nome", name);
     formLayout->addRow("Tipo", type);
@@ -99,16 +98,15 @@ QGroupBox* HomeView::setupForm()
 
 
     // Bottone per l'inserimento della transazione
-    addBtn = new QPushButton("Aggiungi movimento");
+    addBtn = new QPushButton("Aggiungi movimento", this);
     addBtn->setFixedSize(300,50);
 
     // layout del bottone per l0'inserimento della transizione
-    QHBoxLayout* buttonsLayout = new QHBoxLayout;
+    QHBoxLayout* buttonsLayout = new QHBoxLayout(this);
 
     buttonsLayout->setContentsMargins(25,20,12,50);
     buttonsLayout->setAlignment(Qt::AlignCenter);
     buttonsLayout->addWidget(addBtn);
-
 
     formLayout->addRow(buttonsLayout);
 
@@ -124,30 +122,36 @@ void HomeView::setupTransactionTable()
 
     // righe in base a transazioni ricevute
     // Definizione politiche di espansione
-    QHeaderView* movementsHeader = movements->horizontalHeader();
-    movementsHeader->setSectionResizeMode(QHeaderView::Interactive);
+    movements->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);
 
     QStringList hLabel = { "Nome", "Valore", "Categoria", "Data", "Descrizione",""};
     movements->setHorizontalHeaderLabels(hLabel);
-    movements->setColumnWidth(5, 30);
+    // Per mantenere interattività del resizing della tabella non è possibile sfruttare
+    // il fitting automatico di Qt, quindi necessario a settare a mano le misure iniziali
+    movements->setColumnWidth(0, 130);
+    movements->setColumnWidth(1, 90);
+    movements->setColumnWidth(2, 100);
+    movements->setColumnWidth(3, 90);
+    movements->setColumnWidth(4, 150);
+    movements->setColumnWidth(5, 10);
 }
 
 QLayout* HomeView::insertDataWidgets()
 {
-    QHBoxLayout* dataWidgets = new QHBoxLayout;
+    QHBoxLayout* dataWidgets = new QHBoxLayout(this);
 
     // Colonna sinistra, con i valori estratti
-    QLabel* listaMov = new QLabel("Lista movimenti");
-    QVBoxLayout* leftColumn = new QVBoxLayout;
-    movements = new QTableWidget();
+    QLabel* listaMov = new QLabel("Lista movimenti", this);
+    QVBoxLayout* leftColumn = new QVBoxLayout(this);
+    movements = new QTableWidget(this);
     setupTransactionTable();
 
     leftColumn->addWidget(listaMov);
     leftColumn->addWidget(movements);
 
     // Colonna destra, per inserimento e salvataggio dei dati
-    QVBoxLayout* rightColumn = new QVBoxLayout;
-    QLabel* inserimMov = new QLabel("Inserimento transazione");
+    QVBoxLayout* rightColumn = new QVBoxLayout(this);
+    QLabel* inserimMov = new QLabel("Inserimento transazione", this);
 
     rightColumn->addWidget(inserimMov);
     rightColumn->addWidget(setupForm());
@@ -162,10 +166,10 @@ QLayout* HomeView::insertDataWidgets()
 
 QLayout *HomeView::importExportButtonLayout()
 {
-    QHBoxLayout* importExportLayout = new QHBoxLayout;
+    QHBoxLayout* importExportLayout = new QHBoxLayout(this);
 
-    importBtn  = new QPushButton("Importa movimenti");
-    exportBtn  = new QPushButton("Esporta movimenti");
+    importBtn  = new QPushButton("Importa movimenti", this);
+    exportBtn  = new QPushButton("Esporta movimenti", this);
 
     importExportLayout->addWidget(importBtn);
     importExportLayout->addWidget(exportBtn);
@@ -175,7 +179,7 @@ QLayout *HomeView::importExportButtonLayout()
 
 QLayout* HomeView::finalLayout()
 {
-    QVBoxLayout* homeLayout = new QVBoxLayout;
+    QVBoxLayout* homeLayout = new QVBoxLayout(this);
 
     homeLayout->addItem(importExportButtonLayout());
     homeLayout->addItem(insertDataWidgets());
@@ -187,15 +191,15 @@ QLayout* HomeView::finalLayout()
     return homeLayout;
 }
 
-
 void HomeView::displayTransaction(const std::vector<Transaction>& transactionVector){
-
-
     int maxRows = transactionVector.size();
     movements->setRowCount(maxRows);
     int row=0;
     for( auto t : transactionVector ) {
-        deleteBtn = new QPushButton("x");
+        auto deleteBtn = new QPushButton(this);
+        deleteBtn->setFixedSize(QSize(28, 28));
+        deleteBtn->setIcon(QIcon("Resources/x_icon.ico"));
+        deleteBtn->setIconSize(QSize(16, 16));
 
         connect(deleteBtn, &QPushButton::clicked, this, [this]{deleteButtonClicked(movements->currentRow());});
 
@@ -205,7 +209,6 @@ void HomeView::displayTransaction(const std::vector<Transaction>& transactionVec
         movements->setItem(row, 3, new QTableWidgetItem(t.getDate().toString("dd/MM/yyyy")));
         movements->setItem(row, 4, new QTableWidgetItem(t.getShortDesc()));
         movements->setCellWidget(row, 5, deleteBtn);
-
 
         row++;
     }

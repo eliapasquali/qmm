@@ -6,7 +6,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    a.setWindowIcon(QIcon("Resources/icon.ico"));
+    a.setWindowIcon(QIcon("Resources/qmm_icon.ico"));
 
     auto* homeView = new HomeView();
     auto* homeController = new HomeController(homeView);

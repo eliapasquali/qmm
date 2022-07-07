@@ -60,7 +60,7 @@ public:
      * @brief Definisce gli assi del grafico
      * @param max Massimo totale presente
      */
-    void defineAxis(const double max) const;
+    void defineAxis(const double max);
 };
 
 #endif // AREACHARTVIEW_H

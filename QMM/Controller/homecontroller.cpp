@@ -57,6 +57,11 @@ void HomeController::importTransaction()
         }
 
         QJsonObject* obj = new QJsonObject(doc->object());
+
+        auto json_value = obj->value("transactionList");
+        if(json_value.toArray().isEmpty())
+            getView()->errorMessage("Nessun movimento presente nel file");
+
         m->setList(JSONImport::getTransactionList(obj));
         emit checkedTransactionList(m->getList());
     }

@@ -128,11 +128,11 @@ void HomeView::setupTransactionTable()
     movements->setHorizontalHeaderLabels(hLabel);
     // Per mantenere interattività del resizing della tabella non è possibile sfruttare
     // il fitting automatico di Qt, quindi necessario a settare a mano le misure iniziali
-    movements->setColumnWidth(0, 130);
+    movements->setColumnWidth(0, 125);
     movements->setColumnWidth(1, 90);
     movements->setColumnWidth(2, 100);
     movements->setColumnWidth(3, 90);
-    movements->setColumnWidth(4, 160);
+    movements->setColumnWidth(4, 150);
     movements->setColumnWidth(5, 30);
 }
 

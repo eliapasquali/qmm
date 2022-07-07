@@ -19,17 +19,17 @@ public:
     static QString filePicker();
 
     /**
-     * @brief getJSONObject Costruisce l'oggetto JSON dal file importato
-     * @return puntatore all'oggetto JSON
+     * @brief getJSONObject Restituisce un oggetto di tipo JSONDocument
+     * @return puntatore all'oggetto JSONDocument
      */
-    static QJsonObject* getJSONObject();
+    static QJsonDocument* getJSONDocument(QString path);
 
     /**
      * @brief getTransactionList Estrae la lista delle transazioni dall'oggetto JSON
      * @param jObject Oggetto contenente le informazioni del JSON
      * @return std::vector delle transazioni
      */
-    static std::vector<Transaction> getTransactionList(const QJsonObject* jObject);
+    static std::vector<Transaction> getTransactionList(QJsonObject* jObject);
 };
 
 #endif // JSON_IMPORT_H

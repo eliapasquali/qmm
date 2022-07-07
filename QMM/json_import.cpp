@@ -20,11 +20,9 @@ QString JSONImport::filePicker()
     return path;
 }
 
-QJsonObject* JSONImport::getJSONObject(){
+QJsonDocument* JSONImport::getJSONDocument(QString path){
 
     QString val;
-
-    QString path = filePicker();
 
     QFile fileRead(path);
 
@@ -33,15 +31,13 @@ QJsonObject* JSONImport::getJSONObject(){
     val = fileRead.readAll(); // legge il file e lo inserisce dentro la QString "val"
     fileRead.close();   // chiude il file (importante)
 
-    QJsonDocument doc = QJsonDocument::fromJson(val.toUtf8());
+    QJsonDocument* doc = new QJsonDocument(QJsonDocument::fromJson(val.toUtf8()));
 
-    QJsonObject* jObject = new QJsonObject(doc.object()); // comando che ottiene l'oggetto JSON
-
-    return jObject;
+    return doc;
 }
 
 // metodo che prende l'oggetto JSON e costruisce un vettore di transactions da utilizzare poi nel modello
-std::vector<Transaction> JSONImport::getTransactionList(const QJsonObject* jObject){
+std::vector<Transaction> JSONImport::getTransactionList(QJsonObject* jObject){
 
     QJsonValue value = jObject->value("transactionList");
     QJsonArray JSONarray = value.toArray();

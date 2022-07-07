@@ -41,8 +41,21 @@ void HomeController::connectView() const {
 void HomeController::importTransaction()
 {
     auto m = getModel();
-    auto newList = JSONImport::getTransactionList(JSONImport::getJSONObject());
-    m->setList(newList);
+    QString path = JSONImport::filePicker();
+    QJsonDocument* doc = JSONImport::getJSONDocument(path);
+
+    if(path.isNull()){
+        getView()->errorMessage("Inserimento cancellato");
+        return;
+    }
+
+    if(doc->isNull()){
+        getView()->errorMessage("Inserire file ");
+        return;
+    }
+
+    QJsonObject* obj = new QJsonObject(doc->object());
+    m->setList(JSONImport::getTransactionList(obj));
     emit checkedTransactionList(m->getList());
 }
 

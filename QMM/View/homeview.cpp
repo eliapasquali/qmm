@@ -201,7 +201,7 @@ void HomeView::displayTransaction(const std::vector<Transaction>& transactionVec
         deleteBtn->setIcon(QIcon("Resources/x_icon.ico"));
         deleteBtn->setIconSize(QSize(16, 16));
 
-        connect(deleteBtn, &QPushButton::clicked, this, [this]{deleteButtonClicked(movements->currentRow());});
+        connect(deleteBtn, &QPushButton::clicked, this, [this, row]{deleteButtonClicked(row);});
 
         movements->setItem(row, 0, new QTableWidgetItem(t.getName()));
         movements->setItem(row, 1, new QTableWidgetItem(QString::number(t.getValue())));

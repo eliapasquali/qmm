@@ -51,3 +51,12 @@ void View::errorMessage(QString s)
     msgBox.setText(s);
     msgBox.exec();
 }
+
+bool View::questionMessage(QString title, QString testo)
+{
+    QMessageBox::StandardButton askBox;
+    askBox = QMessageBox::question(this, title, testo,
+                                  QMessageBox::Yes|QMessageBox::No);
+
+    return askBox == QMessageBox::Yes;
+}

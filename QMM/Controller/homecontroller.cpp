@@ -40,24 +40,38 @@ void HomeController::connectView() const {
 
 void HomeController::importTransaction()
 {
-    auto m = getModel();
-    QString path = JSONImport::filePicker();
-    QJsonDocument* doc = JSONImport::getJSONDocument(path);
+    if(getView()->questionMessage("Finestra di importazione", "Ogni transazione già presente nel file verrà sovrascritta, procedere comunque?")){
+        auto m = getModel();
 
-    if(path.isNull()){
-        getView()->errorMessage("Inserimento cancellato");
-        return;
+        QString path = JSONImport::filePicker();
+        QJsonDocument* doc = JSONImport::getJSONDocument(path);
+
+        if(path.isNull()){
+            getView()->errorMessage("Inserimento cancellato");
+            return;
+        }
+
+        if(doc->isNull()){
+            getView()->errorMessage("Operazione cancellata");
+            return;
+        }
+
+        QJsonObject* obj = new QJsonObject(doc->object());
+        m->setList(JSONImport::getTransactionList(obj));
+        emit checkedTransactionList(m->getList());
     }
 
-    if(doc->isNull()){
-        getView()->errorMessage("Inserire file ");
-        return;
-    }
-
-    QJsonObject* obj = new QJsonObject(doc->object());
-    m->setList(JSONImport::getTransactionList(obj));
-    emit checkedTransactionList(m->getList());
 }
+
+void HomeController::exportTransaction()
+{
+    auto m = getModel();
+    if(!m->getList().empty())
+        json_export::exportTransaction(m->getList());
+    else
+        getView()->errorMessage("inserire almeno una transazione");
+}
+
 
 void HomeController::insertTransaction(const Transaction& t)
 {
@@ -71,12 +85,6 @@ void HomeController::deleteTransaction(int indexTransaction)
     auto m = getModel();
     m->removeTransaction(indexTransaction);
     emit checkedTransactionList(m->getList());
-}
-
-void HomeController::exportTransaction()
-{
-    auto m = getModel();
-    json_export::exportTransaction(m->getList());
 }
 
 void HomeController::createLineChart()

@@ -21,8 +21,6 @@ private:
     int year; // Anno di riferimento per grafici e componenti view
 
 public:
-    static void errorMessage(QString s); // per avere messaggi di errore personalizzati in base all errore che viene fuori
-
     /**
      * @brief Costruttore base di View, con valori di default
      * @param size QSize definito di default a 720x480
@@ -63,6 +61,18 @@ public:
      * @param closeEvent QCloseEvent raccolto alla richiesta di chiusura
      */
     void closeEvent(QCloseEvent* closeEvent) override;
+
+    /**
+     * @brief per avere messaggi di errore personalizzati in base all errore che viene fuori
+     */
+
+    static void errorMessage(QString s); // per avere messaggi di errore personalizzati in base all errore che viene fuori
+
+    /**
+     * @brief per avere messaggi di errore personalizzati in base all errore che viene fuori
+     */
+
+    bool questionMessage(QString title, QString testo);
 
 signals:
     void closeView() const;
